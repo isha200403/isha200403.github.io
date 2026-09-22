@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Isha | Software Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0f19;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            position: sticky;
+            top: 0;
+            background: rgba(11, 15, 25, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #7c5cff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #7c5cff;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .small-text {
+            color: #7c5cff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(50px, 8vw, 90px);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #7c5cff;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #d4d7e0;
+        }
+
+        .hero p {
+            color: #aeb4c3;
+            font-size: 18px;
+            max-width: 580px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #7c5cff;
+            color: white;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(124, 92, 255, 0.3);
+        }
+
+        .secondary {
+            border: 1px solid #333b50;
+            color: white;
+        }
+
+        .secondary:hover {
+            border-color: #7c5cff;
+        }
+
+        .hero-circle {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c5cff, #26d9ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 80px rgba(124, 92, 255, 0.25);
+        }
+
+        .hero-circle span {
+            font-size: 100px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: #7c5cff;
+        }
+
+        .about {
+            max-width: 850px;
+            color: #aeb4c3;
+            font-size: 18px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 13px 22px;
+            border: 1px solid #333b50;
+            border-radius: 30px;
+            background: #111725;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 30px;
+            border-radius: 20px;
+            background: #111725;
+            border: 1px solid #222a3d;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #7c5cff;
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+            font-size: 23px;
+        }
+
+        .project-card p {
+            color: #aeb4c3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777f91;
+            border-top: 1px solid #222a3d;
+        }
+
+        @media (max-width: 800px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-circle {
+                width: 230px;
+                height: 230px;
+            }
+
+            .hero-circle span {
+                font-size: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">I<span>.</span></div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <div class="small-text">HELLO, I'M</div>
+
+            <h1>Isha<span>.</span></h1>
+
+            <h2>Software Developer</h2>
+
+            <p>
+                B.Tech Computer Science graduate passionate about
+                building useful software, solving problems and
+                continuously learning new technologies.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-circle">
+            <span>I</span>
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="about">
+            I am a 2026 B.Tech Computer Science graduate interested
+            in software development. I enjoy creating applications,
+            learning new technologies and turning ideas into
+            practical solutions.
+        </p>
+
+    </section>
+
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+
+        </div>
+
+    </section>
+
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            Featured <span>Projects</span>
+        </h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>Breast Cancer Detection</h3>
+
+                <p>
+                    Deep learning project using CNN techniques
+                    to classify breast tumors as benign or malignant
+                    from radiology images.
+                </p>
+            </div>
+
+
+            <div class="project-card">
+                <h3>Project Two</h3>
+
+                <p>
+                    Your second project description will be added here.
+                </p>
+            </div>
+
+
+            <div class="project-card">
+                <h3>Project Three</h3>
+
+                <p>
+                    Your third project description will be added here.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <p class="about">
+            I'm currently looking for opportunities to start
+            my career as a Software Developer.
+        </p>
+
+        <br>
+
+        <div class="buttons">
+
+            <a class="btn primary"
+               href="mailto:YOUR_EMAIL@gmail.com">
+                Email Me
+            </a>
+
+            <a class="btn secondary"
+               href="https://github.com/isha200403">
+                GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        © 2026 Isha. Built with passion and code.
+    </footer>
+
+</body>
+</html>
