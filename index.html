@@ -6,957 +6,1425 @@
 
 <title>Isha S. | Software Developer</title>
 
-<meta name="description"
-content="Isha S. - Software Developer and Computer Science graduate">
-
 <style>
 
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #060817;
-    color: white;
-    overflow-x: hidden;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#070916;
+    color:white;
+    overflow-x:hidden;
 }
 
-a {
-    color: inherit;
+a{
+    color:inherit;
 }
 
-
-/* =========================================================
+/* =========================
    NAVBAR
-========================================================= */
+========================= */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:85px;
+    padding:0 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:1000;
 
-    width: 100%;
-    height: 74px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 6%;
-
-    background: rgba(5, 8, 23, 0.88);
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-
-    z-index: 1000;
+    background:rgba(7,9,22,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(140,110,255,.1);
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: 800;
-    text-decoration: none;
+.logo{
+    font-size:34px;
+    font-weight:800;
 }
 
-.logo span {
-    color: #8b5cf6;
+.logo span{
+    color:#895cff;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 27px;
+.nav-links{
+    display:flex;
+    gap:25px;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #c8cad6;
-    font-size: 15px;
-    transition: 0.3s ease;
+.nav-links a{
+    text-decoration:none;
+    color:#c6c9d8;
+    font-size:14px;
+    transition:.3s;
 }
 
-.nav-links a:hover {
-    color: #9b6cff;
+.nav-links a:hover{
+    color:#9c6cff;
 }
 
-.hire-btn {
-    padding: 12px 23px;
-    border-radius: 30px;
-
-    background: linear-gradient(
-        135deg,
-        #7c4dff,
-        #5c5cff
-    );
-
-    color: white !important;
+.hire{
+    text-decoration:none;
+    padding:13px 25px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#8050ff,#5b48e8);
+    font-weight:bold;
 }
 
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
-.hero {
-    min-height: 100vh;
+.hero{
+    min-height:100vh;
+    position:relative;
 
-    display: flex;
-    align-items: center;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    padding: 105px 6% 55px;
+    padding:120px 6% 60px;
 
-    position: relative;
-    overflow: hidden;
+    overflow:hidden;
 
     background:
         radial-gradient(
-            circle at 75% 48%,
-            rgba(100, 68, 255, 0.20),
-            transparent 33%
+            circle at 75% 50%,
+            rgba(91,54,190,.3),
+            transparent 35%
         ),
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(120, 70, 255, 0.12),
-            transparent 30%
-        ),
-        #060817;
+        #070916;
 }
 
-
-/* =========================================================
-   HERO LEFT
-========================================================= */
-
-.hero-content {
-    width: 48%;
-    max-width: 690px;
-
-    position: relative;
-    z-index: 50;
+.hero-content{
+    width:50%;
+    z-index:30;
 }
 
-.hello {
-    color: #a16aff;
-
-    font-size: 27px;
-    font-weight: 600;
-
-    margin-bottom: 17px;
+.hello{
+    font-size:25px;
+    color:#9e6cff;
+    margin-bottom:12px;
 }
 
-.hero h1 {
-    font-size: clamp(65px, 8vw, 110px);
-
-    line-height: 0.95;
-
-    letter-spacing: -5px;
-
-    font-weight: 800;
+.hero h1{
+    font-size:clamp(65px,8vw,110px);
+    line-height:.95;
+    letter-spacing:-5px;
 }
 
-.hero h1 span {
-    color: #8755ff;
+.hero h1 span{
+    color:#895cff;
 }
 
-.hero h2 {
-    margin-top: 28px;
-
-    font-size: clamp(30px, 4vw, 45px);
+.hero h2{
+    font-size:38px;
+    margin-top:28px;
+    margin-bottom:18px;
 }
 
-.hero-details {
-    margin-top: 18px;
-
-    color: #a56cff;
-
-    font-size: 21px;
-    font-weight: 700;
+.education{
+    color:#a875ff;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:25px;
 }
 
-.hero-description {
-    max-width: 640px;
-
-    margin-top: 27px;
-
-    color: #c3c7d6;
-
-    font-size: 18px;
-
-    line-height: 1.75;
+.intro{
+    max-width:630px;
+    color:#b8bfd2;
+    font-size:18px;
+    line-height:1.7;
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.hero-buttons {
-    display: flex;
-    gap: 18px;
-
-    margin-top: 35px;
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:32px;
 }
 
-.hero-buttons a {
-    text-decoration: none;
-
-    padding: 16px 28px;
-
-    border-radius: 40px;
-
-    font-weight: 700;
-
-    transition: 0.3s ease;
+.primary-btn,
+.secondary-btn{
+    padding:16px 27px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.primary-btn {
-    background:
-        linear-gradient(
-            135deg,
-            #814cff,
-            #5d5cff
-        );
-
-    box-shadow:
-        0 12px 35px rgba(100,70,255,0.30);
+.primary-btn{
+    background:linear-gradient(135deg,#8050ff,#5e48e9);
+    box-shadow:0 10px 35px rgba(111,75,255,.35);
 }
 
-.primary-btn:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 18px 45px rgba(100,70,255,0.45);
+.secondary-btn{
+    border:1px solid #2b3047;
 }
 
-.secondary-btn {
-    border: 1px solid #343952;
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-4px);
 }
 
-.secondary-btn:hover {
-    border-color: #9062ff;
-    transform: translateY(-4px);
+.social-links{
+    display:flex;
+    gap:28px;
+    margin-top:35px;
 }
 
-
-/* =========================================================
-   SOCIAL
-========================================================= */
-
-.social-links {
-    display: flex;
-    gap: 28px;
-
-    margin-top: 37px;
+.social-links a{
+    color:#c1c6d8;
+    text-decoration:none;
 }
 
-.social-links a {
-    color: #bfc3d2;
-
-    text-decoration: none;
-
-    transition: 0.3s;
+.social-links a:hover{
+    color:#9c6cff;
 }
 
-.social-links a:hover {
-    color: #a16aff;
-}
-
-
-/* =========================================================
+/* =========================
    CHARACTER AREA
-========================================================= */
+========================= */
 
-.hero-character {
-    width: 52%;
-    height: 650px;
+.character-area{
+    width:50%;
+    height:650px;
+    position:relative;
 
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 10;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-
-/* =========================================================
-   GLOW
-========================================================= */
-
-.character-glow {
-    position: absolute;
-
-    width: 600px;
-    height: 600px;
-
-    border-radius: 50%;
+.character-glow{
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(75, 80, 255, 0.28),
-            rgba(120, 60, 255, 0.15),
+            rgba(113,70,255,.4),
+            rgba(55,95,255,.1),
             transparent 70%
         );
 
-    filter: blur(25px);
-
-    z-index: 1;
+    filter:blur(25px);
 }
 
+/* =========================
+   GIRL
+========================= */
 
-/* =========================================================
-   GIRL STAGE
+.girl{
+    position:absolute;
 
-   IMPORTANT:
-   The eye overlays are INSIDE this stage.
-   Therefore they move together with the image.
-========================================================= */
+    width:320px;
+    height:500px;
 
-.girl-stage {
+    left:50%;
+    top:35px;
 
-    position: absolute;
+    margin-left:-160px;
 
-    width: min(820px, 120%);
+    z-index:10;
 
-    aspect-ratio: 3 / 2;
+    animation:floatGirl 4s ease-in-out infinite;
 
-    right: -45px;
-
-    bottom: 15px;
-
-    z-index: 5;
+    transition:transform .15s ease-out;
 }
 
+@keyframes floatGirl{
 
-/* =========================================================
-   GIRL IMAGE
-========================================================= */
-
-.girl-image {
-
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    display: block;
-
-    filter:
-        drop-shadow(
-            0 0 35px rgba(92,80,255,0.30)
-        );
-
-    transition:
-        transform 0.12s ease-out;
-}
-
-
-/* =========================================================
-   EYES
-
-   These percentages are relative to the image.
-========================================================= */
-
-.eye {
-
-    position: absolute;
-
-    width: 38px;
-    height: 30px;
-
-    pointer-events: none;
-
-    z-index: 20;
-}
-
-
-/*
-   LEFT EYE
-*/
-
-.eye-left {
-
-    left: 55.5%;
-
-    top: 31.5%;
-}
-
-
-/*
-   RIGHT EYE
-*/
-
-.eye-right {
-
-    left: 64.8%;
-
-    top: 31.5%;
-}
-
-
-/* =========================================================
-   PUPIL
-========================================================= */
-
-.pupil {
-
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
-
-    background: #191329;
-
-    box-shadow:
-        0 0 2px white;
-
-    transform:
-        translate(-50%, -50%);
-
-    transition:
-        transform 0.05s linear;
-}
-
-
-/* =========================================================
-   FLOATING BADGES
-========================================================= */
-
-.tech-badge {
-
-    position: absolute;
-
-    padding: 14px 20px;
-
-    border-radius: 16px;
-
-    background: rgba(12,17,34,0.82);
-
-    border: 1px solid rgba(140,110,255,0.22);
-
-    backdrop-filter: blur(10px);
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.25);
-
-    animation:
-        floating 4s ease-in-out infinite;
-
-    z-index: 30;
-}
-
-.python {
-    right: 20px;
-    top: 65px;
-    color: #ffd43b;
-}
-
-.javascript {
-    right: -20px;
-    top: 185px;
-    color: #ffe600;
-    animation-delay: 1s;
-}
-
-.mysql {
-    right: 20px;
-    bottom: 100px;
-    color: #35c6ff;
-    animation-delay: 2s;
-}
-
-.code {
-    left: 10px;
-    top: 250px;
-    color: #b48aff;
-    animation-delay: 0.5s;
-}
-
-@keyframes floating {
-
-    0%, 100% {
-        transform: translateY(0);
+    0%,100%{
+        margin-top:0;
     }
 
-    50% {
-        transform: translateY(-12px);
+    50%{
+        margin-top:-9px;
     }
+
 }
 
+/* =========================
+   HAIR
+========================= */
 
-/* =========================================================
-   SECTIONS
-========================================================= */
+.hair{
+    position:absolute;
 
-.section {
+    width:260px;
+    height:315px;
 
-    padding: 100px 8%;
-
-    background: #080b1c;
-}
-
-.section:nth-child(even) {
-    background: #060817;
-}
-
-.section-title {
-
-    text-align: center;
-
-    font-size: 45px;
-
-    margin-bottom: 55px;
-}
-
-.section-title span {
-    color: #895bff;
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-container {
-
-    max-width: 950px;
-
-    margin: auto;
-
-    text-align: center;
-}
-
-.about-container p {
-
-    color: #bfc3d2;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   SKILLS
-========================================================= */
-
-.skills-grid {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(200px, 1fr));
-
-    gap: 20px;
-}
-
-.skill-card {
-
-    padding: 25px;
-
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #10152b,
-            #0b0f21
-        );
-
-    border: 1px solid #202640;
-
-    text-align: center;
-
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-
-    transform: translateY(-6px);
-
-    border-color: #8056ff;
-
-    box-shadow:
-        0 15px 40px rgba(95,65,255,0.15);
-}
-
-.skill-card h3 {
-
-    color: #9e6cff;
-
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    color: #b9bdcc;
-}
-
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-.projects-grid {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 25px;
-}
-
-.project-card {
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #10152b,
-            #0b0f21
-        );
-
-    border: 1px solid #232943;
-
-    transition: 0.3s;
-}
-
-.project-card:hover {
-
-    transform: translateY(-7px);
-
-    border-color: #855cff;
-
-    box-shadow:
-        0 20px 45px rgba(87,59,255,0.15);
-}
-
-.project-number {
-
-    color: #885aff;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    margin-bottom: 12px;
-}
-
-.project-card h3 {
-
-    font-size: 24px;
-
-    margin-bottom: 14px;
-}
-
-.project-card p {
-
-    color: #b8bdcd;
-
-    line-height: 1.65;
-
-    margin-bottom: 20px;
-}
-
-.project-tech {
-
-    color: #a875ff;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   TIMELINE
-========================================================= */
-
-.timeline {
-
-    max-width: 900px;
-
-    margin: auto;
-}
-
-.timeline-card {
-
-    padding: 28px;
-
-    margin-bottom: 22px;
-
-    border-left: 3px solid #8056ff;
-
-    background: #0c1124;
-
-    border-radius: 0 15px 15px 0;
-}
-
-.timeline-card h3 {
-
-    font-size: 22px;
-
-    margin-bottom: 8px;
-}
-
-.timeline-card .date {
-
-    color: #9e69ff;
-
-    margin-bottom: 12px;
-}
-
-.timeline-card p {
-
-    color: #b8bdcc;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   CERTIFICATIONS
-========================================================= */
-
-.cert-grid {
-
-    max-width: 1000px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 20px;
-}
-
-.cert-card {
-
-    padding: 25px;
-
-    text-align: center;
-
-    border-radius: 17px;
-
-    background: #0d1226;
-
-    border: 1px solid #232942;
-}
-
-.cert-card h3 {
-
-    color: #c7c9d8;
-
-    font-size: 18px;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact {
-
-    text-align: center;
-}
-
-.contact p {
-
-    color: #b9bdcb;
-
-    font-size: 18px;
-
-    margin-bottom: 30px;
-}
-
-.contact-email {
-
-    display: inline-block;
-
-    padding: 17px 30px;
-
-    border-radius: 40px;
-
-    text-decoration: none;
+    left:30px;
+    top:10px;
 
     background:
         linear-gradient(
             135deg,
-            #7d4cff,
-            #5e5cff
+            #3a204a,
+            #181020 70%
         );
 
-    font-weight: 700;
+    border-radius:50% 50% 45% 45%;
+
+    box-shadow:
+        0 0 35px rgba(125,72,255,.35);
 }
 
+.hair::before{
+    content:"";
 
-/* =========================================================
+    position:absolute;
+
+    width:80px;
+    height:240px;
+
+    left:-8px;
+    top:80px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #291532,
+            #63315d,
+            #171021
+        );
+
+    border-radius:50%;
+
+    transform:rotate(16deg);
+}
+
+.hair::after{
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+    height:245px;
+
+    right:-8px;
+    top:75px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #291532,
+            #63315d,
+            #171021
+        );
+
+    border-radius:50%;
+
+    transform:rotate(-17deg);
+}
+
+.hair-highlight{
+    position:absolute;
+
+    width:75px;
+    height:180px;
+
+    left:40px;
+    top:30px;
+
+    border-radius:50%;
+
+    background:rgba(130,75,190,.25);
+
+    transform:rotate(-20deg);
+}
+
+/* =========================
+   FACE
+========================= */
+
+.face{
+    position:absolute;
+
+    width:175px;
+    height:200px;
+
+    left:72px;
+    top:75px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd2ba,
+            #f1ac91
+        );
+
+    border-radius:46% 46% 48% 48%;
+
+    z-index:5;
+}
+
+.face::before{
+    content:"";
+
+    position:absolute;
+
+    width:175px;
+    height:65px;
+
+    top:-8px;
+    left:0;
+
+    background:#1d1229;
+
+    border-radius:50% 50% 35% 35%;
+}
+
+/* =========================
+   EYES
+========================= */
+
+.eye{
+    position:absolute;
+
+    top:92px;
+
+    width:34px;
+    height:24px;
+
+    background:white;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    z-index:20;
+}
+
+.eye-left{
+    left:36px;
+}
+
+.eye-right{
+    right:36px;
+}
+
+/* iris */
+
+.eye::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:19px;
+    height:19px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #05030a 0 30%,
+            #7448d2 32% 68%,
+            #241438 70%
+        );
+}
+
+/* pupil */
+
+.pupil{
+
+    position:absolute;
+
+    width:9px;
+    height:9px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:#020107;
+
+    z-index:30;
+
+    transition:transform .06s linear;
+}
+
+/* eye shine */
+
+.eye::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:5px;
+    height:5px;
+
+    background:white;
+
+    border-radius:50%;
+
+    left:62%;
+    top:25%;
+
+    z-index:40;
+}
+
+/* =========================
+   EYEBROWS
+========================= */
+
+.eyebrow{
+    position:absolute;
+
+    top:78px;
+
+    width:37px;
+    height:5px;
+
+    background:#48283e;
+
+    border-radius:10px;
+}
+
+.eyebrow-left{
+    left:32px;
+    transform:rotate(-6deg);
+}
+
+.eyebrow-right{
+    right:32px;
+    transform:rotate(6deg);
+}
+
+/* =========================
+   NOSE
+========================= */
+
+.nose{
+
+    position:absolute;
+
+    width:9px;
+    height:18px;
+
+    left:82px;
+    top:120px;
+
+    border-right:2px solid rgba(145,75,75,.45);
+
+    border-radius:50%;
+}
+
+/* =========================
+   SMILE
+========================= */
+
+.smile{
+
+    position:absolute;
+
+    width:35px;
+    height:16px;
+
+    left:70px;
+    top:150px;
+
+    border-bottom:3px solid #a84e62;
+
+    border-radius:0 0 50% 50%;
+}
+
+/* =========================
+   EARRINGS
+========================= */
+
+.earring{
+
+    position:absolute;
+
+    width:11px;
+    height:18px;
+
+    border:2px solid #d8b8ff;
+
+    border-radius:50%;
+
+    top:120px;
+}
+
+.left-earring{
+    left:-8px;
+}
+
+.right-earring{
+    right:-8px;
+}
+
+/* =========================
+   NECK
+========================= */
+
+.neck{
+
+    position:absolute;
+
+    width:55px;
+    height:65px;
+
+    left:132px;
+    top:255px;
+
+    background:#efa98d;
+
+    z-index:2;
+}
+
+/* =========================
+   HOODIE
+========================= */
+
+.hoodie{
+
+    position:absolute;
+
+    width:285px;
+    height:180px;
+
+    left:18px;
+    top:275px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #281d42,
+            #100c1b
+        );
+
+    border-radius:90px 90px 25px 25px;
+
+    z-index:3;
+
+    box-shadow:
+        0 0 40px rgba(100,65,200,.2);
+}
+
+.hoodie-glow{
+
+    position:absolute;
+
+    width:105px;
+    height:95px;
+
+    left:90px;
+    top:5px;
+
+    border:2px solid rgba(143,94,255,.2);
+
+    border-radius:50%;
+}
+
+.hoodie-string{
+
+    position:absolute;
+
+    width:3px;
+    height:60px;
+
+    top:40px;
+
+    background:#8b68c9;
+}
+
+.left-string{
+    left:125px;
+}
+
+.right-string{
+    right:125px;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+.laptop{
+
+    position:absolute;
+
+    width:450px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:35px;
+
+    z-index:25;
+}
+
+.laptop-screen{
+
+    width:395px;
+    height:225px;
+
+    margin:auto;
+
+    padding:32px;
+
+    background:#090c18;
+
+    border:7px solid #555f84;
+
+    border-radius:16px 16px 8px 8px;
+
+    box-shadow:
+        0 0 35px rgba(90,70,220,.4);
+}
+
+.code-line{
+
+    font-family:monospace;
+
+    font-size:17px;
+
+    margin:8px 0;
+
+    color:#c0b0ff;
+}
+
+.code-line.purple{
+    color:#9d65ff;
+}
+
+.laptop-base{
+
+    width:460px;
+    height:20px;
+
+    margin-left:-5px;
+
+    background:#606a91;
+
+    border-radius:0 0 20px 20px;
+}
+
+/* =========================
+   BOOKS
+========================= */
+
+.books{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:40px;
+
+    z-index:30;
+}
+
+.book{
+
+    width:170px;
+    height:31px;
+
+    margin-top:4px;
+
+    border-radius:4px;
+
+    padding:8px 12px;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    color:white;
+}
+
+.book1{
+    background:#1766bc;
+}
+
+.book2{
+    background:#5c2db5;
+}
+
+.book3{
+    background:#d56723;
+}
+
+/* =========================
+   PLANT
+========================= */
+
+.plant{
+
+    position:absolute;
+
+    left:15px;
+
+    bottom:115px;
+
+    width:90px;
+    height:160px;
+
+    z-index:35;
+}
+
+.plant-pot{
+
+    position:absolute;
+
+    bottom:0;
+    left:15px;
+
+    width:60px;
+    height:48px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e6e3ef,
+            #a39eb8
+        );
+
+    border-radius:5px 5px 16px 16px;
+}
+
+.plant::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:5px;
+    height:100px;
+
+    left:44px;
+    bottom:38px;
+
+    background:#4a963d;
+}
+
+.plant-leaf{
+
+    position:absolute;
+
+    width:32px;
+    height:55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #72c95b,
+            #183d2a
+        );
+
+    border-radius:100% 0 100% 0;
+}
+
+.leaf1{
+    left:18px;
+    bottom:40px;
+    transform:rotate(-35deg);
+}
+
+.leaf2{
+    left:42px;
+    bottom:58px;
+    transform:rotate(30deg);
+}
+
+.leaf3{
+    left:3px;
+    bottom:75px;
+    transform:rotate(-60deg);
+}
+
+.leaf4{
+    left:52px;
+    bottom:88px;
+    transform:rotate(55deg);
+}
+
+/* =========================
+   COFFEE
+========================= */
+
+.coffee{
+
+    position:absolute;
+
+    right:-5px;
+
+    bottom:42px;
+
+    width:88px;
+    height:95px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #382648,
+            #171321
+        );
+
+    border:2px solid #a967ff;
+
+    border-radius:8px 8px 20px 20px;
+
+    z-index:35;
+
+    text-align:center;
+
+    padding-top:20px;
+
+    color:#ddbaff;
+
+    font-size:10px;
+    line-height:1.4;
+}
+
+.coffee-handle{
+
+    position:absolute;
+
+    right:-25px;
+    top:20px;
+
+    width:30px;
+    height:43px;
+
+    border:6px solid #a967ff;
+
+    border-left:none;
+
+    border-radius:0 20px 20px 0;
+}
+
+/* =========================
+   FLOATING BADGES
+========================= */
+
+.floating-badge{
+
+    position:absolute;
+
+    padding:15px 23px;
+
+    border-radius:16px;
+
+    background:rgba(15,20,38,.85);
+
+    border:1px solid rgba(130,105,220,.3);
+
+    backdrop-filter:blur(10px);
+
+    font-weight:bold;
+
+    z-index:50;
+
+    animation:badgeFloat 4s ease-in-out infinite;
+}
+
+.python-badge{
+    right:50px;
+    top:45px;
+    color:#ffd43b;
+}
+
+.js-badge{
+    right:10px;
+    top:170px;
+    color:#ffe600;
+    animation-delay:1s;
+}
+
+.mysql-badge{
+    right:35px;
+    bottom:140px;
+    color:#38bdf8;
+    animation-delay:2s;
+}
+
+.code-badge{
+    left:15px;
+    top:250px;
+    color:#b388ff;
+    animation-delay:.5s;
+}
+
+@keyframes badgeFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+
+    padding:100px 7%;
+
+    background:#080a18;
+}
+
+.section.alt{
+    background:#0b0d1d;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.section-title h2{
+
+    font-size:44px;
+
+    margin-bottom:12px;
+}
+
+.section-title span{
+    color:#9b6cff;
+}
+
+.section-title p{
+    color:#9da4bc;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+
+    padding:30px;
+
+    border:1px solid #20253c;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,22,42,.9),
+            rgba(11,13,29,.9)
+        );
+}
+
+.card h3{
+
+    color:#b487ff;
+
+    margin-bottom:15px;
+
+    font-size:23px;
+}
+
+.card p{
+
+    color:#b8bfd3;
+
+    line-height:1.75;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid{
+
+    max-width:1050px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+}
+
+.skill{
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:16px;
+
+    background:#101329;
+
+    border:1px solid #252b46;
+
+    color:#d9dcef;
+
+    transition:.25s;
+}
+
+.skill:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#815cff;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.project{
+
+    padding:28px;
+
+    border-radius:20px;
+
+    background:#101329;
+
+    border:1px solid #252b46;
+
+    transition:.3s;
+}
+
+.project:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#815cff;
+}
+
+.project h3{
+
+    color:#c49aff;
+
+    font-size:22px;
+
+    margin-bottom:12px;
+}
+
+.project .tech{
+
+    color:#8f73ff;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+}
+
+.project p{
+
+    color:#b8bfd3;
+
+    line-height:1.7;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.timeline-item{
+
+    padding:25px 30px;
+
+    margin-bottom:20px;
+
+    border-left:3px solid #8058ff;
+
+    background:#101329;
+
+    border-radius:0 16px 16px 0;
+}
+
+.timeline-item h3{
+
+    color:#c49aff;
+
+    margin-bottom:8px;
+}
+
+.timeline-item p{
+
+    color:#b8bfd3;
+
+    line-height:1.6;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.edu-grid,
+.cert-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+
+    max-width:800px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:#101329;
+
+    border:1px solid #282d48;
+}
+
+.contact-box h3{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+}
+
+.contact-box p{
+
+    color:#b8bfd3;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+.contact-email{
+
+    display:inline-block;
+
+    padding:15px 28px;
+
+    border-radius:30px;
+
+    background:#7b4dff;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
-footer {
+footer{
 
-    padding: 30px;
+    text-align:center;
 
-    text-align: center;
+    padding:30px;
 
-    background: #040611;
+    color:#737a94;
 
-    color: #777c91;
-
-    border-top: 1px solid #151a2e;
+    background:#060714;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 
-/* =========================================================
-   MOBILE
-========================================================= */
+@media(max-width:1100px){
 
-@media (max-width: 1000px) {
-
-    .nav-links {
-        display: none;
+    .nav-links{
+        gap:15px;
     }
 
-    .hero {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        padding-top: 120px;
+    .nav-links a{
+        font-size:12px;
     }
 
-    .hero-content {
-
-        width: 100%;
+    .hero-content{
+        width:48%;
     }
 
-    .hero-description {
-
-        margin-left: auto;
-        margin-right: auto;
+    .character-area{
+        width:52%;
+        transform:scale(.85);
     }
 
-    .hero-buttons {
-
-        justify-content: center;
-    }
-
-    .social-links {
-
-        justify-content: center;
-    }
-
-    .hero-character {
-
-        width: 100%;
-
-        height: 570px;
-
-        margin-top: 20px;
-    }
-
-    .girl-stage {
-
-        width: min(820px, 120%);
-
-        right: 50%;
-
-        transform: translateX(50%);
-
-        bottom: 0;
+    .skills-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
+@media(max-width:850px){
 
-@media (max-width: 600px) {
-
-    .hero h1 {
-
-        font-size: 65px;
+    .navbar{
+        height:auto;
+        padding:15px 5%;
     }
 
-    .hero h2 {
-
-        font-size: 30px;
+    .nav-links{
+        display:none;
     }
 
-    .hero-details {
+    .hero{
 
-        font-size: 17px;
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:120px 5% 20px;
     }
 
-    .hero-description {
-
-        font-size: 16px;
+    .hero-content{
+        width:100%;
     }
 
-    .hero-buttons {
-
-        flex-direction: column;
-
-        align-items: center;
+    .intro{
+        margin:auto;
     }
 
-    .social-links {
-
-        flex-wrap: wrap;
+    .hero-buttons,
+    .social-links{
+        justify-content:center;
     }
 
-    .hero-character {
+    .character-area{
 
-        height: 430px;
+        width:100%;
+
+        height:600px;
+
+        transform:scale(.75);
+
+        margin-top:0;
     }
 
-    .girl-stage {
-
-        width: 700px;
-
-        max-width: 150vw;
+    .about-grid,
+    .edu-grid,
+    .cert-grid{
+        grid-template-columns:1fr;
     }
 
-    .section-title {
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+}
 
-        font-size: 35px;
+@media(max-width:600px){
+
+    .logo{
+        font-size:29px;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .hero h2{
+        font-size:30px;
+    }
+
+    .education{
+        font-size:17px;
+    }
+
+    .intro{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .character-area{
+        transform:scale(.58);
+        height:520px;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:75px 5%;
+    }
+
+    .section-title h2{
+        font-size:35px;
     }
 }
 
@@ -967,15 +1435,15 @@ footer {
 <body>
 
 
-<!-- =========================================================
+<!-- =========================
      NAVBAR
-========================================================= -->
+========================= -->
 
 <nav class="navbar">
 
-    <a href="#home" class="logo">
+    <div class="logo">
         Isha<span>.</span>
-    </a>
+    </div>
 
     <div class="nav-links">
 
@@ -995,34 +1463,27 @@ footer {
 
         <a href="#contact">Contact</a>
 
-        <a
-            href="mailto:srish348@gmail.com"
-            class="hire-btn">
-
-            Hire Me
-
-        </a>
-
     </div>
+
+    <a class="hire" href="#contact">
+        Hire Me
+    </a>
 
 </nav>
 
 
-
-<!-- =========================================================
+<!-- =========================
      HERO
-========================================================= -->
+========================= -->
 
 <section class="hero" id="home">
 
 
-    <!-- LEFT SIDE -->
-
     <div class="hero-content">
 
-        <div class="hello">
+        <p class="hello">
             Hi, I'm
-        </div>
+        </p>
 
         <h1>
             Isha <span>S.</span>
@@ -1032,11 +1493,11 @@ footer {
             Software Developer
         </h2>
 
-        <div class="hero-details">
+        <p class="education">
             B.Tech CSE • 2026 • CGPA: 8.7/10
-        </div>
+        </p>
 
-        <p class="hero-description">
+        <p class="intro">
 
             I'm a Computer Science graduate with hands-on
             experience in Python, SQL, Flask, web development
@@ -1049,20 +1510,12 @@ footer {
 
         <div class="hero-buttons">
 
-            <a
-                href="#projects"
-                class="primary-btn">
-
+            <a href="#projects" class="primary-btn">
                 → View My Projects
-
             </a>
 
-            <a
-                href="#contact"
-                class="secondary-btn">
-
+            <a href="#contact" class="secondary-btn">
                 Contact Me
-
             </a>
 
         </div>
@@ -1070,27 +1523,18 @@ footer {
 
         <div class="social-links">
 
-            <a
-                href="https://github.com/isha200403"
-                target="_blank">
-
+            <a href="https://github.com/isha200403"
+               target="_blank">
                 GitHub
-
             </a>
 
-            <a
-                href="https://www.linkedin.com/in/isha-s-10061137b/"
-                target="_blank">
-
+            <a href="https://www.linkedin.com/in/isha-s-10061137b/"
+               target="_blank">
                 LinkedIn
-
             </a>
 
-            <a
-                href="mailto:srish348@gmail.com">
-
+            <a href="mailto:srish348@gmail.com">
                 Email
-
             </a>
 
         </div>
@@ -1099,71 +1543,197 @@ footer {
 
 
 
-    <!-- =====================================================
-         RIGHT SIDE GIRL
-    ====================================================== -->
+    <!-- =========================
+         CHARACTER
+    ========================= -->
 
-    <div class="hero-character">
+    <div class="character-area">
 
         <div class="character-glow"></div>
 
 
-        <!--
-            The entire girl image + eyes are inside
-            this stage.
-        -->
+        <!-- FLOATING SKILLS -->
 
-        <div class="girl-stage" id="girlStage">
-
-
-            <!-- ACTUAL IMAGE -->
-
-            <img
-                src="portfolio-girl.png"
-                alt="Isha coding illustration"
-                class="girl-image"
-                id="girlImage"
-            >
-
-
-            <!-- LEFT EYE -->
-
-            <div class="eye eye-left">
-
-                <div class="pupil"></div>
-
-            </div>
-
-
-            <!-- RIGHT EYE -->
-
-            <div class="eye eye-right">
-
-                <div class="pupil"></div>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- FLOATING TECHNOLOGY BADGES -->
-
-        <div class="tech-badge python">
+        <div class="floating-badge python-badge">
             🐍 Python
         </div>
 
-        <div class="tech-badge javascript">
+        <div class="floating-badge js-badge">
             JS
         </div>
 
-        <div class="tech-badge mysql">
+        <div class="floating-badge mysql-badge">
             MySQL
         </div>
 
-        <div class="tech-badge code">
+        <div class="floating-badge code-badge">
             &lt;/&gt;
         </div>
+
+
+
+        <!-- BOOKS -->
+
+        <div class="books">
+
+            <div class="book book1">
+                PYTHON
+            </div>
+
+            <div class="book book2">
+                DATA SCIENCE
+            </div>
+
+            <div class="book book3">
+                WEB DEVELOPMENT
+            </div>
+
+        </div>
+
+
+
+        <!-- PLANT -->
+
+        <div class="plant">
+
+            <div class="plant-leaf leaf1"></div>
+
+            <div class="plant-leaf leaf2"></div>
+
+            <div class="plant-leaf leaf3"></div>
+
+            <div class="plant-leaf leaf4"></div>
+
+            <div class="plant-pot"></div>
+
+        </div>
+
+
+
+        <!-- =========================
+             GIRL
+        ========================= -->
+
+        <div class="girl" id="girl">
+
+
+            <div class="hair">
+
+                <div class="hair-highlight"></div>
+
+            </div>
+
+
+
+            <div class="face">
+
+
+                <!-- LEFT EYE -->
+
+                <div class="eye eye-left">
+
+                    <div class="pupil"></div>
+
+                </div>
+
+
+                <!-- RIGHT EYE -->
+
+                <div class="eye eye-right">
+
+                    <div class="pupil"></div>
+
+                </div>
+
+
+                <div class="eyebrow eyebrow-left"></div>
+
+                <div class="eyebrow eyebrow-right"></div>
+
+
+                <div class="nose"></div>
+
+                <div class="smile"></div>
+
+
+                <div class="earring left-earring"></div>
+
+                <div class="earring right-earring"></div>
+
+
+            </div>
+
+
+
+            <div class="neck"></div>
+
+
+
+            <div class="hoodie">
+
+                <div class="hoodie-string left-string"></div>
+
+                <div class="hoodie-string right-string"></div>
+
+                <div class="hoodie-glow"></div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             LAPTOP
+        ========================= -->
+
+        <div class="laptop">
+
+            <div class="laptop-screen">
+
+                <div class="code-line purple">
+                    &lt;code&gt;
+                </div>
+
+                <div class="code-line">
+                    build();
+                </div>
+
+                <div class="code-line">
+                    learn();
+                </div>
+
+                <div class="code-line">
+                    create();
+                </div>
+
+                <div class="code-line purple">
+                    &lt;/code&gt;
+                </div>
+
+            </div>
+
+
+            <div class="laptop-base"></div>
+
+        </div>
+
+
+
+        <!-- COFFEE -->
+
+        <div class="coffee">
+
+            Better<br>
+            Code<br>
+            Brighter<br>
+            Future
+
+            <div class="coffee-handle"></div>
+
+        </div>
+
 
     </div>
 
@@ -1171,96 +1741,64 @@ footer {
 
 
 
-<!-- =========================================================
+<!-- =========================
      ABOUT
-========================================================= -->
+========================= -->
 
 <section class="section" id="about">
 
-    <h2 class="section-title">
-        About <span>Me</span>
-    </h2>
+    <div class="section-title">
 
-    <div class="about-container">
+        <h2>
+            About <span>Me</span>
+        </h2>
 
         <p>
-
-            I am a Bachelor of Technology graduate in Computer
-            Science and Engineering with a CGPA of 8.7/10.
-            I am interested in software development, artificial
-            intelligence, machine learning and building practical
-            technology solutions.
-
+            A little about my background and interests
         </p>
 
     </div>
 
-</section>
+
+    <div class="about-grid">
 
 
+        <div class="card">
 
-<!-- =========================================================
-     SKILLS
-========================================================= -->
+            <h3>
+                Who I Am
+            </h3>
 
-<section class="section" id="skills">
+            <p>
 
-    <h2 class="section-title">
-        My <span>Skills</span>
-    </h2>
+                I am Isha S, a Computer Science and Engineering
+                graduate with a strong interest in software
+                development, Python, AI/ML and web technologies.
+                I enjoy learning new technologies and converting
+                ideas into practical applications.
 
+            </p>
 
-    <div class="skills-grid">
-
-        <div class="skill-card">
-            <h3>Python</h3>
-            <p>Programming & Development</p>
         </div>
 
-        <div class="skill-card">
-            <h3>SQL</h3>
-            <p>Database & Querying</p>
+
+
+        <div class="card">
+
+            <h3>
+                What I Build
+            </h3>
+
+            <p>
+
+                I have worked on projects involving touchless
+                interfaces, machine learning, adaptive testing
+                and deep learning for medical image classification.
+
+            </p>
+
         </div>
 
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-            <p>Web Development</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>HTML & CSS</h3>
-            <p>Frontend Development</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Flask</h3>
-            <p>Python Web Framework</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>React JS</h3>
-            <p>Frontend Development</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Machine Learning</h3>
-            <p>Scikit-learn & ML Models</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Data Analysis</h3>
-            <p>Pandas & NumPy</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>MySQL</h3>
-            <p>Database Management</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>GitHub</h3>
-            <p>Version Control</p>
-        </div>
 
     </div>
 
@@ -1268,95 +1806,157 @@ footer {
 
 
 
-<!-- =========================================================
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section class="section alt" id="skills">
+
+    <div class="section-title">
+
+        <h2>
+            Technical <span>Skills</span>
+        </h2>
+
+        <p>
+            Technologies and tools I work with
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill">Python</div>
+
+        <div class="skill">SQL</div>
+
+        <div class="skill">JavaScript</div>
+
+        <div class="skill">HTML & CSS</div>
+
+        <div class="skill">Flask</div>
+
+        <div class="skill">React JS</div>
+
+        <div class="skill">MySQL</div>
+
+        <div class="skill">Scikit-learn</div>
+
+        <div class="skill">Pandas</div>
+
+        <div class="skill">NumPy</div>
+
+        <div class="skill">Decision Tree</div>
+
+        <div class="skill">Random Forest</div>
+
+        <div class="skill">Matplotlib</div>
+
+        <div class="skill">Seaborn</div>
+
+        <div class="skill">GitHub</div>
+
+        <div class="skill">Jupyter Notebook</div>
+
+        <div class="skill">Linux</div>
+
+        <div class="skill">VS Code</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
      PROJECTS
-========================================================= -->
+========================= -->
 
 <section class="section" id="projects">
 
-    <h2 class="section-title">
-        Featured <span>Projects</span>
-    </h2>
+    <div class="section-title">
+
+        <h2>
+            My <span>Projects</span>
+        </h2>
+
+        <p>
+            Practical projects built with modern technologies
+        </p>
+
+    </div>
 
 
     <div class="projects-grid">
 
 
-        <div class="project-card">
-
-            <div class="project-number">
-                PROJECT 01
-            </div>
+        <div class="project">
 
             <h3>
                 GestureCart
             </h3>
 
-            <p>
-
-                AI-based touchless shopping system that uses
-                hand gestures for product navigation,
-                selection and cart interaction.
-
-            </p>
-
-            <div class="project-tech">
+            <div class="tech">
                 Python • Flask • MySQL • MediaPipe
             </div>
+
+            <p>
+
+                AI-based touchless shopping system using
+                hand gestures for product navigation,
+                selection and cart operations, with login,
+                checkout and payment functionality.
+
+            </p>
 
         </div>
 
 
 
-        <div class="project-card">
-
-            <div class="project-number">
-                PROJECT 02
-            </div>
+        <div class="project">
 
             <h3>
                 Adaptive Aptitude Testing System
             </h3>
 
-            <p>
-
-                Machine learning based aptitude testing system
-                that adapts question difficulty according to
-                user performance.
-
-            </p>
-
-            <div class="project-tech">
+            <div class="tech">
                 Python • Pandas • NumPy • Scikit-learn
             </div>
+
+            <p>
+
+                Machine learning based aptitude platform
+                that adapts question difficulty according
+                to a user's performance using Decision Tree
+                and Random Forest techniques.
+
+            </p>
 
         </div>
 
 
 
-        <div class="project-card">
-
-            <div class="project-number">
-                PROJECT 03
-            </div>
+        <div class="project">
 
             <h3>
                 Breast Cancer Detection
             </h3>
 
+            <div class="tech">
+                Python • Deep Learning • CNN
+            </div>
+
             <p>
 
-                Deep learning based project using CNN techniques
-                to classify radiology images into benign and
-                malignant categories.
+                Deep learning project for classifying
+                radiology images as benign or malignant
+                using a CNN model.
 
             </p>
 
-            <div class="project-tech">
-                Python • CNN • Deep Learning
-            </div>
-
         </div>
+
 
     </div>
 
@@ -1364,59 +1964,54 @@ footer {
 
 
 
-<!-- =========================================================
+<!-- =========================
      EXPERIENCE
-========================================================= -->
+========================= -->
 
-<section class="section" id="experience">
+<section class="section alt" id="experience">
 
-    <h2 class="section-title">
-        My <span>Experience</span>
-    </h2>
+    <div class="section-title">
+
+        <h2>
+            Experience & <span>Training</span>
+        </h2>
+
+        <p>
+            My professional learning journey
+        </p>
+
+    </div>
 
 
     <div class="timeline">
 
 
-        <div class="timeline-card">
+        <div class="timeline-item">
 
             <h3>
                 Trainee Machine Learning Engineer
             </h3>
 
-            <div class="date">
-                Inventeron Technologies
-            </div>
-
             <p>
-
-                Gained practical exposure to machine learning,
-                Python programming, data analysis and development
-                workflows.
-
+                Inventeron Technologies
             </p>
 
         </div>
 
 
-        <div class="timeline-card">
+
+        <div class="timeline-item">
 
             <h3>
                 Python Full Stack Development Training
             </h3>
 
-            <div class="date">
-                Besant Technologies
-            </div>
-
             <p>
-
-                Worked with Python, web technologies, databases
-                and full-stack development concepts.
-
+                Besant Technologies
             </p>
 
         </div>
+
 
     </div>
 
@@ -1424,70 +2019,80 @@ footer {
 
 
 
-<!-- =========================================================
+<!-- =========================
      EDUCATION
-========================================================= -->
+========================= -->
 
 <section class="section" id="education">
 
-    <h2 class="section-title">
-        <span>Education</span>
-    </h2>
+    <div class="section-title">
+
+        <h2>
+            My <span>Education</span>
+        </h2>
+
+        <p>
+            Academic background
+        </p>
+
+    </div>
 
 
-    <div class="timeline">
+    <div class="edu-grid">
 
 
-        <div class="timeline-card">
+        <div class="card">
 
             <h3>
-                Bachelor of Technology -
-                Computer Science & Engineering
+                B.Tech / Bachelor of Computer Science and Engineering
             </h3>
 
-            <div class="date">
-                C Byregowda Institute of Technology • 2026
-            </div>
+            <p>
+                C Byregowda Institute of Technology
+            </p>
 
             <p>
-                CGPA: 8.7 / 10
+                2026 • CGPA: 8.7/10
             </p>
 
         </div>
 
 
-        <div class="timeline-card">
+
+        <div class="card">
 
             <h3>
                 Pre-University
             </h3>
 
-            <div class="date">
-                Sahyadri PU College • 2022
-            </div>
+            <p>
+                Sahyadri PU College
+            </p>
 
             <p>
-                72%
+                2022 • 72%
             </p>
 
         </div>
 
 
-        <div class="timeline-card">
+
+        <div class="card">
 
             <h3>
                 Class X
             </h3>
 
-            <div class="date">
-                Shankara Vidyalaya School • 2020
-            </div>
+            <p>
+                Shankara Vidyalaya School
+            </p>
 
             <p>
-                92%
+                2020 • 92%
             </p>
 
         </div>
+
 
     </div>
 
@@ -1495,45 +2100,68 @@ footer {
 
 
 
-<!-- =========================================================
+<!-- =========================
      CERTIFICATIONS
-========================================================= -->
+========================= -->
 
-<section class="section" id="certifications">
+<section class="section alt" id="certifications">
 
-    <h2 class="section-title">
-        <span>Certifications</span>
-    </h2>
+    <div class="section-title">
+
+        <h2>
+            <span>Certifications</span>
+        </h2>
+
+        <p>
+            Courses and certifications
+        </p>
+
+    </div>
 
 
     <div class="cert-grid">
 
 
-        <div class="cert-card">
+        <div class="card">
 
             <h3>
                 SQL Training
             </h3>
 
+            <p>
+                SQL concepts and database fundamentals.
+            </p>
+
         </div>
 
 
-        <div class="cert-card">
+
+        <div class="card">
 
             <h3>
                 Data Analysis and Machine Learning in Python
             </h3>
 
+            <p>
+                Data analysis and machine learning using Python.
+            </p>
+
         </div>
 
 
-        <div class="cert-card">
+
+        <div class="card">
 
             <h3>
                 Introduction to Generative AI
             </h3>
 
+            <p>
+                Fundamentals of generative artificial intelligence.
+            </p>
+
         </div>
+
 
     </div>
 
@@ -1541,36 +2169,52 @@ footer {
 
 
 
-<!-- =========================================================
+<!-- =========================
      CONTACT
-========================================================= -->
+========================= -->
 
-<section class="section contact" id="contact">
+<section class="section" id="contact">
 
-    <h2 class="section-title">
-        Let's <span>Connect</span>
-    </h2>
+    <div class="section-title">
 
-    <p>
-        I'm open to software development and technology
-        opportunities.
-    </p>
+        <h2>
+            Let's <span>Connect</span>
+        </h2>
 
-    <a
-        href="mailto:srish348@gmail.com"
-        class="contact-email">
+        <p>
+            Have an opportunity or project in mind?
+        </p>
 
-        ✉ srish348@gmail.com
+    </div>
 
-    </a>
+
+    <div class="contact-box">
+
+        <h3>
+            I'd love to hear from you.
+        </h3>
+
+        <p>
+
+            I am open to software development,
+            Python, AI/ML and web development
+            opportunities.
+
+        </p>
+
+
+        <a
+            class="contact-email"
+            href="mailto:srish348@gmail.com"
+        >
+            Contact Me
+        </a>
+
+    </div>
 
 </section>
 
 
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
 <footer>
 
@@ -1580,141 +2224,138 @@ footer {
 
 
 
-<!-- =========================================================
-     EYE TRACKING JAVASCRIPT
-========================================================= -->
+<!-- =========================
+     EYE FOLLOWING JAVASCRIPT
+========================= -->
 
 <script>
-
-const girlStage =
-    document.getElementById("girlStage");
-
-const girlImage =
-    document.getElementById("girlImage");
 
 const pupils =
     document.querySelectorAll(".pupil");
 
+const girl =
+    document.getElementById("girl");
+
 
 document.addEventListener(
     "mousemove",
-    function(event) {
+    function(event){
+
+        pupils.forEach(
+            function(pupil){
+
+                const eye =
+                    pupil.parentElement;
+
+                const rect =
+                    eye.getBoundingClientRect();
 
 
-        /* =================================================
-           EYE TRACKING
-        ================================================= */
+                const eyeX =
+                    rect.left +
+                    rect.width / 2;
 
-        pupils.forEach(function(pupil) {
-
-            const eye =
-                pupil.parentElement;
-
-            const eyeRect =
-                eye.getBoundingClientRect();
+                const eyeY =
+                    rect.top +
+                    rect.height / 2;
 
 
-            const eyeX =
-                eyeRect.left +
-                eyeRect.width / 2;
+                const dx =
+                    event.clientX - eyeX;
 
-            const eyeY =
-                eyeRect.top +
-                eyeRect.height / 2;
+                const dy =
+                    event.clientY - eyeY;
 
 
-            const mouseX =
-                event.clientX;
-
-            const mouseY =
-                event.clientY;
+                const angle =
+                    Math.atan2(dy,dx);
 
 
-            const angle =
-                Math.atan2(
-                    mouseY - eyeY,
-                    mouseX - eyeX
-                );
+                const distance =
+                    Math.min(
+                        7,
+                        Math.hypot(dx,dy) / 35
+                    );
 
 
-            /*
-               Maximum pupil movement.
-               Keeps the pupils inside the eyes.
-            */
+                const x =
+                    Math.cos(angle) *
+                    distance;
 
-            const distance =
-                Math.min(
-                    8,
-                    Math.hypot(
-                        mouseX - eyeX,
-                        mouseY - eyeY
-                    ) / 45
-                );
+                const y =
+                    Math.sin(angle) *
+                    distance;
 
 
-            const moveX =
-                Math.cos(angle) *
-                distance;
+                pupil.style.transform =
+                    `translate(
+                        calc(-50% + ${x}px),
+                        calc(-50% + ${y}px)
+                    )`;
 
-            const moveY =
-                Math.sin(angle) *
-                distance;
-
-
-            pupil.style.transform =
-                `translate(
-                    calc(-50% + ${moveX}px),
-                    calc(-50% + ${moveY}px)
-                )`;
-
-        });
+            }
+        );
 
 
+        /* SMALL BODY MOVEMENT */
 
-        /* =================================================
-           VERY SMALL GIRL MOVEMENT
-        ================================================= */
+        const centerX =
+            window.innerWidth / 2;
 
-        const mouseX =
-            event.clientX /
-            window.innerWidth;
-
-        const mouseY =
-            event.clientY /
-            window.innerHeight;
+        const centerY =
+            window.innerHeight / 2;
 
 
         const moveX =
-            (mouseX - 0.5) * 5;
+            Math.max(
+                -1,
+                Math.min(
+                    1,
+                    (event.clientX-centerX) /
+                    centerX
+                )
+            );
+
 
         const moveY =
-            (mouseY - 0.5) * 3;
+            Math.max(
+                -1,
+                Math.min(
+                    1,
+                    (event.clientY-centerY) /
+                    centerY
+                )
+            );
 
 
-        girlImage.style.transform =
-            `translate(${moveX}px, ${moveY}px)`;
+        girl.style.transform =
+            `translate(
+                ${moveX * 5}px,
+                ${moveY * 3}px
+            )`;
 
     }
 );
 
 
-/* =========================================================
-   RESET WHEN MOUSE LEAVES
-========================================================= */
+/* RESET EYES */
 
 document.addEventListener(
     "mouseleave",
-    function() {
+    function(){
 
-        pupils.forEach(function(pupil) {
+        pupils.forEach(
+            function(pupil){
 
-            pupil.style.transform =
-                "translate(-50%, -50%)";
+                pupil.style.transform =
+                    "translate(-50%,-50%)";
 
-        });
+            }
+        );
 
-        girlImage.style.transform =
-            "translate(0, 0)";
+
+        girl.style.transform =
+            "translate(0,0)";
 
     }
 );
