@@ -1,1100 +1,1631 @@
-<!-- ================= HERO SECTION ================= -->
-<section class="hero" id="home">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="hero-content">
+<title>Isha S. | Software Developer</title>
 
-    <p class="hello">Hi, I'm</p>
-
-    <h1>Isha <span>S.</span></h1>
-
-    <h2>Software Developer</h2>
-
-    <p class="education">
-      B.Tech CSE • 2026 • CGPA 8.7/10
-    </p>
-
-    <p class="intro">
-      I'm a Computer Science graduate with hands-on experience in
-      Python, SQL, Flask, web development and AI/ML. I enjoy building
-      practical applications, solving problems and exploring technologies
-      that turn ideas into useful solutions.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#projects" class="primary-btn">
-        → View My Projects
-      </a>
-
-      <a href="#contact" class="secondary-btn">
-        Contact Me
-      </a>
-    </div>
-
-    <div class="social-links">
-      <a href="https://github.com/isha200403" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/isha-s-10061137b/" target="_blank">LinkedIn</a>
-      <a href="mailto:srish348@gmail.com">Email</a>
-    </div>
-
-  </div>
-
-
-  <!-- ================= CHARACTER ================= -->
-  <div class="character-area" id="character">
-
-    <!-- glowing background -->
-    <div class="character-glow"></div>
-
-    <!-- floating skills -->
-    <div class="floating-badge python-badge">🐍 Python</div>
-    <div class="floating-badge js-badge">JS</div>
-    <div class="floating-badge mysql-badge">MySQL</div>
-    <div class="floating-badge code-badge">&lt;/&gt;</div>
-
-    <!-- books -->
-    <div class="books">
-      <div class="book book1">PYTHON</div>
-      <div class="book book2">DATA SCIENCE</div>
-      <div class="book book3">WEB DEVELOPMENT</div>
-    </div>
-
-    <!-- plant -->
-    <div class="plant">
-      <div class="plant-leaf leaf1"></div>
-      <div class="plant-leaf leaf2"></div>
-      <div class="plant-leaf leaf3"></div>
-      <div class="plant-leaf leaf4"></div>
-      <div class="plant-pot"></div>
-    </div>
-
-    <!-- girl -->
-    <div class="girl" id="girl">
-
-      <!-- hair -->
-      <div class="hair">
-        <div class="hair-highlight"></div>
-      </div>
-
-      <!-- face -->
-      <div class="face">
-
-        <!-- eyes -->
-        <div class="eye eye-left">
-          <div class="pupil"></div>
-        </div>
-
-        <div class="eye eye-right">
-          <div class="pupil"></div>
-        </div>
-
-        <!-- eyebrows -->
-        <div class="eyebrow eyebrow-left"></div>
-        <div class="eyebrow eyebrow-right"></div>
-
-        <!-- nose -->
-        <div class="nose"></div>
-
-        <!-- smile -->
-        <div class="smile"></div>
-
-        <!-- earrings -->
-        <div class="earring left-earring"></div>
-        <div class="earring right-earring"></div>
-
-      </div>
-
-      <!-- neck -->
-      <div class="neck"></div>
-
-      <!-- hoodie -->
-      <div class="hoodie">
-
-        <div class="hoodie-string left-string"></div>
-        <div class="hoodie-string right-string"></div>
-
-        <div class="hoodie-glow"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- laptop -->
-    <div class="laptop">
-
-      <div class="laptop-screen">
-
-        <div class="code-line purple">&lt;code&gt;</div>
-        <div class="code-line">build();</div>
-        <div class="code-line">learn();</div>
-        <div class="code-line">create();</div>
-        <div class="code-line purple">&lt;/code&gt;</div>
-
-      </div>
-
-      <div class="laptop-base"></div>
-
-    </div>
-
-
-    <!-- coffee -->
-    <div class="coffee">
-      <div class="coffee-text">
-        Better<br>
-        Code<br>
-        Brighter<br>
-        Future
-      </div>
-      <div class="coffee-handle"></div>
-    </div>
-
-  </div>
-
-</section>
-
+<meta name="description"
+content="Isha S. - Software Developer and Computer Science graduate">
 
 <style>
 
-/* ================= HERO ================= */
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #060817;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(5, 8, 23, 0.82);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #8c5cff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #c8cad5;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9c6cff;
+}
+
+.resume-btn {
+    padding: 11px 20px;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #7c4dff,
+        #5b5cff
+    );
+
+    color: white !important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
+    min-height: 100vh;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
 
-  padding: 110px 6% 70px;
+    padding: 110px 6% 70px;
 
-  background:
-    radial-gradient(
-      circle at 75% 50%,
-      rgba(88, 55, 180, 0.25),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(88, 55, 180, 0.12),
-      transparent 30%
-    ),
-    #070916;
+    position: relative;
+    overflow: hidden;
 
-  color: white;
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(93, 69, 255, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(122, 67, 255, 0.12),
+            transparent 30%
+        ),
+        #060817;
 }
 
 
-/* ================= LEFT CONTENT ================= */
+/* =====================================================
+   HERO LEFT
+===================================================== */
 
 .hero-content {
-  width: 50%;
-  max-width: 700px;
-  z-index: 5;
+    width: 48%;
+    max-width: 680px;
+    z-index: 20;
 }
 
-.hello {
-  font-size: 28px;
-  color: #9b6cff;
-  margin-bottom: 12px;
+.small-title {
+    color: #9c68ff;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .hero h1 {
-  font-size: clamp(70px, 8vw, 120px);
-  line-height: .95;
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: -5px;
+    font-size: clamp(65px, 8vw, 115px);
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    font-weight: 800;
 }
 
 .hero h1 span {
-  color: #8655ff;
+    color: #8755ff;
 }
 
 .hero h2 {
-  font-size: 40px;
-  margin: 30px 0 20px;
+    margin-top: 28px;
+
+    font-size: clamp(30px, 4vw, 43px);
 }
 
-.education {
-  color: #a875ff;
-  font-size: 23px;
-  margin-bottom: 30px;
+.hero-info {
+    margin-top: 18px;
+
+    color: #a977ff;
+
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.intro {
-  color: #b9bfd3;
-  font-size: 20px;
-  line-height: 1.7;
-  max-width: 650px;
+.hero-description {
+    margin-top: 25px;
+
+    max-width: 620px;
+
+    color: #bfc3d3;
+
+    font-size: 18px;
+    line-height: 1.75;
 }
 
 
-/* ================= BUTTONS ================= */
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
 
 .hero-buttons {
-  display: flex;
-  gap: 18px;
-  margin-top: 35px;
+    display: flex;
+    gap: 17px;
+
+    margin-top: 35px;
 }
 
-.primary-btn,
-.secondary-btn {
-  padding: 18px 30px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  transition: .3s;
+.hero-buttons a {
+    text-decoration: none;
+
+    padding: 16px 27px;
+
+    border-radius: 40px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, #7b4dff, #5f4df5);
-  color: white;
-  box-shadow: 0 10px 35px rgba(111, 75, 255, .35);
+    background:
+        linear-gradient(
+            135deg,
+            #814cff,
+            #5c5cff
+        );
+
+    box-shadow:
+        0 12px 35px rgba(103,70,255,0.32);
 }
 
 .primary-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 45px rgba(111, 75, 255, .55);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 17px 45px rgba(103,70,255,0.5);
 }
 
 .secondary-btn {
-  border: 1px solid #292d42;
-  color: white;
+    border: 1px solid #343952;
 }
 
 .secondary-btn:hover {
-  border-color: #8a5cff;
-  transform: translateY(-4px);
+    border-color: #9062ff;
+
+    transform: translateY(-4px);
 }
 
 
-/* ================= SOCIAL ================= */
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
 
 .social-links {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
+    display: flex;
+    gap: 28px;
+
+    margin-top: 38px;
 }
 
 .social-links a {
-  color: #c3c7d7;
-  text-decoration: none;
-  font-size: 17px;
-  transition: .3s;
+    text-decoration: none;
+
+    color: #bfc3d2;
+
+    font-size: 16px;
+
+    transition: 0.3s;
 }
 
 .social-links a:hover {
-  color: #9b6cff;
+    color: #a56cff;
 }
 
 
-/* ================= CHARACTER AREA ================= */
+/* =====================================================
+   HERO RIGHT / CHARACTER
+===================================================== */
 
-.character-area {
-  width: 50%;
-  height: 650px;
-  position: relative;
+.hero-character {
+    width: 52%;
+    height: 680px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-/* glow */
+/* glowing circle */
 
 .character-glow {
-  position: absolute;
+    position: absolute;
 
-  width: 480px;
-  height: 480px;
+    width: 620px;
+    height: 620px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  background: radial-gradient(
-    circle,
-    rgba(113, 71, 255, .45),
-    rgba(44, 130, 255, .12),
-    transparent 70%
-  );
+    background:
+        radial-gradient(
+            circle,
+            rgba(75, 90, 255, 0.35),
+            rgba(125, 65, 255, 0.18),
+            transparent 68%
+        );
 
-  filter: blur(20px);
+    filter: blur(20px);
 }
 
 
-/* ================= GIRL ================= */
+/* =====================================================
+   YOUR ACTUAL GIRL IMAGE
+===================================================== */
 
-.girl {
-  position: absolute;
+.girl-wrapper {
+    position: absolute;
 
-  width: 300px;
-  height: 390px;
+    width: 100%;
+    height: 100%;
 
-  top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  transition:
-    transform .18s ease-out;
+    z-index: 5;
+}
 
-  z-index: 4;
+.girl-image {
+    position: absolute;
+
+    width: min(850px, 125%);
+
+    max-width: none;
+
+    right: -70px;
+    bottom: -30px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 35px rgba(92,80,255,0.32)
+        );
+
+    transition:
+        transform 0.18s ease-out;
 }
 
 
-/* hair */
-
-.hair {
-  position: absolute;
-
-  width: 245px;
-  height: 270px;
-
-  left: 28px;
-  top: 5px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #251832,
-      #120d1d 70%
-    );
-
-  border-radius: 48% 48% 42% 42%;
-
-  box-shadow:
-    20px 20px 0 #160f25,
-    0 0 35px rgba(119, 67, 255, .18);
-}
-
-.hair-highlight {
-  position: absolute;
-
-  width: 80px;
-  height: 170px;
-
-  left: 35px;
-  top: 30px;
-
-  border-radius: 50%;
-
-  background: rgba(107, 65, 165, .22);
-
-  transform: rotate(-20deg);
-}
-
-
-/* face */
-
-.face {
-  position: absolute;
-
-  width: 165px;
-  height: 190px;
-
-  left: 68px;
-  top: 70px;
-
-  background: linear-gradient(
-    135deg,
-    #ffd0b7,
-    #f3ad91
-  );
-
-  border-radius: 45% 45% 48% 48%;
-
-  z-index: 3;
-
-  box-shadow:
-    inset -8px -10px 20px rgba(180, 75, 75, .12);
-}
-
-
-/* hair fringe */
-
-.face:before {
-  content: "";
-
-  position: absolute;
-
-  top: -5px;
-  left: 0;
-
-  width: 165px;
-  height: 55px;
-
-  background: #1c1228;
-
-  border-radius: 50% 50% 35% 35%;
-}
-
-
-/* eyes */
+/* =====================================================
+   EYE TRACKERS
+===================================================== */
 
 .eye {
-  position: absolute;
+    position: absolute;
 
-  top: 88px;
+    width: 32px;
+    height: 25px;
 
-  width: 30px;
-  height: 22px;
+    border-radius: 50%;
 
-  background: white;
+    z-index: 15;
 
-  border-radius: 50%;
-
-  overflow: hidden;
-
-  box-shadow:
-    0 0 4px rgba(0,0,0,.15);
+    pointer-events: none;
 }
 
+.pupil {
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #21142e;
+
+    box-shadow:
+        1px 1px 0 white;
+
+    transition:
+        transform 0.06s linear;
+}
+
+
+/*
+   Eye positions.
+
+   These are intentionally easy to adjust
+   if the eyes of your image are slightly
+   different after upload.
+*/
+
 .eye-left {
-  left: 35px;
+    left: 58%;
+    top: 34%;
 }
 
 .eye-right {
-  right: 35px;
+    left: 63.5%;
+    top: 34%;
 }
 
 
-/* pupils */
+/* =====================================================
+   FLOATING TECH BADGES
+===================================================== */
 
-.pupil {
-  position: absolute;
+.tech-badge {
+    position: absolute;
 
-  width: 11px;
-  height: 11px;
+    padding: 14px 21px;
 
-  left: 9px;
-  top: 5px;
+    border-radius: 15px;
 
-  border-radius: 50%;
+    background: rgba(12, 17, 34, 0.8);
 
-  background: #24152e;
+    border: 1px solid rgba(140,110,255,0.22);
 
-  transition:
-    transform .08s linear;
+    backdrop-filter: blur(10px);
 
-  box-shadow:
-    2px 1px 0 white inset;
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25);
+
+    animation:
+        floating 4s ease-in-out infinite;
+
+    z-index: 20;
+}
+
+.python {
+    right: 35px;
+    top: 75px;
+
+    color: #ffd43b;
+}
+
+.javascript {
+    right: 0;
+    top: 190px;
+
+    color: #ffe600;
+
+    animation-delay: 1s;
+}
+
+.mysql {
+    right: 35px;
+    bottom: 145px;
+
+    color: #40bfff;
+
+    animation-delay: 2s;
+}
+
+.code {
+    left: 15px;
+    top: 260px;
+
+    color: #b58aff;
+
+    animation-delay: 0.5s;
+}
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
 }
 
 
-/* eyebrows */
+/* =====================================================
+   COMMON SECTIONS
+===================================================== */
 
-.eyebrow {
-  position: absolute;
+.section {
+    padding: 100px 8%;
 
-  top: 76px;
-
-  width: 35px;
-  height: 5px;
-
-  background: #43283c;
-
-  border-radius: 10px;
+    background: #080b1c;
 }
 
-.eyebrow-left {
-  left: 32px;
-  transform: rotate(-5deg);
+.section:nth-child(even) {
+    background: #060817;
 }
 
-.eyebrow-right {
-  right: 32px;
-  transform: rotate(5deg);
+.section-title {
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-bottom: 55px;
 }
 
-
-/* nose */
-
-.nose {
-  position: absolute;
-
-  width: 8px;
-  height: 14px;
-
-  top: 112px;
-  left: 78px;
-
-  border-right: 2px solid rgba(150,70,70,.4);
-
-  border-radius: 50%;
+.section-title span {
+    color: #895bff;
 }
 
 
-/* smile */
+/* =====================================================
+   ABOUT
+===================================================== */
 
-.smile {
-  position: absolute;
+.about-container {
+    max-width: 950px;
 
-  width: 32px;
-  height: 15px;
+    margin: auto;
 
-  left: 66px;
-  top: 138px;
+    text-align: center;
+}
 
-  border-bottom: 3px solid #a64c62;
+.about-container p {
+    color: #bfc3d2;
 
-  border-radius: 0 0 50% 50%;
+    font-size: 18px;
+
+    line-height: 1.8;
 }
 
 
-/* earrings */
+/* =====================================================
+   SKILLS
+===================================================== */
 
-.earring {
-  position: absolute;
+.skills-grid {
+    max-width: 1100px;
 
-  width: 10px;
-  height: 16px;
+    margin: auto;
 
-  border: 2px solid #d8b7ff;
+    display: grid;
 
-  border-radius: 50%;
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
 }
 
-.left-earring {
-  left: -7px;
-  top: 115px;
-}
-
-.right-earring {
-  right: -7px;
-  top: 115px;
-}
-
-
-/* neck */
-
-.neck {
-  position: absolute;
-
-  width: 55px;
-  height: 60px;
-
-  left: 122px;
-  top: 245px;
-
-  background: #efaa8d;
-
-  z-index: 2;
-}
-
-
-/* ================= HOODIE ================= */
-
-.hoodie {
-  position: absolute;
-
-  width: 270px;
-  height: 160px;
-
-  left: 15px;
-  top: 255px;
-
-  background: linear-gradient(
-    135deg,
-    #251b3b,
-    #100d1c
-  );
-
-  border-radius: 80px 80px 25px 25px;
-
-  z-index: 3;
-
-  box-shadow:
-    0 0 35px rgba(101, 67, 190, .18);
-}
-
-.hoodie-glow {
-  position: absolute;
-
-  left: 85px;
-  top: 5px;
-
-  width: 100px;
-  height: 90px;
-
-  border: 2px solid rgba(143, 94, 255, .2);
-
-  border-radius: 50%;
-}
-
-
-/* hoodie strings */
-
-.hoodie-string {
-  position: absolute;
-
-  width: 3px;
-  height: 60px;
-
-  top: 35px;
-
-  background: #8c69c9;
-}
-
-.left-string {
-  left: 120px;
-}
-
-.right-string {
-  right: 120px;
-}
-
-
-/* ================= LAPTOP ================= */
-
-.laptop {
-  position: absolute;
-
-  width: 440px;
-
-  left: 50%;
-  transform: translateX(-50%);
-
-  bottom: 50px;
-
-  z-index: 8;
-}
-
-.laptop-screen {
-  width: 390px;
-  height: 225px;
-
-  margin: auto;
-
-  background: #0a0d19;
-
-  border: 7px solid #525d83;
-
-  border-radius: 16px 16px 8px 8px;
-
-  padding: 35px;
-
-  box-shadow:
-    0 0 35px rgba(90, 70, 220, .35);
-}
-
-.code-line {
-  color: #b8a1ff;
-
-  font-family: monospace;
-
-  font-size: 18px;
-
-  margin: 8px 0;
-}
-
-.code-line.purple {
-  color: #9b65ff;
-}
-
-.laptop-base {
-  width: 450px;
-  height: 18px;
-
-  background: #606b91;
-
-  border-radius: 0 0 20px 20px;
-
-  margin-left: -5px;
-}
-
-
-/* ================= FLOATING BADGES ================= */
-
-.floating-badge {
-  position: absolute;
-
-  padding: 17px 25px;
-
-  border-radius: 17px;
-
-  background: rgba(16, 21, 38, .75);
-
-  border: 1px solid rgba(130, 105, 220, .25);
-
-  backdrop-filter: blur(10px);
-
-  font-weight: 700;
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,.2);
-
-  animation: float 4s ease-in-out infinite;
-}
-
-.python-badge {
-  right: 50px;
-  top: 55px;
-
-  color: #ffd43b;
-}
-
-.js-badge {
-  right: 15px;
-  top: 170px;
-
-  color: #ffe600;
-
-  animation-delay: 1s;
-}
-
-.mysql-badge {
-  right: 40px;
-  bottom: 145px;
-
-  color: #38bdf8;
-
-  animation-delay: 2s;
-}
-
-.code-badge {
-  left: 20px;
-  top: 250px;
-
-  color: #b388ff;
-
-  animation-delay: .5s;
-}
-
-@keyframes float {
-  0%,100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-
-/* ================= BOOKS ================= */
-
-.books {
-  position: absolute;
-
-  bottom: 48px;
-  left: 20px;
-
-  z-index: 3;
-}
-
-.book {
-  width: 150px;
-  height: 28px;
-
-  margin-top: 3px;
-
-  border-radius: 4px;
-
-  padding: 5px 10px;
-
-  font-size: 10px;
-
-  font-weight: bold;
-
-  color: #ddd;
-}
-
-.book1 {
-  background: #282050;
-}
-
-.book2 {
-  background: #30265d;
-}
-
-.book3 {
-  background: #68403a;
-}
-
-
-/* ================= PLANT ================= */
-
-.plant {
-  position: absolute;
-
-  bottom: 75px;
-  left: 0;
-
-  z-index: 5;
-}
-
-.plant-pot {
-  width: 55px;
-  height: 45px;
-
-  background: linear-gradient(
-    135deg,
-    #e6e3ef,
-    #a9a4bb
-  );
-
-  border-radius: 5px 5px 15px 15px;
-}
-
-.plant-leaf {
-  position: absolute;
-
-  width: 30px;
-  height: 55px;
-
-  background: linear-gradient(
-    135deg,
-    #568f50,
-    #183d2a
-  );
-
-  border-radius: 100% 0 100% 0;
-}
-
-.leaf1 {
-  left: 25px;
-  bottom: 35px;
-  transform: rotate(-35deg);
-}
-
-.leaf2 {
-  left: 45px;
-  bottom: 55px;
-  transform: rotate(30deg);
-}
-
-.leaf3 {
-  left: 8px;
-  bottom: 70px;
-  transform: rotate(-60deg);
-}
-
-.leaf4 {
-  left: 55px;
-  bottom: 85px;
-  transform: rotate(55deg);
-}
-
-
-/* ================= COFFEE ================= */
-
-.coffee {
-  position: absolute;
-
-  right: -20px;
-  bottom: 55px;
-
-  width: 90px;
-  height: 100px;
-
-  background: linear-gradient(
-    135deg,
-    #342444,
-    #171321
-  );
-
-  border-radius: 8px 8px 20px 20px;
-
-  z-index: 4;
-
-  text-align: center;
-
-  padding-top: 20px;
-
-  color: #dcb8ff;
-
-  font-size: 10px;
-
-  line-height: 1.4;
-}
-
-.coffee-handle {
-  position: absolute;
-
-  right: -25px;
-  top: 20px;
-
-  width: 30px;
-  height: 45px;
-
-  border: 7px solid #342444;
-
-  border-left: none;
-
-  border-radius: 0 20px 20px 0;
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width: 1000px) {
-
-  .hero {
-    flex-direction: column;
+.skill-card {
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #10152b,
+            #0b0f21
+        );
+
+    border: 1px solid #202640;
+
+    border-radius: 18px;
 
     text-align: center;
 
-    padding-top: 130px;
-  }
+    color: #d5d7e3;
 
-  .hero-content {
-    width: 100%;
-  }
+    transition: 0.3s;
+}
 
-  .intro {
+.skill-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #8056ff;
+
+    box-shadow:
+        0 15px 40px rgba(95,65,255,0.14);
+}
+
+.skill-card h3 {
+    color: #9e6cff;
+
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-grid {
+    max-width: 1100px;
+
     margin: auto;
-  }
 
-  .hero-buttons,
-  .social-links {
-    justify-content: center;
-  }
+    display: grid;
 
-  .character-area {
-    width: 100%;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
 
-    margin-top: 30px;
+    gap: 25px;
+}
 
-    transform: scale(.85);
-  }
+.project-card {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #10152b,
+            #0b0f21
+        );
+
+    border: 1px solid #232943;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #855cff;
+
+    box-shadow:
+        0 20px 45px rgba(87,59,255,0.15);
+}
+
+.project-number {
+    color: #885aff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+
+    margin-bottom: 14px;
+}
+
+.project-card p {
+    color: #b8bdcd;
+
+    line-height: 1.65;
+
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    color: #a875ff;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   EXPERIENCE / EDUCATION
+===================================================== */
+
+.timeline {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.timeline-card {
+    padding: 28px;
+
+    margin-bottom: 22px;
+
+    border-left: 3px solid #8056ff;
+
+    background: #0c1124;
+
+    border-radius: 0 15px 15px 0;
+}
+
+.timeline-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.timeline-card .date {
+    color: #9e69ff;
+
+    margin-bottom: 12px;
+}
+
+.timeline-card p {
+    color: #b8bdcc;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   CERTIFICATIONS
+===================================================== */
+
+.cert-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.cert-card {
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 17px;
+
+    background: #0d1226;
+
+    border: 1px solid #232942;
+}
+
+.cert-card h3 {
+    color: #c7c9d8;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #b9bdcb;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.contact-email {
+    display: inline-block;
+
+    padding: 17px 30px;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7d4cff,
+            #5e5cff
+        );
+
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 35px rgba(100,70,255,0.3);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #040611;
+
+    color: #777c91;
+
+    border-top: 1px solid #151a2e;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width: 1000px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 120px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .hero-character {
+        width: 100%;
+
+        height: 550px;
+
+        margin-top: 20px;
+    }
+
+    .girl-image {
+        width: 850px;
+
+        right: 50%;
+
+        transform:
+            translateX(50%);
+    }
+
 }
 
 
 @media(max-width: 600px) {
 
-  .hero h1 {
-    font-size: 65px;
-  }
+    .hero h1 {
+        font-size: 65px;
+    }
 
-  .hero h2 {
-    font-size: 30px;
-  }
+    .hero h2 {
+        font-size: 30px;
+    }
 
-  .intro {
-    font-size: 16px;
-  }
+    .hero-info {
+        font-size: 17px;
+    }
 
-  .character-area {
-    transform: scale(.65);
+    .hero-description {
+        font-size: 16px;
+    }
 
-    margin-top: -50px;
-  }
+    .hero-buttons {
+        flex-direction: column;
 
-}
+        align-items: center;
+    }
 
+    .social-links {
+        flex-wrap: wrap;
+    }
 
-/* ================= MOUSE EFFECT ================= */
+    .hero-character {
+        height: 400px;
+    }
 
-.eye {
-  transition: transform .08s linear;
+    .girl-image {
+        width: 650px;
+    }
+
+    .section-title {
+        font-size: 35px;
+    }
 }
 
 </style>
+</head>
 
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navbar">
+
+    <a href="#home" class="logo">
+        Isha<span>.</span>
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+
+        <a
+            href="mailto:srish348@gmail.com"
+            class="resume-btn">
+            Hire Me
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            Hi, I'm
+        </div>
+
+        <h1>
+            Isha <span>S.</span>
+        </h1>
+
+        <h2>
+            Software Developer
+        </h2>
+
+        <div class="hero-info">
+            B.Tech CSE • 2026 • CGPA: 8.7/10
+        </div>
+
+        <p class="hero-description">
+
+            I'm a Computer Science graduate with hands-on
+            experience in Python, SQL, Flask, web development
+            and AI/ML. I enjoy building practical applications,
+            solving problems and exploring technologies that
+            turn ideas into useful solutions.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#projects"
+                class="primary-btn">
+
+                → View My Projects
+
+            </a>
+
+            <a
+                href="#contact"
+                class="secondary-btn">
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+
+        <div class="social-links">
+
+            <a
+                href="https://github.com/isha200403"
+                target="_blank">
+
+                GitHub
+
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/isha-s-10061137b/"
+                target="_blank">
+
+                LinkedIn
+
+            </a>
+
+            <a
+                href="mailto:srish348@gmail.com">
+
+                Email
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CHARACTER
+    ================================================== -->
+
+    <div class="hero-character">
+
+        <div class="character-glow"></div>
+
+
+        <div class="girl-wrapper">
+
+            <img
+                src="portfolio-girl.png"
+                alt="Isha animated developer illustration"
+                class="girl-image"
+                id="girlImage"
+            >
+
+
+            <!-- LEFT EYE -->
+
+            <div class="eye eye-left">
+
+                <div class="pupil"></div>
+
+            </div>
+
+
+            <!-- RIGHT EYE -->
+
+            <div class="eye eye-right">
+
+                <div class="pupil"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FLOATING BADGES -->
+
+        <div class="tech-badge python">
+            🐍 Python
+        </div>
+
+        <div class="tech-badge javascript">
+            JS
+        </div>
+
+        <div class="tech-badge mysql">
+            MySQL
+        </div>
+
+        <div class="tech-badge code">
+            &lt;/&gt;
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section" id="about">
+
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
+
+    <div class="about-container">
+
+        <p>
+
+            I am a Bachelor of Technology graduate in Computer
+            Science and Engineering with a CGPA of 8.7/10.
+            I am interested in software development, artificial
+            intelligence, machine learning and building practical
+            technology solutions.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section class="section" id="skills">
+
+    <h2 class="section-title">
+        My <span>Skills</span>
+    </h2>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <h3>Python</h3>
+            <p>Programming & Development</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>SQL</h3>
+            <p>Database & Querying</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Web Development</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>HTML & CSS</h3>
+            <p>Frontend Development</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Flask</h3>
+            <p>Python Web Framework</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>React JS</h3>
+            <p>Frontend Development</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Machine Learning</h3>
+            <p>Scikit-learn & ML Models</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Data Analysis</h3>
+            <p>Pandas & NumPy</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>MySQL</h3>
+            <p>Database Management</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>GitHub</h3>
+            <p>Version Control</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="section" id="projects">
+
+    <h2 class="section-title">
+        Featured <span>Projects</span>
+    </h2>
+
+
+    <div class="projects-grid">
+
+
+        <div class="project-card">
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+            <h3>
+                GestureCart
+            </h3>
+
+            <p>
+
+                AI-based touchless shopping system that uses
+                hand gestures for product navigation,
+                selection and cart interaction.
+
+            </p>
+
+            <div class="project-tech">
+                Python • Flask • MySQL • MediaPipe
+            </div>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+            <h3>
+                Adaptive Aptitude Testing System
+            </h3>
+
+            <p>
+
+                Machine learning based aptitude testing system
+                that adapts question difficulty according to
+                user performance.
+
+            </p>
+
+            <div class="project-tech">
+                Python • Pandas • NumPy • Scikit-learn
+            </div>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+            <h3>
+                Breast Cancer Detection
+            </h3>
+
+            <p>
+
+                Deep learning based project using CNN techniques
+                to classify radiology images into benign and
+                malignant categories.
+
+            </p>
+
+            <div class="project-tech">
+                Python • CNN • Deep Learning
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section class="section" id="experience">
+
+    <h2 class="section-title">
+        My <span>Experience</span>
+    </h2>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-card">
+
+            <h3>
+                Trainee Machine Learning Engineer
+            </h3>
+
+            <div class="date">
+                Inventeron Technologies
+            </div>
+
+            <p>
+
+                Gained practical exposure to machine learning,
+                Python programming, data analysis and development
+                workflows.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <h3>
+                Python Full Stack Development Training
+            </h3>
+
+            <div class="date">
+                Besant Technologies
+            </div>
+
+            <p>
+
+                Worked with Python, web technologies, databases
+                and full-stack development concepts.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section class="section" id="education">
+
+    <h2 class="section-title">
+        <span>Education</span>
+    </h2>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-card">
+
+            <h3>
+                Bachelor of Technology -
+                Computer Science & Engineering
+            </h3>
+
+            <div class="date">
+                C Byregowda Institute of Technology • 2026
+            </div>
+
+            <p>
+                CGPA: 8.7 / 10
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <h3>
+                Pre-University
+            </h3>
+
+            <div class="date">
+                Sahyadri PU College • 2022
+            </div>
+
+            <p>
+                72%
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <h3>
+                Class X
+            </h3>
+
+            <div class="date">
+                Shankara Vidyalaya School • 2020
+            </div>
+
+            <p>
+                92%
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+
+<section class="section" id="certifications">
+
+    <h2 class="section-title">
+        <span>Certifications</span>
+    </h2>
+
+
+    <div class="cert-grid">
+
+
+        <div class="cert-card">
+
+            <h3>
+                SQL Training
+            </h3>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <h3>
+                Data Analysis and Machine Learning in Python
+            </h3>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <h3>
+                Introduction to Generative AI
+            </h3>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="section contact" id="contact">
+
+    <h2 class="section-title">
+        Let's <span>Connect</span>
+    </h2>
+
+    <p>
+        I'm open to software development and technology
+        opportunities.
+    </p>
+
+    <a
+        href="mailto:srish348@gmail.com"
+        class="contact-email">
+
+        ✉ srish348@gmail.com
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    © 2026 Isha S. • Software Developer
+
+</footer>
+
+
+
+<!-- =====================================================
+     MOUSE / EYE JAVASCRIPT
+===================================================== -->
 
 <script>
 
-/* ============================================
-   CURSOR FOLLOWING EYES
-   ============================================ */
+const pupils =
+    document.querySelectorAll(".pupil");
 
-const character = document.getElementById("character");
-const girl = document.getElementById("girl");
-
-const pupils = document.querySelectorAll(".pupil");
-
-document.addEventListener("mousemove", function(event) {
-
-  pupils.forEach(function(pupil) {
-
-    const eye = pupil.parentElement;
-
-    const eyeRect = eye.getBoundingClientRect();
-
-    const eyeX =
-      eyeRect.left +
-      eyeRect.width / 2;
-
-    const eyeY =
-      eyeRect.top +
-      eyeRect.height / 2;
-
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    const angle =
-      Math.atan2(
-        mouseY - eyeY,
-        mouseX - eyeX
-      );
-
-    const distance =
-      Math.min(
-        7,
-        Math.hypot(
-          mouseX - eyeX,
-          mouseY - eyeY
-        ) / 30
-      );
-
-    const moveX =
-      Math.cos(angle) * distance;
-
-    const moveY =
-      Math.sin(angle) * distance;
-
-    pupil.style.transform =
-      `translate(${moveX}px, ${moveY}px)`;
-
-  });
+const girl =
+    document.getElementById("girlImage");
 
 
-  /* =====================================
-     SUBTLE HEAD MOVEMENT
-     ===================================== */
-
-  const centerX =
-    window.innerWidth / 2;
-
-  const centerY =
-    window.innerHeight / 2;
-
-  const moveX =
-    (event.clientX - centerX) / centerX;
-
-  const moveY =
-    (event.clientY - centerY) / centerY;
-
-  const limitedX =
-    Math.max(-1, Math.min(1, moveX));
-
-  const limitedY =
-    Math.max(-1, Math.min(1, moveY));
-
-  girl.style.transform =
-    `translate(
-      ${limitedX * 7}px,
-      ${limitedY * 4}px
-    )`;
-
-});
+document.addEventListener(
+    "mousemove",
+    function(event) {
 
 
-/* ============================================
-   RESET EYES WHEN MOUSE LEAVES
-   ============================================ */
+        /* ==========================================
+           EYE TRACKING
+        ========================================== */
 
-document.addEventListener("mouseleave", function() {
+        pupils.forEach(function(pupil) {
 
-  pupils.forEach(function(pupil) {
+            const eye =
+                pupil.parentElement;
 
-    pupil.style.transform =
-      "translate(0, 0)";
+            const eyeRect =
+                eye.getBoundingClientRect();
 
-  });
 
-  girl.style.transform =
-    "translate(0, 0)";
+            const eyeX =
+                eyeRect.left +
+                eyeRect.width / 2;
 
-});
+            const eyeY =
+                eyeRect.top +
+                eyeRect.height / 2;
+
+
+            const mouseX =
+                event.clientX;
+
+            const mouseY =
+                event.clientY;
+
+
+            const angle =
+                Math.atan2(
+                    mouseY - eyeY,
+                    mouseX - eyeX
+                );
+
+
+            const distance =
+                Math.min(
+                    8,
+
+                    Math.hypot(
+                        mouseX - eyeX,
+                        mouseY - eyeY
+                    ) / 35
+                );
+
+
+            const moveX =
+                Math.cos(angle) *
+                distance;
+
+            const moveY =
+                Math.sin(angle) *
+                distance;
+
+
+            pupil.style.transform =
+                `translate(
+                    calc(-50% + ${moveX}px),
+                    calc(-50% + ${moveY}px)
+                )`;
+
+        });
+
+
+
+        /* ==========================================
+           SUBTLE CHARACTER MOVEMENT
+        ========================================== */
+
+        const mouseX =
+            event.clientX /
+            window.innerWidth;
+
+        const mouseY =
+            event.clientY /
+            window.innerHeight;
+
+
+        const moveX =
+            (mouseX - 0.5) * 8;
+
+        const moveY =
+            (mouseY - 0.5) * 5;
+
+
+        girl.style.transform =
+            `translate(${moveX}px, ${moveY}px)`;
+
+    }
+);
+
+
+
+/* ================================================
+   RESET WHEN MOUSE LEAVES
+================================================ */
+
+document.addEventListener(
+    "mouseleave",
+    function() {
+
+        pupils.forEach(function(pupil) {
+
+            pupil.style.transform =
+                "translate(-50%, -50%)";
+
+        });
+
+        girl.style.transform =
+            "translate(0, 0)";
+
+    }
+);
 
 </script>
+
+
+</body>
+</html>
