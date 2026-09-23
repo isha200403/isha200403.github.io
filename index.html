@@ -11,9 +11,9 @@ content="Isha S. - Software Developer and Computer Science graduate">
 
 <style>
 
-/* =====================================================
-   GLOBAL
-===================================================== */
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -22,10 +22,14 @@ content="Isha S. - Software Developer and Computer Science graduate">
     scroll-behavior: smooth;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #060817;
-    color: #ffffff;
+    color: white;
     overflow-x: hidden;
 }
 
@@ -33,22 +37,18 @@ a {
     color: inherit;
 }
 
-section {
-    scroll-margin-top: 80px;
-}
 
-
-/* =====================================================
+/* =========================================================
    NAVBAR
-===================================================== */
+========================================================= */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
 
-    height: 75px;
+    width: 100%;
+    height: 74px;
 
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@ section {
 
     padding: 0 6%;
 
-    background: rgba(5, 8, 23, 0.82);
+    background: rgba(5, 8, 23, 0.88);
     backdrop-filter: blur(15px);
 
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -65,49 +65,49 @@ section {
 }
 
 .logo {
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 800;
     text-decoration: none;
 }
 
 .logo span {
-    color: #8c5cff;
+    color: #8b5cf6;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 27px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #c8cad5;
+    color: #c8cad6;
     font-size: 15px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #9c6cff;
+    color: #9b6cff;
 }
 
-.resume-btn {
-    padding: 11px 20px;
-    border-radius: 25px;
+.hire-btn {
+    padding: 12px 23px;
+    border-radius: 30px;
 
     background: linear-gradient(
         135deg,
         #7c4dff,
-        #5b5cff
+        #5c5cff
     );
 
     color: white !important;
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
     min-height: 100vh;
@@ -115,45 +115,50 @@ section {
     display: flex;
     align-items: center;
 
-    padding: 110px 6% 70px;
+    padding: 105px 6% 55px;
 
     position: relative;
     overflow: hidden;
 
     background:
         radial-gradient(
-            circle at 78% 45%,
-            rgba(93, 69, 255, 0.22),
-            transparent 30%
+            circle at 75% 48%,
+            rgba(100, 68, 255, 0.20),
+            transparent 33%
         ),
         radial-gradient(
             circle at 20% 20%,
-            rgba(122, 67, 255, 0.12),
+            rgba(120, 70, 255, 0.12),
             transparent 30%
         ),
         #060817;
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO LEFT
-===================================================== */
+========================================================= */
 
 .hero-content {
     width: 48%;
-    max-width: 680px;
-    z-index: 20;
+    max-width: 690px;
+
+    position: relative;
+    z-index: 50;
 }
 
-.small-title {
-    color: #9c68ff;
-    font-size: 26px;
+.hello {
+    color: #a16aff;
+
+    font-size: 27px;
     font-weight: 600;
-    margin-bottom: 15px;
+
+    margin-bottom: 17px;
 }
 
 .hero h1 {
-    font-size: clamp(65px, 8vw, 115px);
+    font-size: clamp(65px, 8vw, 110px);
+
     line-height: 0.95;
 
     letter-spacing: -5px;
@@ -168,37 +173,38 @@ section {
 .hero h2 {
     margin-top: 28px;
 
-    font-size: clamp(30px, 4vw, 43px);
+    font-size: clamp(30px, 4vw, 45px);
 }
 
-.hero-info {
+.hero-details {
     margin-top: 18px;
 
-    color: #a977ff;
+    color: #a56cff;
 
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .hero-description {
-    margin-top: 25px;
+    max-width: 640px;
 
-    max-width: 620px;
+    margin-top: 27px;
 
-    color: #bfc3d3;
+    color: #c3c7d6;
 
     font-size: 18px;
+
     line-height: 1.75;
 }
 
 
-/* =====================================================
-   HERO BUTTONS
-===================================================== */
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .hero-buttons {
     display: flex;
-    gap: 17px;
+    gap: 18px;
 
     margin-top: 35px;
 }
@@ -206,13 +212,13 @@ section {
 .hero-buttons a {
     text-decoration: none;
 
-    padding: 16px 27px;
+    padding: 16px 28px;
 
     border-radius: 40px;
 
     font-weight: 700;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .primary-btn {
@@ -220,18 +226,18 @@ section {
         linear-gradient(
             135deg,
             #814cff,
-            #5c5cff
+            #5d5cff
         );
 
     box-shadow:
-        0 12px 35px rgba(103,70,255,0.32);
+        0 12px 35px rgba(100,70,255,0.30);
 }
 
 .primary-btn:hover {
     transform: translateY(-4px);
 
     box-shadow:
-        0 17px 45px rgba(103,70,255,0.5);
+        0 18px 45px rgba(100,70,255,0.45);
 }
 
 .secondary-btn {
@@ -240,192 +246,221 @@ section {
 
 .secondary-btn:hover {
     border-color: #9062ff;
-
     transform: translateY(-4px);
 }
 
 
-/* =====================================================
-   SOCIAL LINKS
-===================================================== */
+/* =========================================================
+   SOCIAL
+========================================================= */
 
 .social-links {
     display: flex;
     gap: 28px;
 
-    margin-top: 38px;
+    margin-top: 37px;
 }
 
 .social-links a {
-    text-decoration: none;
-
     color: #bfc3d2;
 
-    font-size: 16px;
+    text-decoration: none;
 
     transition: 0.3s;
 }
 
 .social-links a:hover {
-    color: #a56cff;
+    color: #a16aff;
 }
 
 
-/* =====================================================
-   HERO RIGHT / CHARACTER
-===================================================== */
+/* =========================================================
+   CHARACTER AREA
+========================================================= */
 
 .hero-character {
     width: 52%;
-    height: 680px;
+    height: 650px;
 
     position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 10;
 }
 
 
-/* glowing circle */
+/* =========================================================
+   GLOW
+========================================================= */
 
 .character-glow {
     position: absolute;
 
-    width: 620px;
-    height: 620px;
+    width: 600px;
+    height: 600px;
 
     border-radius: 50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(75, 90, 255, 0.35),
-            rgba(125, 65, 255, 0.18),
-            transparent 68%
+            rgba(75, 80, 255, 0.28),
+            rgba(120, 60, 255, 0.15),
+            transparent 70%
         );
 
-    filter: blur(20px);
+    filter: blur(25px);
+
+    z-index: 1;
 }
 
 
-/* =====================================================
-   YOUR ACTUAL GIRL IMAGE
-===================================================== */
+/* =========================================================
+   GIRL STAGE
 
-.girl-wrapper {
+   IMPORTANT:
+   The eye overlays are INSIDE this stage.
+   Therefore they move together with the image.
+========================================================= */
+
+.girl-stage {
+
     position: absolute;
 
-    width: 100%;
-    height: 100%;
+    width: min(820px, 120%);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    aspect-ratio: 3 / 2;
+
+    right: -45px;
+
+    bottom: 15px;
 
     z-index: 5;
 }
 
+
+/* =========================================================
+   GIRL IMAGE
+========================================================= */
+
 .girl-image {
+
     position: absolute;
 
-    width: min(850px, 125%);
+    inset: 0;
 
-    max-width: none;
-
-    right: -70px;
-    bottom: -30px;
+    width: 100%;
+    height: 100%;
 
     object-fit: contain;
 
+    display: block;
+
     filter:
         drop-shadow(
-            0 0 35px rgba(92,80,255,0.32)
+            0 0 35px rgba(92,80,255,0.30)
         );
 
     transition:
-        transform 0.18s ease-out;
+        transform 0.12s ease-out;
 }
 
 
-/* =====================================================
-   EYE TRACKERS
-===================================================== */
+/* =========================================================
+   EYES
+
+   These percentages are relative to the image.
+========================================================= */
 
 .eye {
+
     position: absolute;
 
-    width: 32px;
-    height: 25px;
-
-    border-radius: 50%;
-
-    z-index: 15;
+    width: 38px;
+    height: 30px;
 
     pointer-events: none;
-}
 
-.pupil {
-    position: absolute;
-
-    width: 9px;
-    height: 9px;
-
-    left: 50%;
-    top: 50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    border-radius: 50%;
-
-    background: #21142e;
-
-    box-shadow:
-        1px 1px 0 white;
-
-    transition:
-        transform 0.06s linear;
+    z-index: 20;
 }
 
 
 /*
-   Eye positions.
-
-   These are intentionally easy to adjust
-   if the eyes of your image are slightly
-   different after upload.
+   LEFT EYE
 */
 
 .eye-left {
-    left: 58%;
-    top: 34%;
+
+    left: 55.5%;
+
+    top: 31.5%;
 }
+
+
+/*
+   RIGHT EYE
+*/
 
 .eye-right {
-    left: 63.5%;
-    top: 34%;
+
+    left: 64.8%;
+
+    top: 31.5%;
 }
 
 
-/* =====================================================
-   FLOATING TECH BADGES
-===================================================== */
+/* =========================================================
+   PUPIL
+========================================================= */
 
-.tech-badge {
+.pupil {
+
     position: absolute;
 
-    padding: 14px 21px;
+    left: 50%;
+    top: 50%;
 
-    border-radius: 15px;
+    width: 10px;
+    height: 10px;
 
-    background: rgba(12, 17, 34, 0.8);
+    border-radius: 50%;
+
+    background: #191329;
+
+    box-shadow:
+        0 0 2px white;
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        transform 0.05s linear;
+}
+
+
+/* =========================================================
+   FLOATING BADGES
+========================================================= */
+
+.tech-badge {
+
+    position: absolute;
+
+    padding: 14px 20px;
+
+    border-radius: 16px;
+
+    background: rgba(12,17,34,0.82);
 
     border: 1px solid rgba(140,110,255,0.22);
 
     backdrop-filter: blur(10px);
 
     font-size: 14px;
+
     font-weight: 700;
 
     box-shadow:
@@ -434,40 +469,33 @@ section {
     animation:
         floating 4s ease-in-out infinite;
 
-    z-index: 20;
+    z-index: 30;
 }
 
 .python {
-    right: 35px;
-    top: 75px;
-
+    right: 20px;
+    top: 65px;
     color: #ffd43b;
 }
 
 .javascript {
-    right: 0;
-    top: 190px;
-
+    right: -20px;
+    top: 185px;
     color: #ffe600;
-
     animation-delay: 1s;
 }
 
 .mysql {
-    right: 35px;
-    bottom: 145px;
-
-    color: #40bfff;
-
+    right: 20px;
+    bottom: 100px;
+    color: #35c6ff;
     animation-delay: 2s;
 }
 
 .code {
-    left: 15px;
-    top: 260px;
-
-    color: #b58aff;
-
+    left: 10px;
+    top: 250px;
+    color: #b48aff;
     animation-delay: 0.5s;
 }
 
@@ -483,11 +511,12 @@ section {
 }
 
 
-/* =====================================================
-   COMMON SECTIONS
-===================================================== */
+/* =========================================================
+   SECTIONS
+========================================================= */
 
 .section {
+
     padding: 100px 8%;
 
     background: #080b1c;
@@ -498,6 +527,7 @@ section {
 }
 
 .section-title {
+
     text-align: center;
 
     font-size: 45px;
@@ -510,11 +540,12 @@ section {
 }
 
 
-/* =====================================================
+/* =========================================================
    ABOUT
-===================================================== */
+========================================================= */
 
 .about-container {
+
     max-width: 950px;
 
     margin: auto;
@@ -523,6 +554,7 @@ section {
 }
 
 .about-container p {
+
     color: #bfc3d2;
 
     font-size: 18px;
@@ -531,11 +563,12 @@ section {
 }
 
 
-/* =====================================================
+/* =========================================================
    SKILLS
-===================================================== */
+========================================================= */
 
 .skills-grid {
+
     max-width: 1100px;
 
     margin: auto;
@@ -549,7 +582,10 @@ section {
 }
 
 .skill-card {
+
     padding: 25px;
+
+    border-radius: 18px;
 
     background:
         linear-gradient(
@@ -560,36 +596,39 @@ section {
 
     border: 1px solid #202640;
 
-    border-radius: 18px;
-
     text-align: center;
-
-    color: #d5d7e3;
 
     transition: 0.3s;
 }
 
 .skill-card:hover {
+
     transform: translateY(-6px);
 
     border-color: #8056ff;
 
     box-shadow:
-        0 15px 40px rgba(95,65,255,0.14);
+        0 15px 40px rgba(95,65,255,0.15);
 }
 
 .skill-card h3 {
+
     color: #9e6cff;
 
     margin-bottom: 10px;
 }
 
+.skill-card p {
+    color: #b9bdcc;
+}
 
-/* =====================================================
+
+/* =========================================================
    PROJECTS
-===================================================== */
+========================================================= */
 
 .projects-grid {
+
     max-width: 1100px;
 
     margin: auto;
@@ -603,6 +642,7 @@ section {
 }
 
 .project-card {
+
     padding: 30px;
 
     border-radius: 20px;
@@ -620,6 +660,7 @@ section {
 }
 
 .project-card:hover {
+
     transform: translateY(-7px);
 
     border-color: #855cff;
@@ -629,6 +670,7 @@ section {
 }
 
 .project-number {
+
     color: #885aff;
 
     font-size: 14px;
@@ -639,12 +681,14 @@ section {
 }
 
 .project-card h3 {
+
     font-size: 24px;
 
     margin-bottom: 14px;
 }
 
 .project-card p {
+
     color: #b8bdcd;
 
     line-height: 1.65;
@@ -653,23 +697,26 @@ section {
 }
 
 .project-tech {
+
     color: #a875ff;
 
     font-size: 14px;
 }
 
 
-/* =====================================================
-   EXPERIENCE / EDUCATION
-===================================================== */
+/* =========================================================
+   TIMELINE
+========================================================= */
 
 .timeline {
+
     max-width: 900px;
 
     margin: auto;
 }
 
 .timeline-card {
+
     padding: 28px;
 
     margin-bottom: 22px;
@@ -682,29 +729,33 @@ section {
 }
 
 .timeline-card h3 {
+
     font-size: 22px;
 
     margin-bottom: 8px;
 }
 
 .timeline-card .date {
+
     color: #9e69ff;
 
     margin-bottom: 12px;
 }
 
 .timeline-card p {
+
     color: #b8bdcc;
 
     line-height: 1.65;
 }
 
 
-/* =====================================================
+/* =========================================================
    CERTIFICATIONS
-===================================================== */
+========================================================= */
 
 .cert-grid {
+
     max-width: 1000px;
 
     margin: auto;
@@ -718,6 +769,7 @@ section {
 }
 
 .cert-card {
+
     padding: 25px;
 
     text-align: center;
@@ -730,21 +782,24 @@ section {
 }
 
 .cert-card h3 {
+
     color: #c7c9d8;
 
     font-size: 18px;
 }
 
 
-/* =====================================================
+/* =========================================================
    CONTACT
-===================================================== */
+========================================================= */
 
 .contact {
+
     text-align: center;
 }
 
 .contact p {
+
     color: #b9bdcb;
 
     font-size: 18px;
@@ -753,6 +808,7 @@ section {
 }
 
 .contact-email {
+
     display: inline-block;
 
     padding: 17px 30px;
@@ -769,17 +825,15 @@ section {
         );
 
     font-weight: 700;
-
-    box-shadow:
-        0 12px 35px rgba(100,70,255,0.3);
 }
 
 
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
 footer {
+
     padding: 30px;
 
     text-align: center;
@@ -792,17 +846,18 @@ footer {
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
 
     .nav-links {
         display: none;
     }
 
     .hero {
+
         flex-direction: column;
 
         text-align: center;
@@ -811,79 +866,96 @@ footer {
     }
 
     .hero-content {
+
         width: 100%;
     }
 
     .hero-description {
+
         margin-left: auto;
         margin-right: auto;
     }
 
     .hero-buttons {
+
         justify-content: center;
     }
 
     .social-links {
+
         justify-content: center;
     }
 
     .hero-character {
+
         width: 100%;
 
-        height: 550px;
+        height: 570px;
 
         margin-top: 20px;
     }
 
-    .girl-image {
-        width: 850px;
+    .girl-stage {
+
+        width: min(820px, 120%);
 
         right: 50%;
 
-        transform:
-            translateX(50%);
-    }
+        transform: translateX(50%);
 
+        bottom: 0;
+    }
 }
 
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
 
     .hero h1 {
+
         font-size: 65px;
     }
 
     .hero h2 {
+
         font-size: 30px;
     }
 
-    .hero-info {
+    .hero-details {
+
         font-size: 17px;
     }
 
     .hero-description {
+
         font-size: 16px;
     }
 
     .hero-buttons {
+
         flex-direction: column;
 
         align-items: center;
     }
 
     .social-links {
+
         flex-wrap: wrap;
     }
 
     .hero-character {
-        height: 400px;
+
+        height: 430px;
     }
 
-    .girl-image {
-        width: 650px;
+    .girl-stage {
+
+        width: 700px;
+
+        max-width: 150vw;
     }
 
     .section-title {
+
         font-size: 35px;
     }
 }
@@ -895,9 +967,9 @@ footer {
 <body>
 
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
 <nav class="navbar">
 
@@ -908,18 +980,27 @@ footer {
     <div class="nav-links">
 
         <a href="#home">Home</a>
+
         <a href="#about">About</a>
+
         <a href="#skills">Skills</a>
+
         <a href="#projects">Projects</a>
+
         <a href="#experience">Experience</a>
+
         <a href="#education">Education</a>
+
         <a href="#certifications">Certifications</a>
+
         <a href="#contact">Contact</a>
 
         <a
             href="mailto:srish348@gmail.com"
-            class="resume-btn">
+            class="hire-btn">
+
             Hire Me
+
         </a>
 
     </div>
@@ -927,16 +1008,19 @@ footer {
 </nav>
 
 
-<!-- =====================================================
+
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section class="hero" id="home">
 
 
+    <!-- LEFT SIDE -->
+
     <div class="hero-content">
 
-        <div class="small-title">
+        <div class="hello">
             Hi, I'm
         </div>
 
@@ -948,7 +1032,7 @@ footer {
             Software Developer
         </h2>
 
-        <div class="hero-info">
+        <div class="hero-details">
             B.Tech CSE • 2026 • CGPA: 8.7/10
         </div>
 
@@ -1015,20 +1099,28 @@ footer {
 
 
 
-    <!-- =================================================
-         CHARACTER
-    ================================================== -->
+    <!-- =====================================================
+         RIGHT SIDE GIRL
+    ====================================================== -->
 
     <div class="hero-character">
 
         <div class="character-glow"></div>
 
 
-        <div class="girl-wrapper">
+        <!--
+            The entire girl image + eyes are inside
+            this stage.
+        -->
+
+        <div class="girl-stage" id="girlStage">
+
+
+            <!-- ACTUAL IMAGE -->
 
             <img
                 src="portfolio-girl.png"
-                alt="Isha animated developer illustration"
+                alt="Isha coding illustration"
                 class="girl-image"
                 id="girlImage"
             >
@@ -1051,10 +1143,11 @@ footer {
 
             </div>
 
+
         </div>
 
 
-        <!-- FLOATING BADGES -->
+        <!-- FLOATING TECHNOLOGY BADGES -->
 
         <div class="tech-badge python">
             🐍 Python
@@ -1078,9 +1171,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      ABOUT
-===================================================== -->
+========================================================= -->
 
 <section class="section" id="about">
 
@@ -1106,9 +1199,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      SKILLS
-===================================================== -->
+========================================================= -->
 
 <section class="section" id="skills">
 
@@ -1175,9 +1268,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      PROJECTS
-===================================================== -->
+========================================================= -->
 
 <section class="section" id="projects">
 
@@ -1265,16 +1358,15 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      EXPERIENCE
-===================================================== -->
+========================================================= -->
 
 <section class="section" id="experience">
 
@@ -1326,16 +1418,15 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      EDUCATION
-===================================================== -->
+========================================================= -->
 
 <section class="section" id="education">
 
@@ -1398,16 +1489,15 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      CERTIFICATIONS
-===================================================== -->
+========================================================= -->
 
 <section class="section" id="certifications">
 
@@ -1445,16 +1535,15 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      CONTACT
-===================================================== -->
+========================================================= -->
 
 <section class="section contact" id="contact">
 
@@ -1479,9 +1568,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -1491,17 +1580,20 @@ footer {
 
 
 
-<!-- =====================================================
-     MOUSE / EYE JAVASCRIPT
-===================================================== -->
+<!-- =========================================================
+     EYE TRACKING JAVASCRIPT
+========================================================= -->
 
 <script>
 
+const girlStage =
+    document.getElementById("girlStage");
+
+const girlImage =
+    document.getElementById("girlImage");
+
 const pupils =
     document.querySelectorAll(".pupil");
-
-const girl =
-    document.getElementById("girlImage");
 
 
 document.addEventListener(
@@ -1509,9 +1601,9 @@ document.addEventListener(
     function(event) {
 
 
-        /* ==========================================
+        /* =================================================
            EYE TRACKING
-        ========================================== */
+        ================================================= */
 
         pupils.forEach(function(pupil) {
 
@@ -1545,14 +1637,18 @@ document.addEventListener(
                 );
 
 
+            /*
+               Maximum pupil movement.
+               Keeps the pupils inside the eyes.
+            */
+
             const distance =
                 Math.min(
                     8,
-
                     Math.hypot(
                         mouseX - eyeX,
                         mouseY - eyeY
-                    ) / 35
+                    ) / 45
                 );
 
 
@@ -1575,9 +1671,9 @@ document.addEventListener(
 
 
 
-        /* ==========================================
-           SUBTLE CHARACTER MOVEMENT
-        ========================================== */
+        /* =================================================
+           VERY SMALL GIRL MOVEMENT
+        ================================================= */
 
         const mouseX =
             event.clientX /
@@ -1589,23 +1685,22 @@ document.addEventListener(
 
 
         const moveX =
-            (mouseX - 0.5) * 8;
+            (mouseX - 0.5) * 5;
 
         const moveY =
-            (mouseY - 0.5) * 5;
+            (mouseY - 0.5) * 3;
 
 
-        girl.style.transform =
+        girlImage.style.transform =
             `translate(${moveX}px, ${moveY}px)`;
 
     }
 );
 
 
-
-/* ================================================
+/* =========================================================
    RESET WHEN MOUSE LEAVES
-================================================ */
+========================================================= */
 
 document.addEventListener(
     "mouseleave",
@@ -1618,7 +1713,7 @@ document.addEventListener(
 
         });
 
-        girl.style.transform =
+        girlImage.style.transform =
             "translate(0, 0)";
 
     }
