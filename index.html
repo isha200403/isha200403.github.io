@@ -6,578 +6,469 @@
 
 <title>Isha S. | Software Developer</title>
 
-<meta name="description"
-content="Isha S. - Software Developer and Computer Science graduate">
-
 <style>
 
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#060817;
+    color:white;
+    overflow-x:hidden;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #060817;
-    color: white;
-    overflow-x: hidden;
-}
-
-a {
-    color: inherit;
+a{
+    color:inherit;
 }
 
 
-/* =========================================================
+/* =========================
    NAVBAR
-========================================================= */
+========================= */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:74px;
 
-    width: 100%;
-    height: 74px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding:0 6%;
 
-    padding: 0 6%;
+    background:rgba(5,8,23,.90);
+    backdrop-filter:blur(15px);
 
-    background: rgba(5, 8, 23, 0.88);
-    backdrop-filter: blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.06);
 
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-
-    z-index: 1000;
+    z-index:1000;
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: 800;
-    text-decoration: none;
+.logo{
+    font-size:30px;
+    font-weight:800;
+    text-decoration:none;
 }
 
-.logo span {
-    color: #8b5cf6;
+.logo span{
+    color:#8b5cf6;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 27px;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:27px;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #c8cad6;
-    font-size: 15px;
-    transition: 0.3s ease;
+.nav-links a{
+    text-decoration:none;
+    color:#c8cad6;
+    font-size:15px;
+    transition:.3s;
 }
 
-.nav-links a:hover {
-    color: #9b6cff;
+.nav-links a:hover{
+    color:#9b6cff;
 }
 
-.hire-btn {
-    padding: 12px 23px;
-    border-radius: 30px;
+.hire-btn{
+    padding:12px 23px;
+    border-radius:30px;
 
-    background: linear-gradient(
+    background:linear-gradient(
         135deg,
         #7c4dff,
         #5c5cff
     );
 
-    color: white !important;
+    color:white!important;
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
-.hero {
-    min-height: 100vh;
+.hero{
+    min-height:100vh;
 
-    display: flex;
-    align-items: center;
+    display:flex;
+    align-items:center;
 
-    padding: 105px 6% 55px;
+    padding:105px 6% 55px;
 
-    position: relative;
-    overflow: hidden;
+    position:relative;
+    overflow:hidden;
 
     background:
         radial-gradient(
             circle at 75% 48%,
-            rgba(100, 68, 255, 0.20),
+            rgba(100,68,255,.20),
             transparent 33%
         ),
         radial-gradient(
             circle at 20% 20%,
-            rgba(120, 70, 255, 0.12),
+            rgba(120,70,255,.12),
             transparent 30%
         ),
         #060817;
 }
 
 
-/* =========================================================
-   HERO LEFT
-========================================================= */
+/* =========================
+   LEFT CONTENT
+========================= */
 
-.hero-content {
-    width: 48%;
-    max-width: 690px;
-
-    position: relative;
-    z-index: 50;
+.hero-content{
+    width:48%;
+    max-width:690px;
+    position:relative;
+    z-index:50;
 }
 
-.hello {
-    color: #a16aff;
-
-    font-size: 27px;
-    font-weight: 600;
-
-    margin-bottom: 17px;
+.hello{
+    color:#a16aff;
+    font-size:27px;
+    font-weight:600;
+    margin-bottom:17px;
 }
 
-.hero h1 {
-    font-size: clamp(65px, 8vw, 110px);
-
-    line-height: 0.95;
-
-    letter-spacing: -5px;
-
-    font-weight: 800;
+.hero h1{
+    font-size:clamp(65px,8vw,110px);
+    line-height:.95;
+    letter-spacing:-5px;
+    font-weight:800;
 }
 
-.hero h1 span {
-    color: #8755ff;
+.hero h1 span{
+    color:#8755ff;
 }
 
-.hero h2 {
-    margin-top: 28px;
-
-    font-size: clamp(30px, 4vw, 45px);
+.hero h2{
+    margin-top:28px;
+    font-size:clamp(30px,4vw,45px);
 }
 
-.hero-details {
-    margin-top: 18px;
-
-    color: #a56cff;
-
-    font-size: 21px;
-    font-weight: 700;
+.hero-details{
+    margin-top:18px;
+    color:#a56cff;
+    font-size:21px;
+    font-weight:700;
 }
 
-.hero-description {
-    max-width: 640px;
-
-    margin-top: 27px;
-
-    color: #c3c7d6;
-
-    font-size: 18px;
-
-    line-height: 1.75;
+.hero-description{
+    max-width:640px;
+    margin-top:27px;
+    color:#c3c7d6;
+    font-size:18px;
+    line-height:1.75;
 }
 
 
-/* =========================================================
+/* =========================
    BUTTONS
-========================================================= */
+========================= */
 
-.hero-buttons {
-    display: flex;
-    gap: 18px;
-
-    margin-top: 35px;
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
 }
 
-.hero-buttons a {
-    text-decoration: none;
-
-    padding: 16px 28px;
-
-    border-radius: 40px;
-
-    font-weight: 700;
-
-    transition: 0.3s ease;
+.hero-buttons a{
+    text-decoration:none;
+    padding:16px 28px;
+    border-radius:40px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.primary-btn {
-    background:
-        linear-gradient(
-            135deg,
-            #814cff,
-            #5d5cff
-        );
+.primary-btn{
+    background:linear-gradient(
+        135deg,
+        #814cff,
+        #5d5cff
+    );
 
     box-shadow:
-        0 12px 35px rgba(100,70,255,0.30);
+        0 12px 35px rgba(100,70,255,.30);
 }
 
-.primary-btn:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 18px 45px rgba(100,70,255,0.45);
+.primary-btn:hover{
+    transform:translateY(-4px);
 }
 
-.secondary-btn {
-    border: 1px solid #343952;
+.secondary-btn{
+    border:1px solid #343952;
 }
 
-.secondary-btn:hover {
-    border-color: #9062ff;
-    transform: translateY(-4px);
+.secondary-btn:hover{
+    border-color:#9062ff;
+    transform:translateY(-4px);
 }
 
 
-/* =========================================================
+/* =========================
    SOCIAL
-========================================================= */
+========================= */
 
-.social-links {
-    display: flex;
-    gap: 28px;
-
-    margin-top: 37px;
+.social-links{
+    display:flex;
+    gap:28px;
+    margin-top:37px;
 }
 
-.social-links a {
-    color: #bfc3d2;
-
-    text-decoration: none;
-
-    transition: 0.3s;
+.social-links a{
+    color:#bfc3d2;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.social-links a:hover {
-    color: #a16aff;
+.social-links a:hover{
+    color:#a16aff;
 }
 
 
-/* =========================================================
-   CHARACTER AREA
-========================================================= */
+/* =========================
+   RIGHT IMAGE AREA
+========================= */
 
-.hero-character {
-    width: 52%;
-    height: 650px;
+.hero-character{
+    width:52%;
+    height:650px;
 
-    position: relative;
+    position:relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    z-index: 10;
+    z-index:10;
 }
 
 
-/* =========================================================
-   GLOW
-========================================================= */
+/* =========================
+   PURPLE GLOW
+========================= */
 
-.character-glow {
-    position: absolute;
+.character-glow{
+    position:absolute;
 
-    width: 600px;
-    height: 600px;
+    width:600px;
+    height:600px;
 
-    border-radius: 50%;
+    border-radius:50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(75, 80, 255, 0.28),
-            rgba(120, 60, 255, 0.15),
+            rgba(75,80,255,.28),
+            rgba(120,60,255,.15),
             transparent 70%
         );
 
-    filter: blur(25px);
+    filter:blur(25px);
 
-    z-index: 1;
+    z-index:1;
 }
 
 
-/* =========================================================
-   GIRL STAGE
-========================================================= */
-
-.girl-stage {
-
-    position: absolute;
-
-    width: min(820px, 120%);
-
-    aspect-ratio: 3 / 2;
-
-    right: -45px;
-
-    bottom: 15px;
-
-    z-index: 5;
-}
-
-
-/* =========================================================
+/* =========================
    GIRL IMAGE
-========================================================= */
+========================= */
 
-.girl-image {
+/*
+   Smaller than before.
+   Moved slightly upward.
+*/
 
-    position: absolute;
+.girl-stage{
+    position:absolute;
 
-    inset: 0;
+    width:680px;
 
-    width: 100%;
-    height: 100%;
+    aspect-ratio:3 / 2;
 
-    object-fit: contain;
+    right:-5px;
 
-    display: block;
+    bottom:55px;
+
+    z-index:5;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.girl-image{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
 
     filter:
         drop-shadow(
-            0 0 35px rgba(92,80,255,0.30)
+            0 0 35px rgba(92,80,255,.30)
         );
 
     transition:
-        transform 0.12s ease-out;
+        transform .12s ease-out;
 }
 
 
-/* =========================================================
-   EYES
-========================================================= */
+/* =========================
+   IMPORTANT
+   NO EYE DOTS
+========================= */
 
-.eye {
-
-    position: absolute;
-
-    width: 38px;
-    height: 30px;
-
-    pointer-events: none;
-
-    z-index: 20;
-}
-
-.eye-left {
-
-    left: 55.5%;
-
-    top: 31.5%;
-}
-
-.eye-right {
-
-    left: 64.8%;
-
-    top: 31.5%;
-}
+/*
+   The old .eye and .pupil elements
+   have been completely removed.
+*/
 
 
-/* =========================================================
-   PUPIL
-========================================================= */
-
-.pupil {
-
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
-
-    background: #191329;
-
-    box-shadow:
-        0 0 2px white;
-
-    transform:
-        translate(-50%, -50%);
-
-    transition:
-        transform 0.05s linear;
-}
-
-
-/* =========================================================
+/* =========================
    FLOATING BADGES
-========================================================= */
+========================= */
 
-.tech-badge {
+.tech-badge{
+    position:absolute;
 
-    position: absolute;
+    padding:14px 20px;
 
-    padding: 14px 20px;
+    border-radius:16px;
 
-    border-radius: 16px;
+    background:rgba(12,17,34,.82);
 
-    background: rgba(12,17,34,0.82);
+    border:1px solid rgba(140,110,255,.22);
 
-    border: 1px solid rgba(140,110,255,0.22);
+    backdrop-filter:blur(10px);
 
-    backdrop-filter: blur(10px);
-
-    font-size: 14px;
-
-    font-weight: 700;
+    font-size:14px;
+    font-weight:700;
 
     box-shadow:
-        0 15px 35px rgba(0,0,0,0.25);
+        0 15px 35px rgba(0,0,0,.25);
 
-    animation:
-        floating 4s ease-in-out infinite;
+    animation:floating 4s ease-in-out infinite;
 
-    z-index: 30;
+    z-index:30;
 }
 
-.python {
-    right: 20px;
-    top: 65px;
-    color: #ffd43b;
+.python{
+    right:20px;
+    top:65px;
+    color:#ffd43b;
 }
 
-.javascript {
-    right: -20px;
-    top: 185px;
-    color: #ffe600;
-    animation-delay: 1s;
+.javascript{
+    right:-20px;
+    top:185px;
+    color:#ffe600;
+    animation-delay:1s;
 }
 
-/* =========================================================
-   MYSQL — MOVED SLIGHTLY UP
-========================================================= */
-
-.mysql {
-    right: 20px;
-    bottom: 125px;
-    color: #35c6ff;
-    animation-delay: 2s;
+.mysql{
+    right:20px;
+    bottom:100px;
+    color:#35c6ff;
+    animation-delay:2s;
 }
 
-/* =========================================================
-   HTML CODE BADGE — MOVED SLIGHTLY UP
-========================================================= */
-
-.code {
-    left: 10px;
-    top: 220px;
-    color: #b48aff;
-    animation-delay: 0.5s;
+.code{
+    left:10px;
+    top:250px;
+    color:#b48aff;
+    animation-delay:.5s;
 }
 
-@keyframes floating {
+@keyframes floating{
 
-    0%, 100% {
-        transform: translateY(0);
+    0%,100%{
+        transform:translateY(0);
     }
 
-    50% {
-        transform: translateY(-12px);
+    50%{
+        transform:translateY(-12px);
     }
 }
 
 
-/* =========================================================
+/* =========================
    SECTIONS
-========================================================= */
+========================= */
 
-.section {
-
-    padding: 100px 8%;
-
-    background: #080b1c;
+.section{
+    padding:100px 8%;
+    background:#080b1c;
 }
 
-.section:nth-child(even) {
-    background: #060817;
+.section:nth-child(even){
+    background:#060817;
 }
 
-.section-title {
-
-    text-align: center;
-
-    font-size: 45px;
-
-    margin-bottom: 55px;
+.section-title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:55px;
 }
 
-.section-title span {
-    color: #895bff;
+.section-title span{
+    color:#895bff;
 }
 
 
-/* =========================================================
+/* =========================
    ABOUT
-========================================================= */
+========================= */
 
-.about-container {
-
-    max-width: 950px;
-
-    margin: auto;
-
-    text-align: center;
+.about-container{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
 }
 
-.about-container p {
-
-    color: #bfc3d2;
-
-    font-size: 18px;
-
-    line-height: 1.8;
+.about-container p{
+    color:#bfc3d2;
+    font-size:18px;
+    line-height:1.8;
 }
 
 
-/* =========================================================
+/* =========================
    SKILLS
-========================================================= */
+========================= */
 
-.skills-grid {
+.skills-grid{
+    max-width:1100px;
+    margin:auto;
 
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(200px, 1fr));
+        repeat(auto-fit,minmax(200px,1fr));
 
-    gap: 20px;
+    gap:20px;
 }
 
-.skill-card {
-
-    padding: 25px;
-
-    border-radius: 18px;
+.skill-card{
+    padding:25px;
+    border-radius:18px;
 
     background:
         linear-gradient(
@@ -586,58 +477,47 @@ a {
             #0b0f21
         );
 
-    border: 1px solid #202640;
+    border:1px solid #202640;
 
-    text-align: center;
+    text-align:center;
 
-    transition: 0.3s;
+    transition:.3s;
 }
 
-.skill-card:hover {
-
-    transform: translateY(-6px);
-
-    border-color: #8056ff;
-
-    box-shadow:
-        0 15px 40px rgba(95,65,255,0.15);
+.skill-card:hover{
+    transform:translateY(-6px);
+    border-color:#8056ff;
 }
 
-.skill-card h3 {
-
-    color: #9e6cff;
-
-    margin-bottom: 10px;
+.skill-card h3{
+    color:#9e6cff;
+    margin-bottom:10px;
 }
 
-.skill-card p {
-    color: #b9bdcc;
+.skill-card p{
+    color:#b9bdcc;
 }
 
 
-/* =========================================================
+/* =========================
    PROJECTS
-========================================================= */
+========================= */
 
-.projects-grid {
+.projects-grid{
+    max-width:1100px;
+    margin:auto;
 
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
+        repeat(auto-fit,minmax(280px,1fr));
 
-    gap: 25px;
+    gap:25px;
 }
 
-.project-card {
-
-    padding: 30px;
-
-    border-radius: 20px;
+.project-card{
+    padding:30px;
+    border-radius:20px;
 
     background:
         linear-gradient(
@@ -646,168 +526,131 @@ a {
             #0b0f21
         );
 
-    border: 1px solid #232943;
+    border:1px solid #232943;
 
-    transition: 0.3s;
+    transition:.3s;
 }
 
-.project-card:hover {
-
-    transform: translateY(-7px);
-
-    border-color: #855cff;
-
-    box-shadow:
-        0 20px 45px rgba(87,59,255,0.15);
+.project-card:hover{
+    transform:translateY(-7px);
+    border-color:#855cff;
 }
 
-.project-number {
-
-    color: #885aff;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    margin-bottom: 12px;
+.project-number{
+    color:#885aff;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
-.project-card h3 {
-
-    font-size: 24px;
-
-    margin-bottom: 14px;
+.project-card h3{
+    font-size:24px;
+    margin-bottom:14px;
 }
 
-.project-card p {
-
-    color: #b8bdcd;
-
-    line-height: 1.65;
-
-    margin-bottom: 20px;
+.project-card p{
+    color:#b8bdcd;
+    line-height:1.65;
+    margin-bottom:20px;
 }
 
-.project-tech {
-
-    color: #a875ff;
-
-    font-size: 14px;
+.project-tech{
+    color:#a875ff;
+    font-size:14px;
 }
 
 
-/* =========================================================
+/* =========================
    TIMELINE
-========================================================= */
+========================= */
 
-.timeline {
-
-    max-width: 900px;
-
-    margin: auto;
+.timeline{
+    max-width:900px;
+    margin:auto;
 }
 
-.timeline-card {
+.timeline-card{
+    padding:28px;
+    margin-bottom:22px;
 
-    padding: 28px;
+    border-left:3px solid #8056ff;
 
-    margin-bottom: 22px;
+    background:#0c1124;
 
-    border-left: 3px solid #8056ff;
-
-    background: #0c1124;
-
-    border-radius: 0 15px 15px 0;
+    border-radius:0 15px 15px 0;
 }
 
-.timeline-card h3 {
-
-    font-size: 22px;
-
-    margin-bottom: 8px;
+.timeline-card h3{
+    font-size:22px;
+    margin-bottom:8px;
 }
 
-.timeline-card .date {
-
-    color: #9e69ff;
-
-    margin-bottom: 12px;
+.timeline-card .date{
+    color:#9e69ff;
+    margin-bottom:12px;
 }
 
-.timeline-card p {
-
-    color: #b8bdcc;
-
-    line-height: 1.65;
+.timeline-card p{
+    color:#b8bdcc;
+    line-height:1.65;
 }
 
 
-/* =========================================================
+/* =========================
    CERTIFICATIONS
-========================================================= */
+========================= */
 
-.cert-grid {
+.cert-grid{
+    max-width:1000px;
+    margin:auto;
 
-    max-width: 1000px;
-
-    margin: auto;
-
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(auto-fit,minmax(250px,1fr));
 
-    gap: 20px;
+    gap:20px;
 }
 
-.cert-card {
+.cert-card{
+    padding:25px;
+    text-align:center;
 
-    padding: 25px;
+    border-radius:17px;
 
-    text-align: center;
+    background:#0d1226;
 
-    border-radius: 17px;
-
-    background: #0d1226;
-
-    border: 1px solid #232942;
+    border:1px solid #232942;
 }
 
-.cert-card h3 {
-
-    color: #c7c9d8;
-
-    font-size: 18px;
+.cert-card h3{
+    color:#c7c9d8;
+    font-size:18px;
 }
 
 
-/* =========================================================
+/* =========================
    CONTACT
-========================================================= */
+========================= */
 
-.contact {
-
-    text-align: center;
+.contact{
+    text-align:center;
 }
 
-.contact p {
-
-    color: #b9bdcb;
-
-    font-size: 18px;
-
-    margin-bottom: 30px;
+.contact p{
+    color:#b9bdcb;
+    font-size:18px;
+    margin-bottom:30px;
 }
 
-.contact-email {
+.contact-email{
+    display:inline-block;
 
-    display: inline-block;
+    padding:17px 30px;
 
-    padding: 17px 30px;
+    border-radius:40px;
 
-    border-radius: 40px;
-
-    text-decoration: none;
+    text-decoration:none;
 
     background:
         linear-gradient(
@@ -816,140 +659,124 @@ a {
             #5e5cff
         );
 
-    font-weight: 700;
+    font-weight:700;
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
-footer {
+footer{
+    padding:30px;
 
-    padding: 30px;
+    text-align:center;
 
-    text-align: center;
+    background:#040611;
 
-    background: #040611;
+    color:#777c91;
 
-    color: #777c91;
-
-    border-top: 1px solid #151a2e;
+    border-top:1px solid #151a2e;
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
-@media (max-width: 1000px) {
+@media(max-width:1000px){
 
-    .nav-links {
-        display: none;
+    .nav-links{
+        display:none;
     }
 
-    .hero {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        padding-top: 120px;
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
     }
 
-    .hero-content {
-
-        width: 100%;
+    .hero-content{
+        width:100%;
     }
 
-    .hero-description {
-
-        margin-left: auto;
-        margin-right: auto;
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
     }
 
-    .hero-buttons {
-
-        justify-content: center;
+    .hero-buttons{
+        justify-content:center;
     }
 
-    .social-links {
-
-        justify-content: center;
+    .social-links{
+        justify-content:center;
     }
 
-    .hero-character {
-
-        width: 100%;
-
-        height: 570px;
-
-        margin-top: 20px;
+    .hero-character{
+        width:100%;
+        height:570px;
+        margin-top:20px;
     }
 
-    .girl-stage {
+    .girl-stage{
 
-        width: min(820px, 120%);
+        width:650px;
 
-        right: 50%;
+        right:50%;
 
-        transform: translateX(50%);
+        transform:translateX(50%);
 
-        bottom: 0;
+        bottom:35px;
     }
+
 }
 
 
-@media (max-width: 600px) {
+@media(max-width:600px){
 
-    .hero h1 {
-
-        font-size: 65px;
+    .hero h1{
+        font-size:65px;
     }
 
-    .hero h2 {
-
-        font-size: 30px;
+    .hero h2{
+        font-size:30px;
     }
 
-    .hero-details {
-
-        font-size: 17px;
+    .hero-details{
+        font-size:17px;
     }
 
-    .hero-description {
-
-        font-size: 16px;
+    .hero-description{
+        font-size:16px;
     }
 
-    .hero-buttons {
-
-        flex-direction: column;
-
-        align-items: center;
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
     }
 
-    .social-links {
-
-        flex-wrap: wrap;
+    .social-links{
+        flex-wrap:wrap;
     }
 
-    .hero-character {
-
-        height: 430px;
+    .hero-character{
+        height:430px;
     }
 
-    .girl-stage {
+    .girl-stage{
 
-        width: 700px;
+        width:580px;
 
-        max-width: 150vw;
+        max-width:150vw;
+
+        bottom:25px;
     }
 
-    .section-title {
-
-        font-size: 35px;
+    .section-title{
+        font-size:35px;
     }
+
 }
 
 </style>
@@ -959,9 +786,9 @@ footer {
 <body>
 
 
-<!-- =========================================================
+<!-- =========================
      NAVBAR
-========================================================= -->
+========================= -->
 
 <nav class="navbar">
 
@@ -990,9 +817,7 @@ footer {
         <a
             href="mailto:srish348@gmail.com"
             class="hire-btn">
-
             Hire Me
-
         </a>
 
     </div>
@@ -1000,14 +825,14 @@ footer {
 </nav>
 
 
-<!-- =========================================================
+<!-- =========================
      HERO
-========================================================= -->
+========================= -->
 
 <section class="hero" id="home">
 
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT -->
 
     <div class="hero-content">
 
@@ -1043,17 +868,13 @@ footer {
             <a
                 href="#projects"
                 class="primary-btn">
-
                 → View My Projects
-
             </a>
 
             <a
                 href="#contact"
                 class="secondary-btn">
-
                 Contact Me
-
             </a>
 
         </div>
@@ -1064,24 +885,18 @@ footer {
             <a
                 href="https://github.com/isha200403"
                 target="_blank">
-
                 GitHub
-
             </a>
 
             <a
                 href="https://www.linkedin.com/in/isha-s-10061137b/"
                 target="_blank">
-
                 LinkedIn
-
             </a>
 
             <a
                 href="mailto:srish348@gmail.com">
-
                 Email
-
             </a>
 
         </div>
@@ -1089,50 +904,27 @@ footer {
     </div>
 
 
-    <!-- =====================================================
-         RIGHT SIDE GIRL
-    ====================================================== -->
+    <!-- =========================
+         RIGHT SIDE IMAGE
+    ========================= -->
 
     <div class="hero-character">
 
         <div class="character-glow"></div>
 
 
-        <div class="girl-stage" id="girlStage">
-
-
-            <!-- ACTUAL IMAGE -->
+        <div class="girl-stage">
 
             <img
                 src="portfolio-girl.png"
                 alt="Isha coding illustration"
                 class="girl-image"
-                id="girlImage"
             >
-
-
-            <!-- LEFT EYE -->
-
-            <div class="eye eye-left">
-
-                <div class="pupil"></div>
-
-            </div>
-
-
-            <!-- RIGHT EYE -->
-
-            <div class="eye eye-right">
-
-                <div class="pupil"></div>
-
-            </div>
-
 
         </div>
 
 
-        <!-- FLOATING TECHNOLOGY BADGES -->
+        <!-- TECHNOLOGY BADGES -->
 
         <div class="tech-badge python">
             🐍 Python
@@ -1155,9 +947,9 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      ABOUT
-========================================================= -->
+========================= -->
 
 <section class="section" id="about">
 
@@ -1182,16 +974,15 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      SKILLS
-========================================================= -->
+========================= -->
 
 <section class="section" id="skills">
 
     <h2 class="section-title">
         My <span>Skills</span>
     </h2>
-
 
     <div class="skills-grid">
 
@@ -1250,16 +1041,15 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      PROJECTS
-========================================================= -->
+========================= -->
 
 <section class="section" id="projects">
 
     <h2 class="section-title">
         Featured <span>Projects</span>
     </h2>
-
 
     <div class="projects-grid">
 
@@ -1275,11 +1065,9 @@ footer {
             </h3>
 
             <p>
-
                 AI-based touchless shopping system that uses
                 hand gestures for product navigation,
                 selection and cart interaction.
-
             </p>
 
             <div class="project-tech">
@@ -1300,11 +1088,9 @@ footer {
             </h3>
 
             <p>
-
                 Machine learning based aptitude testing system
                 that adapts question difficulty according to
                 user performance.
-
             </p>
 
             <div class="project-tech">
@@ -1325,11 +1111,9 @@ footer {
             </h3>
 
             <p>
-
                 Deep learning based project using CNN techniques
                 to classify radiology images into benign and
                 malignant categories.
-
             </p>
 
             <div class="project-tech">
@@ -1343,16 +1127,15 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      EXPERIENCE
-========================================================= -->
+========================= -->
 
 <section class="section" id="experience">
 
     <h2 class="section-title">
         My <span>Experience</span>
     </h2>
-
 
     <div class="timeline">
 
@@ -1368,11 +1151,9 @@ footer {
             </div>
 
             <p>
-
                 Gained practical exposure to machine learning,
                 Python programming, data analysis and development
                 workflows.
-
             </p>
 
         </div>
@@ -1389,10 +1170,8 @@ footer {
             </div>
 
             <p>
-
                 Worked with Python, web technologies, databases
                 and full-stack development concepts.
-
             </p>
 
         </div>
@@ -1402,16 +1181,15 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      EDUCATION
-========================================================= -->
+========================= -->
 
 <section class="section" id="education">
 
     <h2 class="section-title">
         <span>Education</span>
     </h2>
-
 
     <div class="timeline">
 
@@ -1472,9 +1250,9 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      CERTIFICATIONS
-========================================================= -->
+========================= -->
 
 <section class="section" id="certifications">
 
@@ -1482,34 +1260,24 @@ footer {
         <span>Certifications</span>
     </h2>
 
-
     <div class="cert-grid">
 
-
         <div class="cert-card">
-
             <h3>
                 SQL Training
             </h3>
-
         </div>
 
-
         <div class="cert-card">
-
             <h3>
                 Data Analysis and Machine Learning in Python
             </h3>
-
         </div>
 
-
         <div class="cert-card">
-
             <h3>
                 Introduction to Generative AI
             </h3>
-
         </div>
 
     </div>
@@ -1517,9 +1285,9 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      CONTACT
-========================================================= -->
+========================= -->
 
 <section class="section contact" id="contact">
 
@@ -1543,151 +1311,15 @@ footer {
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      FOOTER
-========================================================= -->
+========================= -->
 
 <footer>
 
     © 2026 Isha S. • Software Developer
 
 </footer>
-
-
-<!-- =========================================================
-     EYE TRACKING JAVASCRIPT
-========================================================= -->
-
-<script>
-
-const girlStage =
-    document.getElementById("girlStage");
-
-const girlImage =
-    document.getElementById("girlImage");
-
-const pupils =
-    document.querySelectorAll(".pupil");
-
-
-document.addEventListener(
-    "mousemove",
-    function(event) {
-
-
-        /* =================================================
-           EYE TRACKING
-        ================================================= */
-
-        pupils.forEach(function(pupil) {
-
-            const eye =
-                pupil.parentElement;
-
-            const eyeRect =
-                eye.getBoundingClientRect();
-
-
-            const eyeX =
-                eyeRect.left +
-                eyeRect.width / 2;
-
-            const eyeY =
-                eyeRect.top +
-                eyeRect.height / 2;
-
-
-            const mouseX =
-                event.clientX;
-
-            const mouseY =
-                event.clientY;
-
-
-            const angle =
-                Math.atan2(
-                    mouseY - eyeY,
-                    mouseX - eyeX
-                );
-
-
-            const distance =
-                Math.min(
-                    8,
-                    Math.hypot(
-                        mouseX - eyeX,
-                        mouseY - eyeY
-                    ) / 45
-                );
-
-
-            const moveX =
-                Math.cos(angle) *
-                distance;
-
-            const moveY =
-                Math.sin(angle) *
-                distance;
-
-
-            pupil.style.transform =
-                `translate(
-                    calc(-50% + ${moveX}px),
-                    calc(-50% + ${moveY}px)
-                )`;
-
-        });
-
-
-        /* =================================================
-           VERY SMALL GIRL MOVEMENT
-        ================================================= */
-
-        const mouseX =
-            event.clientX /
-            window.innerWidth;
-
-        const mouseY =
-            event.clientY /
-            window.innerHeight;
-
-
-        const moveX =
-            (mouseX - 0.5) * 5;
-
-        const moveY =
-            (mouseY - 0.5) * 3;
-
-
-        girlImage.style.transform =
-            `translate(${moveX}px, ${moveY}px)`;
-
-    }
-);
-
-
-/* =========================================================
-   RESET WHEN MOUSE LEAVES
-========================================================= */
-
-document.addEventListener(
-    "mouseleave",
-    function() {
-
-        pupils.forEach(function(pupil) {
-
-            pupil.style.transform =
-                "translate(-50%, -50%)";
-
-        });
-
-        girlImage.style.transform =
-            "translate(0, 0)";
-
-    }
-);
-
-</script>
 
 
 </body>
