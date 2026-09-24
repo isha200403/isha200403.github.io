@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -293,7 +294,7 @@ a {
 
 
 /* =========================================================
-   GLOW
+   PURPLE GLOW
 ========================================================= */
 
 .character-glow {
@@ -319,29 +320,46 @@ a {
 
 
 /* =========================================================
-   GIRL STAGE
-   REDUCED SIZE
+   ORIGINAL GIRL IMAGE
 ========================================================= */
+
+/*
+   IMPORTANT:
+
+   This uses ONLY your original image.
+
+   No CSS girl.
+   No fake eyes.
+   No pupil overlays.
+   No black dots.
+*/
 
 .girl-stage {
 
     position: absolute;
 
-    width: min(680px, 105%);
+    /*
+       SMALLER THAN BEFORE
+    */
+    width: 670px;
+
+    max-width: 100%;
 
     aspect-ratio: 3 / 2;
 
-    right: -20px;
+    /*
+       Move image slightly upward
+    */
+    top: 15px;
 
-    bottom: 15px;
+    /*
+       Keep it toward the right
+    */
+    right: -5px;
 
     z-index: 5;
 }
 
-
-/* =========================================================
-   GIRL IMAGE
-========================================================= */
 
 .girl-image {
 
@@ -356,84 +374,24 @@ a {
 
     display: block;
 
+    /*
+       IMPORTANT:
+       No background is added here.
+       Your transparent PNG stays transparent.
+    */
+
     filter:
         drop-shadow(
             0 0 35px rgba(92,80,255,0.30)
         );
 
     transition:
-        transform 0.12s ease-out;
+        transform 0.15s ease-out;
 }
 
 
 /* =========================================================
-   EYES
-========================================================= */
-
-.eye {
-
-    position: absolute;
-
-    width: 38px;
-    height: 30px;
-
-    pointer-events: none;
-
-    z-index: 20;
-}
-
-
-/* LEFT EYE */
-
-.eye-left {
-
-    left: 55.5%;
-
-    top: 31.5%;
-}
-
-
-/* RIGHT EYE */
-
-.eye-right {
-
-    left: 64.8%;
-
-    top: 31.5%;
-}
-
-
-/* =========================================================
-   PUPIL
-========================================================= */
-
-.pupil {
-
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
-
-    background: #191329;
-
-    box-shadow:
-        0 0 2px white;
-
-    transform:
-        translate(-50%, -50%);
-
-    transition:
-        transform 0.05s linear;
-}
-
-
-/* =========================================================
-   FLOATING BADGES
+   FLOATING TECHNOLOGY BADGES
 ========================================================= */
 
 .tech-badge {
@@ -489,6 +447,7 @@ a {
     color: #b48aff;
     animation-delay: 0.5s;
 }
+
 
 @keyframes floating {
 
@@ -838,7 +797,7 @@ footer {
 
 
 /* =========================================================
-   TABLET
+   MOBILE
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -881,27 +840,26 @@ footer {
 
         width: 100%;
 
-        height: 570px;
+        height: 520px;
 
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .girl-stage {
 
-        width: min(680px, 105%);
+        width: 620px;
+
+        max-width: 95vw;
 
         right: 50%;
 
         transform: translateX(50%);
 
-        bottom: 0;
+        top: 0;
     }
+
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 600px) {
 
@@ -944,18 +902,22 @@ footer {
 
     .girl-stage {
 
-        width: 560px;
+        width: 520px;
 
-        max-width: 120vw;
+        max-width: 125vw;
+
+        top: 0;
     }
 
     .section-title {
 
         font-size: 35px;
     }
+
 }
 
 </style>
+
 </head>
 
 
@@ -1011,7 +973,9 @@ footer {
 <section class="hero" id="home">
 
 
-    <!-- LEFT SIDE -->
+    <!-- =====================================================
+         LEFT SIDE
+    ====================================================== -->
 
     <div class="hero-content">
 
@@ -1019,17 +983,21 @@ footer {
             Hi, I'm
         </div>
 
+
         <h1>
             Isha <span>S.</span>
         </h1>
+
 
         <h2>
             Software Developer
         </h2>
 
+
         <div class="hero-details">
             B.Tech CSE • 2026 • CGPA: 8.7/10
         </div>
+
 
         <p class="hero-description">
 
@@ -1052,6 +1020,7 @@ footer {
 
             </a>
 
+
             <a
                 href="#contact"
                 class="secondary-btn">
@@ -1073,6 +1042,7 @@ footer {
 
             </a>
 
+
             <a
                 href="https://www.linkedin.com/in/isha-s-10061137b/"
                 target="_blank">
@@ -1080,6 +1050,7 @@ footer {
                 LinkedIn
 
             </a>
+
 
             <a
                 href="mailto:srish348@gmail.com">
@@ -1095,61 +1066,53 @@ footer {
 
 
     <!-- =====================================================
-         RIGHT SIDE GIRL
+         RIGHT SIDE
     ====================================================== -->
 
     <div class="hero-character">
 
+
         <div class="character-glow"></div>
 
 
-        <div class="girl-stage" id="girlStage">
+        <!-- =================================================
+             ORIGINAL IMAGE ONLY
 
+             NO EYES
+             NO PUPILS
+             NO EXTRA DOTS
+             NO CSS GIRL
+        ================================================== -->
 
-            <!-- GIRL IMAGE -->
+        <div class="girl-stage">
 
             <img
                 src="portfolio-girl.png"
                 alt="Isha coding illustration"
                 class="girl-image"
-                id="girlImage"
             >
-
-
-            <!-- LEFT EYE -->
-
-            <div class="eye eye-left">
-
-                <div class="pupil"></div>
-
-            </div>
-
-
-            <!-- RIGHT EYE -->
-
-            <div class="eye eye-right">
-
-                <div class="pupil"></div>
-
-            </div>
-
 
         </div>
 
 
-        <!-- FLOATING TECHNOLOGY BADGES -->
+        <!-- =================================================
+             FLOATING TECHNOLOGY BADGES
+        ================================================== -->
 
         <div class="tech-badge python">
             🐍 Python
         </div>
 
+
         <div class="tech-badge javascript">
             JS
         </div>
 
+
         <div class="tech-badge mysql">
             MySQL
         </div>
+
 
         <div class="tech-badge code">
             &lt;/&gt;
@@ -1170,6 +1133,7 @@ footer {
     <h2 class="section-title">
         About <span>Me</span>
     </h2>
+
 
     <div class="about-container">
 
@@ -1207,45 +1171,54 @@ footer {
             <p>Programming & Development</p>
         </div>
 
+
         <div class="skill-card">
             <h3>SQL</h3>
             <p>Database & Querying</p>
         </div>
+
 
         <div class="skill-card">
             <h3>JavaScript</h3>
             <p>Web Development</p>
         </div>
 
+
         <div class="skill-card">
             <h3>HTML & CSS</h3>
             <p>Frontend Development</p>
         </div>
+
 
         <div class="skill-card">
             <h3>Flask</h3>
             <p>Python Web Framework</p>
         </div>
 
+
         <div class="skill-card">
             <h3>React JS</h3>
             <p>Frontend Development</p>
         </div>
+
 
         <div class="skill-card">
             <h3>Machine Learning</h3>
             <p>Scikit-learn & ML Models</p>
         </div>
 
+
         <div class="skill-card">
             <h3>Data Analysis</h3>
             <p>Pandas & NumPy</p>
         </div>
 
+
         <div class="skill-card">
             <h3>MySQL</h3>
             <p>Database Management</p>
         </div>
+
 
         <div class="skill-card">
             <h3>GitHub</h3>
@@ -1541,10 +1514,12 @@ footer {
         Let's <span>Connect</span>
     </h2>
 
+
     <p>
         I'm open to software development and technology
         opportunities.
     </p>
+
 
     <a
         href="mailto:srish348@gmail.com"
@@ -1569,143 +1544,15 @@ footer {
 </footer>
 
 
-
 <!-- =========================================================
-     EYE TRACKING JAVASCRIPT
+     IMPORTANT
+
+     NO EYE TRACKING SCRIPT HERE.
+
+     The original image already has its own eyes.
+     Adding extra pupils was causing the black dots.
+
 ========================================================= -->
-
-<script>
-
-const girlStage =
-    document.getElementById("girlStage");
-
-const girlImage =
-    document.getElementById("girlImage");
-
-const pupils =
-    document.querySelectorAll(".pupil");
-
-
-document.addEventListener(
-    "mousemove",
-    function(event) {
-
-
-        /* =================================================
-           EYE TRACKING
-        ================================================= */
-
-        pupils.forEach(function(pupil) {
-
-            const eye =
-                pupil.parentElement;
-
-            const eyeRect =
-                eye.getBoundingClientRect();
-
-
-            const eyeX =
-                eyeRect.left +
-                eyeRect.width / 2;
-
-            const eyeY =
-                eyeRect.top +
-                eyeRect.height / 2;
-
-
-            const mouseX =
-                event.clientX;
-
-            const mouseY =
-                event.clientY;
-
-
-            const angle =
-                Math.atan2(
-                    mouseY - eyeY,
-                    mouseX - eyeX
-                );
-
-
-            const distance =
-                Math.min(
-                    8,
-                    Math.hypot(
-                        mouseX - eyeX,
-                        mouseY - eyeY
-                    ) / 45
-                );
-
-
-            const moveX =
-                Math.cos(angle) *
-                distance;
-
-            const moveY =
-                Math.sin(angle) *
-                distance;
-
-
-            pupil.style.transform =
-                `translate(
-                    calc(-50% + ${moveX}px),
-                    calc(-50% + ${moveY}px)
-                )`;
-
-        });
-
-
-
-        /* =================================================
-           VERY SMALL GIRL MOVEMENT
-        ================================================= */
-
-        const mouseX =
-            event.clientX /
-            window.innerWidth;
-
-        const mouseY =
-            event.clientY /
-            window.innerHeight;
-
-
-        const moveX =
-            (mouseX - 0.5) * 5;
-
-        const moveY =
-            (mouseY - 0.5) * 3;
-
-
-        girlImage.style.transform =
-            `translate(${moveX}px, ${moveY}px)`;
-
-    }
-);
-
-
-/* =========================================================
-   RESET WHEN MOUSE LEAVES
-========================================================= */
-
-document.addEventListener(
-    "mouseleave",
-    function() {
-
-        pupils.forEach(function(pupil) {
-
-            pupil.style.transform =
-                "translate(-50%, -50%)";
-
-        });
-
-        girlImage.style.transform =
-            "translate(0, 0)";
-
-    }
-);
-
-</script>
-
 
 </body>
 </html>
