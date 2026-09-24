@@ -54,7 +54,7 @@ body{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:42px;
+    gap:38px;
 }
 
 .nav-links a{
@@ -65,7 +65,7 @@ body{
 }
 
 .nav-links a:hover{
-    color:#9a68ff;
+    color:#9b68ff;
 }
 
 .hire-btn{
@@ -79,36 +79,45 @@ body{
     box-shadow:0 10px 30px rgba(116,64,255,0.25);
 }
 
+
 /* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
-    padding:88px 6% 40px;
+    padding:88px 6% 30px;
+
     display:grid;
     grid-template-columns:48% 52%;
+
     align-items:center;
+
     position:relative;
     overflow:hidden;
 }
 
-/* purple glow behind girl */
-
 .hero::after{
     content:"";
+
     position:absolute;
+
     width:650px;
     height:650px;
+
     right:5%;
     top:170px;
+
     background:radial-gradient(
         circle,
-        rgba(89,45,255,0.48) 0%,
-        rgba(64,37,190,0.20) 35%,
+        rgba(89,45,255,0.45) 0%,
+        rgba(64,37,190,0.18) 35%,
         rgba(20,15,70,0) 70%
     );
+
     filter:blur(15px);
+
     pointer-events:none;
 }
+
 
 /* ================= LEFT CONTENT ================= */
 
@@ -138,7 +147,8 @@ body{
 }
 
 .role{
-    font-size:58px;
+    font-size:56px;
+    line-height:1.1;
     font-weight:800;
     margin-bottom:24px;
 }
@@ -152,9 +162,9 @@ body{
 
 .description{
     color:#d8d8e4;
-    font-size:21px;
+    font-size:20px;
     line-height:1.75;
-    max-width:690px;
+    max-width:680px;
     margin-bottom:38px;
 }
 
@@ -166,23 +176,38 @@ body{
 
 .primary-btn{
     display:inline-block;
+
     padding:18px 32px;
+
     border-radius:35px;
-    background:linear-gradient(135deg,#8049ff,#6841e8);
+
+    background:linear-gradient(
+        135deg,
+        #8049ff,
+        #6841e8
+    );
+
     color:white;
     text-decoration:none;
+
     font-size:19px;
     font-weight:700;
+
     box-shadow:0 10px 30px rgba(115,65,255,0.25);
 }
 
 .secondary-btn{
     display:inline-block;
+
     padding:18px 32px;
+
     border-radius:35px;
+
     border:1px solid rgba(160,140,255,0.35);
+
     color:white;
     text-decoration:none;
+
     font-size:19px;
     font-weight:700;
 }
@@ -202,100 +227,211 @@ body{
     color:#9b6cff;
 }
 
-/* ================= GIRL AREA ================= */
+
+/* ================= IMAGE AREA ================= */
 
 .hero-visual{
-    height:720px;
+
+    height:680px;
+
     position:relative;
+
     z-index:3;
+
     display:flex;
+
     align-items:flex-start;
+
     justify-content:center;
 }
 
+
 /*
-   IMPORTANT:
-   The transparent girl image is moved slightly DOWN.
-   Change top:65px if you ever want to adjust it.
+====================================================
+YOUR IMAGE
+
+I MADE IT SMALLER.
+
+OLD:
+width:760px
+
+NEW:
+width:570px
+
+It is also slightly lower:
+top:105px
+====================================================
 */
 
 .girl-image{
+
     position:absolute;
 
-    /* THIS controls the vertical position */
-    top:65px;
-
-    right:-20px;
-
-    width:760px;
-    max-width:none;
+    width:570px;
 
     height:auto;
+
+    top:105px;
+
+    right:10px;
+
+    max-width:none;
 
     object-fit:contain;
 
     z-index:3;
 
-    filter:drop-shadow(0 20px 35px rgba(79,45,255,0.20));
+    filter:drop-shadow(
+        0 20px 35px rgba(79,45,255,0.20)
+    );
 
-    transition:transform 0.25s ease;
 }
+
 
 /* ================= FLOATING SKILL CARDS ================= */
 
 .skill-card{
+
     position:absolute;
+
     z-index:10;
 
     min-width:130px;
+
     height:66px;
 
     padding:0 24px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    border:1px solid rgba(150,135,255,0.25);
+    border:1px solid rgba(
+        150,
+        135,
+        255,
+        0.25
+    );
+
     border-radius:20px;
 
-    background:rgba(5,7,25,0.75);
+    background:rgba(
+        5,
+        7,
+        25,
+        0.75
+    );
+
     backdrop-filter:blur(12px);
 
     font-size:21px;
+
     font-weight:700;
 
-    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.25);
 }
 
+
+/* Python */
+
 .python{
+
     top:35px;
-    right:50px;
+
+    right:45px;
+
     color:#ffd43b;
 }
 
 .python::before{
+
     content:"🐍";
+
     margin-right:10px;
 }
 
+
+/* JavaScript */
+
 .javascript{
+
     top:235px;
-    right:5px;
+
+    right:0;
+
     color:#ffe600;
 }
 
+
+/* Code */
+
 .code{
-    top:310px;
-    left:80px;
+
+    top:330px;
+
+    left:55px;
+
     color:#a86cff;
 }
 
+
+/* MySQL */
+
 .mysql{
-    bottom:100px;
+
+    bottom:70px;
+
     right:20px;
+
     color:#28d9ff;
 }
+
+
+/* ================= OTHER SECTIONS ================= */
+
+section:not(.hero){
+
+    min-height:600px;
+
+    padding:100px 8%;
+}
+
+section h2{
+
+    font-size:50px;
+
+    color:#9b68ff;
+
+    margin-bottom:35px;
+}
+
+section p{
+
+    color:#d8d8e4;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    max-width:900px;
+}
+
+.project{
+
+    margin-bottom:40px;
+}
+
+.project h3{
+
+    font-size:30px;
+
+    margin-bottom:12px;
+}
+
 
 /* ================= RESPONSIVE ================= */
 
@@ -322,11 +458,15 @@ body{
     }
 
     .girl-image{
-        width:650px;
-        right:-80px;
-        top:90px;
+
+        width:520px;
+
+        right:-30px;
+
+        top:110px;
     }
 }
+
 
 @media(max-width:900px){
 
@@ -339,40 +479,53 @@ body{
     }
 
     .hero{
+
         grid-template-columns:1fr;
+
         padding-top:120px;
     }
 
     .hero-content{
+
         text-align:center;
     }
 
     .description{
+
         margin-left:auto;
         margin-right:auto;
     }
 
     .buttons,
     .socials{
+
         justify-content:center;
     }
 
     .hero-visual{
-        height:600px;
+
+        height:550px;
+
         margin-top:20px;
     }
 
     .girl-image{
-        width:650px;
+
+        width:500px;
+
         right:50%;
+
         transform:translateX(50%);
-        top:40px;
+
+        top:45px;
     }
 
     .skill-card{
+
         display:none;
     }
 }
+
 
 @media(max-width:600px){
 
@@ -405,18 +558,23 @@ body{
     }
 
     .hero-visual{
-        height:480px;
+        height:470px;
     }
 
     .girl-image{
-        width:500px;
+
+        width:430px;
+
         top:35px;
     }
 }
+
 </style>
 </head>
 
+
 <body>
+
 
 <!-- ================= NAVBAR ================= -->
 
@@ -427,14 +585,23 @@ body{
     </div>
 
     <div class="nav-links">
+
         <a href="#home">Home</a>
+
         <a href="#about">About</a>
+
         <a href="#skills">Skills</a>
+
         <a href="#projects">Projects</a>
+
         <a href="#experience">Experience</a>
+
         <a href="#education">Education</a>
+
         <a href="#certifications">Certifications</a>
+
         <a href="#contact">Contact</a>
+
     </div>
 
     <a href="#contact" class="hire-btn">
@@ -444,11 +611,13 @@ body{
 </nav>
 
 
-<!-- ================= HERO ================= -->
+
+<!-- ================= HOME ================= -->
 
 <section class="hero" id="home">
 
-    <!-- LEFT SIDE -->
+
+    <!-- LEFT -->
 
     <div class="hero-content">
 
@@ -456,48 +625,74 @@ body{
             Hi, I'm
         </div>
 
+
         <div class="name">
             Isha <span>S.</span>
         </div>
+
 
         <div class="role">
             Software Developer
         </div>
 
+
         <div class="education-line">
             B.Tech CSE • 2026 • CGPA: 8.7/10
         </div>
 
+
         <p class="description">
-            I'm a Computer Science graduate with hands-on experience in
-            Python, SQL, Flask, web development and AI/ML. I enjoy building
-            practical applications, solving problems and exploring
-            technologies that turn ideas into useful solutions.
+
+            I'm a Computer Science graduate with hands-on
+            experience in Python, SQL, Flask, web development
+            and AI/ML. I enjoy building practical applications,
+            solving problems and exploring technologies that
+            turn ideas into useful solutions.
+
         </p>
+
 
         <div class="buttons">
 
-            <a href="#projects" class="primary-btn">
+            <a
+                href="#projects"
+                class="primary-btn"
+            >
                 → View My Projects
             </a>
 
-            <a href="#contact" class="secondary-btn">
+
+            <a
+                href="#contact"
+                class="secondary-btn"
+            >
                 Contact Me
             </a>
 
         </div>
 
+
         <div class="socials">
 
-            <a href="https://github.com/isha200403" target="_blank">
+            <a
+                href="https://github.com/isha200403"
+                target="_blank"
+            >
                 GitHub
             </a>
 
-            <a href="https://linkedin.com/in/isha-s-10061137b" target="_blank">
+
+            <a
+                href="https://linkedin.com/in/isha-s-10061137b"
+                target="_blank"
+            >
                 LinkedIn
             </a>
 
-            <a href="mailto:srish348@gmail.com">
+
+            <a
+                href="mailto:srish348@gmail.com"
+            >
                 Email
             </a>
 
@@ -506,11 +701,13 @@ body{
     </div>
 
 
-    <!-- RIGHT SIDE -->
+
+    <!-- RIGHT IMAGE -->
 
     <div class="hero-visual">
 
-        <!-- YOUR TRANSPARENT GIRL + BOOKS + PLANT IMAGE -->
+
+        <!-- KEEP YOUR TRANSPARENT PNG HERE -->
 
         <img
             src="portfolio-girl.png"
@@ -518,219 +715,298 @@ body{
             class="girl-image"
         >
 
-        <!-- FLOATING CARDS -->
+
+        <!-- PYTHON -->
 
         <div class="skill-card python">
             Python
         </div>
 
+
+        <!-- JS -->
+
         <div class="skill-card javascript">
             JS
         </div>
+
+
+        <!-- CODE -->
 
         <div class="skill-card code">
             &lt;/&gt;
         </div>
 
+
+        <!-- MYSQL -->
+
         <div class="skill-card mysql">
             MySQL
         </div>
 
+
     </div>
 
 </section>
+
 
 
 <!-- ================= ABOUT ================= -->
 
-<section id="about" style="min-height:600px;padding:100px 8%;">
-    <h2 style="font-size:50px;color:#9b68ff;margin-bottom:25px;">
+<section id="about">
+
+    <h2>
         About Me
     </h2>
 
-    <p style="font-size:20px;line-height:1.8;color:#d8d8e4;max-width:850px;">
-        I am a Computer Science and Engineering graduate passionate about
-        software development, Python, machine learning and web technologies.
-        I enjoy creating practical applications and continuously learning
-        new technologies.
+    <p>
+
+        I am a Computer Science and Engineering graduate
+        passionate about software development, Python,
+        machine learning and web technologies. I enjoy
+        creating practical applications and continuously
+        learning new technologies.
+
     </p>
+
 </section>
+
 
 
 <!-- ================= SKILLS ================= -->
 
-<section id="skills" style="min-height:600px;padding:100px 8%;">
-    <h2 style="font-size:50px;color:#9b68ff;margin-bottom:35px;">
+<section id="skills">
+
+    <h2>
         Skills
     </h2>
 
-    <p style="font-size:21px;line-height:2;color:#ddd;">
-        Python • SQL • JavaScript • HTML • CSS • Flask • React JS • MySQL
-        • Scikit-learn • Pandas • NumPy • GitHub • VS Code • Jupyter Notebook
+    <p>
+
+        Python • SQL • JavaScript • HTML • CSS • Flask •
+        React JS • MySQL • Scikit-learn • Pandas • NumPy •
+        Decision Tree • Random Forest • Matplotlib • Seaborn •
+        GitHub • VS Code • Jupyter Notebook • Linux
+
     </p>
+
 </section>
+
 
 
 <!-- ================= PROJECTS ================= -->
 
-<section id="projects" style="min-height:700px;padding:100px 8%;">
+<section id="projects">
 
-    <h2 style="font-size:50px;color:#9b68ff;margin-bottom:40px;">
+    <h2>
         Projects
     </h2>
 
-    <div style="margin-bottom:35px;">
-        <h3 style="font-size:30px;">
+
+    <div class="project">
+
+        <h3>
             GestureCart
         </h3>
 
-        <p style="color:#ccc;font-size:19px;line-height:1.7;">
-            AI-Based Touchless Shopping System using Python, Flask,
-            MySQL and MediaPipe. Hand gestures are used for product
-            navigation, selection and cart operations.
+        <p>
+
+            AI-Based Touchless Shopping System using Python,
+            Flask, MySQL and MediaPipe. Hand gestures are used
+            for product navigation, selection and cart operations.
+
         </p>
+
     </div>
 
-    <div style="margin-bottom:35px;">
-        <h3 style="font-size:30px;">
+
+    <div class="project">
+
+        <h3>
             Adaptive Aptitude Testing System
         </h3>
 
-        <p style="color:#ccc;font-size:19px;line-height:1.7;">
-            Machine learning based aptitude system that adapts question
-            difficulty according to user performance using Decision Tree
-            and Random Forest algorithms.
+        <p>
+
+            Machine learning based aptitude system that adapts
+            question difficulty according to user performance
+            using Decision Tree and Random Forest algorithms.
+
         </p>
+
     </div>
 
-    <div>
-        <h3 style="font-size:30px;">
+
+    <div class="project">
+
+        <h3>
             Breast Cancer Detection
         </h3>
 
-        <p style="color:#ccc;font-size:19px;line-height:1.7;">
-            Deep learning project using CNN and radiology images to
-            classify tumors as benign or malignant.
+        <p>
+
+            Deep learning project using CNN and radiology images
+            to classify tumors as benign or malignant.
+
         </p>
+
     </div>
 
 </section>
+
 
 
 <!-- ================= EXPERIENCE ================= -->
 
-<section id="experience" style="min-height:600px;padding:100px 8%;">
+<section id="experience">
 
-    <h2 style="font-size:50px;color:#9b68ff;margin-bottom:35px;">
+    <h2>
         Experience
     </h2>
 
-    <h3 style="font-size:28px;">
-        Trainee Machine Learning Engineer
-    </h3>
 
-    <p style="color:#ccc;font-size:19px;margin:15px 0 40px;">
-        Inventeron Technologies
-    </p>
+    <div class="project">
 
-    <h3 style="font-size:28px;">
-        Python Full Stack Development Training
-    </h3>
+        <h3>
+            Trainee Machine Learning Engineer
+        </h3>
 
-    <p style="color:#ccc;font-size:19px;margin-top:15px;">
-        Besant Technologies
-    </p>
+        <p>
+            Inventeron Technologies
+        </p>
+
+    </div>
+
+
+    <div class="project">
+
+        <h3>
+            Python Full Stack Development Training
+        </h3>
+
+        <p>
+            Besant Technologies
+        </p>
+
+    </div>
 
 </section>
+
 
 
 <!-- ================= EDUCATION ================= -->
 
-<section id="education" style="min-height:600px;padding:100px 8%;">
+<section id="education">
 
-    <h2 style="font-size:50px;color:#9b68ff;margin-bottom:35px;">
+    <h2>
         Education
     </h2>
 
-    <h3 style="font-size:28px;">
-        B.Tech / Bachelor of Computer Science and Engineering
-    </h3>
 
-    <p style="color:#ccc;font-size:19px;line-height:1.8;">
-        C Byregowda Institute of Technology<br>
-        2026 • CGPA: 8.7/10
-    </p>
+    <div class="project">
 
-    <br>
+        <h3>
+            B.Tech / Bachelor of Computer Science and Engineering
+        </h3>
 
-    <h3 style="font-size:28px;">
-        Pre-University
-    </h3>
+        <p>
+            C Byregowda Institute of Technology<br>
+            2026 • CGPA: 8.7/10
+        </p>
 
-    <p style="color:#ccc;font-size:19px;">
-        Sahyadri PU College • 2022 • 72%
-    </p>
+    </div>
 
-    <br>
 
-    <h3 style="font-size:28px;">
-        Class X
-    </h3>
+    <div class="project">
 
-    <p style="color:#ccc;font-size:19px;">
-        Shankara Vidyalaya School • 2020 • 92%
-    </p>
+        <h3>
+            Pre-University
+        </h3>
+
+        <p>
+            Sahyadri PU College<br>
+            2022 • 72%
+        </p>
+
+    </div>
+
+
+    <div class="project">
+
+        <h3>
+            Class X
+        </h3>
+
+        <p>
+            Shankara Vidyalaya School<br>
+            2020 • 92%
+        </p>
+
+    </div>
 
 </section>
+
 
 
 <!-- ================= CERTIFICATIONS ================= -->
 
-<section id="certifications" style="min-height:500px;padding:100px 8%;">
+<section id="certifications">
 
-    <h2 style="font-size:50px;color:#9b68ff;margin-bottom:35px;">
+    <h2>
         Certifications
     </h2>
 
-    <p style="font-size:21px;color:#ddd;line-height:2;">
+    <p>
+
         SQL Training<br>
         Data Analysis and Machine Learning in Python<br>
         Introduction to Generative AI
+
     </p>
 
 </section>
 
 
+
 <!-- ================= CONTACT ================= -->
 
-<section id="contact" style="min-height:500px;padding:100px 8%;">
+<section id="contact">
 
-    <h2 style="font-size:50px;color:#9b68ff;margin-bottom:35px;">
+    <h2>
         Contact
     </h2>
 
-    <p style="font-size:21px;color:#ddd;line-height:2;">
+    <p>
+
         Email:
-        <a href="mailto:srish348@gmail.com"
-           style="color:#a66cff;">
+        <a
+            href="mailto:srish348@gmail.com"
+            style="color:#a66cff;"
+        >
             srish348@gmail.com
         </a>
-        <br>
+
+        <br><br>
 
         LinkedIn:
-        <a href="https://linkedin.com/in/isha-s-10061137b"
-           target="_blank"
-           style="color:#a66cff;">
+        <a
+            href="https://linkedin.com/in/isha-s-10061137b"
+            target="_blank"
+            style="color:#a66cff;"
+        >
             linkedin.com/in/isha-s-10061137b
         </a>
-        <br>
+
+        <br><br>
 
         GitHub:
-        <a href="https://github.com/isha200403"
-           target="_blank"
-           style="color:#a66cff;">
+        <a
+            href="https://github.com/isha200403"
+            target="_blank"
+            style="color:#a66cff;"
+        >
             github.com/isha200403
         </a>
+
     </p>
 
 </section>
