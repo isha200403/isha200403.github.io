@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Isha S. | Software Developer</title>
 
 <meta name="description"
-      content="Isha S. - Software Developer and Computer Science graduate">
+content="Isha S. - Software Developer and Computer Science graduate">
 
 <style>
 
@@ -19,26 +15,26 @@
    RESET
 ========================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#060817;
-    color:white;
-    overflow-x:hidden;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #060817;
+    color: white;
+    overflow-x: hidden;
 }
 
-a{
-    color:inherit;
+a {
+    color: inherit;
 }
 
 
@@ -46,82 +42,66 @@ a{
    NAVBAR
 ========================================================= */
 
-.navbar{
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    position:fixed;
+    width: 100%;
+    height: 74px;
 
-    top:0;
-    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    width:100%;
-    height:74px;
+    padding: 0 6%;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    background: rgba(5, 8, 23, 0.88);
+    backdrop-filter: blur(15px);
 
-    padding:0 6%;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 
-    background:rgba(5,8,23,.92);
-
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(255,255,255,.06);
-
-    z-index:1000;
+    z-index: 1000;
 }
 
-.logo{
-
-    font-size:30px;
-
-    font-weight:800;
-
-    text-decoration:none;
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: none;
 }
 
-.logo span{
-    color:#8b5cf6;
+.logo span {
+    color: #8b5cf6;
 }
 
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:27px;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
 }
 
-.nav-links a{
-
-    text-decoration:none;
-
-    color:#c8cad6;
-
-    font-size:15px;
-
-    transition:.3s;
+.nav-links a {
+    text-decoration: none;
+    color: #c8cad6;
+    font-size: 15px;
+    transition: 0.3s ease;
 }
 
-.nav-links a:hover{
-    color:#9b6cff;
+.nav-links a:hover {
+    color: #9b6cff;
 }
 
-.hire-btn{
+.hire-btn {
+    padding: 12px 23px;
+    border-radius: 30px;
 
-    padding:12px 23px;
-
-    border-radius:30px;
-
-    background:
-    linear-gradient(
+    background: linear-gradient(
         135deg,
         #7c4dff,
         #5c5cff
     );
 
-    color:white !important;
+    color: white !important;
 }
 
 
@@ -129,105 +109,92 @@ a{
    HERO
 ========================================================= */
 
-.hero{
+.hero {
+    min-height: 100vh;
 
-    min-height:100vh;
+    display: flex;
+    align-items: center;
 
-    display:flex;
+    padding: 105px 6% 55px;
 
-    align-items:center;
-
-    padding:
-        105px
-        5%
-        45px;
-
-    position:relative;
-
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
 
     background:
-
-    radial-gradient(
-        circle at 72% 45%,
-        rgba(80,60,255,.25),
-        transparent 35%
-    ),
-
-    #060817;
+        radial-gradient(
+            circle at 75% 48%,
+            rgba(100, 68, 255, 0.20),
+            transparent 33%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(120, 70, 255, 0.12),
+            transparent 30%
+        ),
+        #060817;
 }
 
 
 /* =========================================================
-   LEFT SIDE
+   HERO LEFT
 ========================================================= */
 
-.hero-content{
+.hero-content {
+    width: 48%;
+    max-width: 690px;
 
-    width:47%;
-
-    position:relative;
-
-    z-index:20;
+    position: relative;
+    z-index: 50;
 }
 
-.hello{
+.hello {
+    color: #a16aff;
 
-    color:#a16aff;
+    font-size: 27px;
+    font-weight: 600;
 
-    font-size:28px;
-
-    font-weight:600;
-
-    margin-bottom:18px;
+    margin-bottom: 17px;
 }
 
-.hero h1{
+.hero h1 {
+    font-size: clamp(65px, 8vw, 110px);
 
-    font-size:
-        clamp(65px,8vw,105px);
+    line-height: 0.95;
 
-    line-height:.95;
+    letter-spacing: -5px;
 
-    letter-spacing:-5px;
-
-    font-weight:800;
+    font-weight: 800;
 }
 
-.hero h1 span{
-    color:#8755ff;
+.hero h1 span {
+    color: #8755ff;
 }
 
-.hero h2{
+.hero h2 {
+    margin-top: 28px;
 
-    margin-top:30px;
-
-    font-size:
-        clamp(30px,4vw,46px);
+    font-size: clamp(30px, 4vw, 45px);
 }
 
-.hero-details{
+.hero-details {
+    margin-top: 18px;
 
-    margin-top:20px;
+    color: #a56cff;
 
-    color:#a56cff;
-
-    font-size:22px;
-
-    font-weight:700;
+    font-size: 21px;
+    font-weight: 700;
 }
 
-.hero-description{
+.hero-description {
+    max-width: 640px;
 
-    max-width:650px;
+    margin-top: 27px;
 
-    margin-top:28px;
+    color: #c3c7d6;
 
-    color:#c3c7d6;
+    font-size: 18px;
 
-    font-size:18px;
-
-    line-height:1.75;
+    line-height: 1.75;
 }
 
 
@@ -235,248 +202,302 @@ a{
    BUTTONS
 ========================================================= */
 
-.hero-buttons{
+.hero-buttons {
+    display: flex;
+    gap: 18px;
 
-    display:flex;
-
-    gap:18px;
-
-    margin-top:35px;
+    margin-top: 35px;
 }
 
-.hero-buttons a{
+.hero-buttons a {
+    text-decoration: none;
 
-    text-decoration:none;
+    padding: 16px 28px;
 
-    padding:16px 28px;
+    border-radius: 40px;
 
-    border-radius:40px;
+    font-weight: 700;
 
-    font-weight:700;
-
-    transition:.3s;
+    transition: 0.3s ease;
 }
 
-.primary-btn{
-
+.primary-btn {
     background:
-    linear-gradient(
-        135deg,
-        #814cff,
-        #5d5cff
-    );
+        linear-gradient(
+            135deg,
+            #814cff,
+            #5d5cff
+        );
 
     box-shadow:
-        0 12px 35px
-        rgba(100,70,255,.3);
+        0 12px 35px rgba(100,70,255,0.30);
 }
 
-.primary-btn:hover{
-
-    transform:translateY(-4px);
+.primary-btn:hover {
+    transform: translateY(-4px);
 
     box-shadow:
-        0 18px 45px
-        rgba(100,70,255,.45);
+        0 18px 45px rgba(100,70,255,0.45);
 }
 
-.secondary-btn{
-
-    border:1px solid #343952;
+.secondary-btn {
+    border: 1px solid #343952;
 }
 
-.secondary-btn:hover{
-
-    border-color:#9062ff;
-
-    transform:translateY(-4px);
+.secondary-btn:hover {
+    border-color: #9062ff;
+    transform: translateY(-4px);
 }
 
 
 /* =========================================================
-   SOCIAL LINKS
+   SOCIAL
 ========================================================= */
 
-.social-links{
+.social-links {
+    display: flex;
+    gap: 28px;
 
-    display:flex;
-
-    gap:28px;
-
-    margin-top:37px;
+    margin-top: 37px;
 }
 
-.social-links a{
+.social-links a {
+    color: #bfc3d2;
 
-    color:#bfc3d2;
+    text-decoration: none;
 
-    text-decoration:none;
-
-    transition:.3s;
+    transition: 0.3s;
 }
 
-.social-links a:hover{
-    color:#a16aff;
+.social-links a:hover {
+    color: #a16aff;
 }
 
 
 /* =========================================================
-   RIGHT SIDE IMAGE
+   CHARACTER AREA
 ========================================================= */
 
-.hero-character{
+.hero-character {
+    width: 52%;
+    height: 650px;
 
-    width:53%;
+    position: relative;
 
-    height:700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+    z-index: 10;
 }
 
 
 /* =========================================================
-   GLOW BEHIND IMAGE
+   GLOW
 ========================================================= */
 
-.character-glow{
+.character-glow {
+    position: absolute;
 
-    position:absolute;
+    width: 600px;
+    height: 600px;
 
-    width:650px;
-    height:650px;
-
-    border-radius:50%;
+    border-radius: 50%;
 
     background:
+        radial-gradient(
+            circle,
+            rgba(75, 80, 255, 0.28),
+            rgba(120, 60, 255, 0.15),
+            transparent 70%
+        );
 
-    radial-gradient(
-        circle,
-        rgba(70,70,255,.35),
-        rgba(100,50,255,.15),
-        transparent 70%
-    );
+    filter: blur(25px);
 
-    filter:blur(30px);
-
-    z-index:1;
+    z-index: 1;
 }
 
 
 /* =========================================================
-   EXACT GIRL IMAGE
+   GIRL STAGE
+   REDUCED SIZE
 ========================================================= */
 
-.girl-image{
+.girl-stage {
 
-    position:absolute;
+    position: absolute;
 
-    width:900px;
+    width: min(680px, 105%);
 
-    max-width:none;
+    aspect-ratio: 3 / 2;
 
-    height:auto;
+    right: -20px;
 
-    right:-150px;
+    bottom: 15px;
 
-    top:50%;
+    z-index: 5;
+}
 
-    transform:translateY(-50%);
 
-    display:block;
+/* =========================================================
+   GIRL IMAGE
+========================================================= */
 
-    z-index:5;
+.girl-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
 
     filter:
         drop-shadow(
-            0 0 35px
-            rgba(90,70,255,.3)
+            0 0 35px rgba(92,80,255,0.30)
         );
+
+    transition:
+        transform 0.12s ease-out;
 }
 
 
 /* =========================================================
-   TECHNOLOGY BADGES
+   EYES
 ========================================================= */
 
-.tech-badge{
+.eye {
 
-    position:absolute;
+    position: absolute;
 
-    padding:15px 22px;
+    width: 38px;
+    height: 30px;
 
-    border-radius:17px;
+    pointer-events: none;
 
-    background:
-        rgba(10,15,32,.9);
+    z-index: 20;
+}
 
-    border:1px solid #34375b;
 
-    font-size:17px;
+/* LEFT EYE */
 
-    font-weight:700;
+.eye-left {
 
-    z-index:20;
+    left: 55.5%;
+
+    top: 31.5%;
+}
+
+
+/* RIGHT EYE */
+
+.eye-right {
+
+    left: 64.8%;
+
+    top: 31.5%;
+}
+
+
+/* =========================================================
+   PUPIL
+========================================================= */
+
+.pupil {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #191329;
+
+    box-shadow:
+        0 0 2px white;
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        transform 0.05s linear;
+}
+
+
+/* =========================================================
+   FLOATING BADGES
+========================================================= */
+
+.tech-badge {
+
+    position: absolute;
+
+    padding: 14px 20px;
+
+    border-radius: 16px;
+
+    background: rgba(12,17,34,0.82);
+
+    border: 1px solid rgba(140,110,255,0.22);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25);
 
     animation:
         floating 4s ease-in-out infinite;
+
+    z-index: 30;
 }
 
-.python{
-
-    right:15px;
-
-    top:40px;
-
-    color:#ffd43b;
+.python {
+    right: 20px;
+    top: 65px;
+    color: #ffd43b;
 }
 
-.javascript{
-
-    right:-20px;
-
-    top:210px;
-
-    color:#ffe600;
-
-    animation-delay:1s;
+.javascript {
+    right: -20px;
+    top: 185px;
+    color: #ffe600;
+    animation-delay: 1s;
 }
 
-.mysql{
-
-    right:10px;
-
-    bottom:100px;
-
-    color:#35c6ff;
-
-    animation-delay:2s;
+.mysql {
+    right: 20px;
+    bottom: 100px;
+    color: #35c6ff;
+    animation-delay: 2s;
 }
 
-.code{
-
-    left:10px;
-
-    top:300px;
-
-    color:#b48aff;
-
-    animation-delay:.5s;
+.code {
+    left: 10px;
+    top: 250px;
+    color: #b48aff;
+    animation-delay: 0.5s;
 }
 
-@keyframes floating{
+@keyframes floating {
 
-    0%,100%{
-        transform:translateY(0);
+    0%, 100% {
+        transform: translateY(0);
     }
 
-    50%{
-        transform:translateY(-12px);
+    50% {
+        transform: translateY(-12px);
     }
 }
 
@@ -485,28 +506,28 @@ a{
    SECTIONS
 ========================================================= */
 
-.section{
+.section {
 
-    padding:100px 8%;
+    padding: 100px 8%;
 
-    background:#080b1c;
+    background: #080b1c;
 }
 
-.section:nth-child(even){
-    background:#060817;
+.section:nth-child(even) {
+    background: #060817;
 }
 
-.section-title{
+.section-title {
 
-    text-align:center;
+    text-align: center;
 
-    font-size:45px;
+    font-size: 45px;
 
-    margin-bottom:55px;
+    margin-bottom: 55px;
 }
 
-.section-title span{
-    color:#895bff;
+.section-title span {
+    color: #895bff;
 }
 
 
@@ -514,22 +535,22 @@ a{
    ABOUT
 ========================================================= */
 
-.about-container{
+.about-container {
 
-    max-width:950px;
+    max-width: 950px;
 
-    margin:auto;
+    margin: auto;
 
-    text-align:center;
+    text-align: center;
 }
 
-.about-container p{
+.about-container p {
 
-    color:#bfc3d2;
+    color: #bfc3d2;
 
-    font-size:18px;
+    font-size: 18px;
 
-    line-height:1.8;
+    line-height: 1.8;
 }
 
 
@@ -537,28 +558,25 @@ a{
    SKILLS
 ========================================================= */
 
-.skills-grid{
+.skills-grid {
 
-    max-width:1100px;
+    max-width: 1100px;
 
-    margin:auto;
+    margin: auto;
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(200px,1fr)
-        );
+        repeat(auto-fit, minmax(200px, 1fr));
 
-    gap:20px;
+    gap: 20px;
 }
 
-.skill-card{
+.skill-card {
 
-    padding:25px;
+    padding: 25px;
 
-    border-radius:18px;
+    border-radius: 18px;
 
     background:
         linear-gradient(
@@ -567,29 +585,32 @@ a{
             #0b0f21
         );
 
-    border:1px solid #202640;
+    border: 1px solid #202640;
 
-    text-align:center;
+    text-align: center;
 
-    transition:.3s;
+    transition: 0.3s;
 }
 
-.skill-card:hover{
+.skill-card:hover {
 
-    transform:translateY(-6px);
+    transform: translateY(-6px);
 
-    border-color:#8056ff;
+    border-color: #8056ff;
+
+    box-shadow:
+        0 15px 40px rgba(95,65,255,0.15);
 }
 
-.skill-card h3{
+.skill-card h3 {
 
-    color:#9e6cff;
+    color: #9e6cff;
 
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
-.skill-card p{
-    color:#b9bdcc;
+.skill-card p {
+    color: #b9bdcc;
 }
 
 
@@ -597,28 +618,25 @@ a{
    PROJECTS
 ========================================================= */
 
-.projects-grid{
+.projects-grid {
 
-    max-width:1100px;
+    max-width: 1100px;
 
-    margin:auto;
+    margin: auto;
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(280px,1fr)
-        );
+        repeat(auto-fit, minmax(280px, 1fr));
 
-    gap:25px;
+    gap: 25px;
 }
 
-.project-card{
+.project-card {
 
-    padding:30px;
+    padding: 30px;
 
-    border-radius:20px;
+    border-radius: 20px;
 
     background:
         linear-gradient(
@@ -627,98 +645,99 @@ a{
             #0b0f21
         );
 
-    border:1px solid #232943;
+    border: 1px solid #232943;
 
-    transition:.3s;
+    transition: 0.3s;
 }
 
-.project-card:hover{
+.project-card:hover {
 
-    transform:translateY(-7px);
+    transform: translateY(-7px);
 
-    border-color:#855cff;
+    border-color: #855cff;
+
+    box-shadow:
+        0 20px 45px rgba(87,59,255,0.15);
 }
 
-.project-number{
+.project-number {
 
-    color:#885aff;
+    color: #885aff;
 
-    font-size:14px;
+    font-size: 14px;
 
-    font-weight:bold;
+    font-weight: bold;
 
-    margin-bottom:12px;
+    margin-bottom: 12px;
 }
 
-.project-card h3{
+.project-card h3 {
 
-    font-size:24px;
+    font-size: 24px;
 
-    margin-bottom:14px;
+    margin-bottom: 14px;
 }
 
-.project-card p{
+.project-card p {
 
-    color:#b8bdcd;
+    color: #b8bdcd;
 
-    line-height:1.65;
+    line-height: 1.65;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
-.project-tech{
+.project-tech {
 
-    color:#a875ff;
+    color: #a875ff;
 
-    font-size:14px;
+    font-size: 14px;
 }
 
 
 /* =========================================================
-   EXPERIENCE / EDUCATION
+   TIMELINE
 ========================================================= */
 
-.timeline{
+.timeline {
 
-    max-width:900px;
+    max-width: 900px;
 
-    margin:auto;
+    margin: auto;
 }
 
-.timeline-card{
+.timeline-card {
 
-    padding:28px;
+    padding: 28px;
 
-    margin-bottom:22px;
+    margin-bottom: 22px;
 
-    border-left:
-        3px solid #8056ff;
+    border-left: 3px solid #8056ff;
 
-    background:#0c1124;
+    background: #0c1124;
 
-    border-radius:
-        0 15px 15px 0;
+    border-radius: 0 15px 15px 0;
 }
 
-.timeline-card h3{
+.timeline-card h3 {
 
-    font-size:22px;
+    font-size: 22px;
 
-    margin-bottom:8px;
+    margin-bottom: 8px;
 }
 
-.timeline-card .date{
+.timeline-card .date {
 
-    color:#9e69ff;
+    color: #9e69ff;
 
-    margin-bottom:12px;
+    margin-bottom: 12px;
 }
 
-.timeline-card p{
+.timeline-card p {
 
-    color:#b8bdcc;
+    color: #b8bdcc;
 
-    line-height:1.65;
+    line-height: 1.65;
 }
 
 
@@ -726,41 +745,38 @@ a{
    CERTIFICATIONS
 ========================================================= */
 
-.cert-grid{
+.cert-grid {
 
-    max-width:1000px;
+    max-width: 1000px;
 
-    margin:auto;
+    margin: auto;
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(250px,1fr)
-        );
+        repeat(auto-fit, minmax(250px, 1fr));
 
-    gap:20px;
+    gap: 20px;
 }
 
-.cert-card{
+.cert-card {
 
-    padding:25px;
+    padding: 25px;
 
-    text-align:center;
+    text-align: center;
 
-    border-radius:17px;
+    border-radius: 17px;
 
-    background:#0d1226;
+    background: #0d1226;
 
-    border:1px solid #232942;
+    border: 1px solid #232942;
 }
 
-.cert-card h3{
+.cert-card h3 {
 
-    color:#c7c9d8;
+    color: #c7c9d8;
 
-    font-size:18px;
+    font-size: 18px;
 }
 
 
@@ -768,28 +784,29 @@ a{
    CONTACT
 ========================================================= */
 
-.contact{
-    text-align:center;
+.contact {
+
+    text-align: center;
 }
 
-.contact p{
+.contact p {
 
-    color:#b9bdcb;
+    color: #b9bdcb;
 
-    font-size:18px;
+    font-size: 18px;
 
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
-.contact-email{
+.contact-email {
 
-    display:inline-block;
+    display: inline-block;
 
-    padding:17px 30px;
+    padding: 17px 30px;
 
-    border-radius:40px;
+    border-radius: 40px;
 
-    text-decoration:none;
+    text-decoration: none;
 
     background:
         linear-gradient(
@@ -798,7 +815,7 @@ a{
             #5e5cff
         );
 
-    font-weight:700;
+    font-weight: 700;
 }
 
 
@@ -806,18 +823,79 @@ a{
    FOOTER
 ========================================================= */
 
-footer{
+footer {
 
-    padding:30px;
+    padding: 30px;
 
-    text-align:center;
+    text-align: center;
 
-    background:#040611;
+    background: #040611;
 
-    color:#777c91;
+    color: #777c91;
 
-    border-top:
-        1px solid #151a2e;
+    border-top: 1px solid #151a2e;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 120px;
+    }
+
+    .hero-content {
+
+        width: 100%;
+    }
+
+    .hero-description {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
+
+    .social-links {
+
+        justify-content: center;
+    }
+
+    .hero-character {
+
+        width: 100%;
+
+        height: 570px;
+
+        margin-top: 20px;
+    }
+
+    .girl-stage {
+
+        width: min(680px, 105%);
+
+        right: 50%;
+
+        transform: translateX(50%);
+
+        bottom: 0;
+    }
 }
 
 
@@ -825,133 +903,59 @@ footer{
    MOBILE
 ========================================================= */
 
-@media(max-width:1000px){
+@media (max-width: 600px) {
 
-    .nav-links{
-        display:none;
+    .hero h1 {
+
+        font-size: 65px;
     }
 
-    .hero{
+    .hero h2 {
 
-        flex-direction:column;
-
-        text-align:center;
-
-        padding-top:120px;
+        font-size: 30px;
     }
 
-    .hero-content{
+    .hero-details {
 
-        width:100%;
+        font-size: 17px;
     }
 
-    .hero-description{
+    .hero-description {
 
-        margin-left:auto;
-        margin-right:auto;
+        font-size: 16px;
     }
 
-    .hero-buttons{
+    .hero-buttons {
 
-        justify-content:center;
+        flex-direction: column;
+
+        align-items: center;
     }
 
-    .social-links{
+    .social-links {
 
-        justify-content:center;
+        flex-wrap: wrap;
     }
 
-    .hero-character{
+    .hero-character {
 
-        width:100%;
-
-        height:600px;
-
-        margin-top:30px;
+        height: 430px;
     }
 
-    .girl-image{
+    .girl-stage {
 
-        width:850px;
+        width: 560px;
 
-        right:50%;
-
-        transform:
-            translate(50%,-50%);
-
-        top:50%;
+        max-width: 120vw;
     }
 
-    .tech-badge{
-        display:none;
-    }
-}
+    .section-title {
 
-
-@media(max-width:600px){
-
-    .navbar{
-        height:70px;
-    }
-
-    .logo{
-        font-size:27px;
-    }
-
-    .hire-btn{
-        padding:10px 17px;
-    }
-
-    .hero h1{
-        font-size:65px;
-    }
-
-    .hero h2{
-        font-size:30px;
-    }
-
-    .hero-details{
-        font-size:17px;
-    }
-
-    .hero-description{
-        font-size:16px;
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-    }
-
-    .social-links{
-        flex-wrap:wrap;
-    }
-
-    .hero-character{
-        height:450px;
-    }
-
-    .girl-image{
-
-        width:650px;
-
-        max-width:none;
-
-        right:50%;
-
-        transform:
-            translate(50%,-50%);
-    }
-
-    .section-title{
-        font-size:35px;
+        font-size: 35px;
     }
 }
 
 </style>
-
 </head>
 
 
@@ -982,9 +986,7 @@ footer{
 
         <a href="#education">Education</a>
 
-        <a href="#certifications">
-            Certifications
-        </a>
+        <a href="#certifications">Certifications</a>
 
         <a href="#contact">Contact</a>
 
@@ -1001,16 +1003,15 @@ footer{
 </nav>
 
 
+
 <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section
-    class="hero"
-    id="home">
+<section class="hero" id="home">
 
 
-    <!-- LEFT -->
+    <!-- LEFT SIDE -->
 
     <div class="hero-content">
 
@@ -1018,23 +1019,17 @@ footer{
             Hi, I'm
         </div>
 
-
         <h1>
             Isha <span>S.</span>
         </h1>
-
 
         <h2>
             Software Developer
         </h2>
 
-
         <div class="hero-details">
-
             B.Tech CSE • 2026 • CGPA: 8.7/10
-
         </div>
-
 
         <p class="hero-description">
 
@@ -1057,7 +1052,6 @@ footer{
 
             </a>
 
-
             <a
                 href="#contact"
                 class="secondary-btn">
@@ -1079,7 +1073,6 @@ footer{
 
             </a>
 
-
             <a
                 href="https://www.linkedin.com/in/isha-s-10061137b/"
                 target="_blank">
@@ -1088,8 +1081,8 @@ footer{
 
             </a>
 
-
-            <a href="mailto:srish348@gmail.com">
+            <a
+                href="mailto:srish348@gmail.com">
 
                 Email
 
@@ -1100,8 +1093,9 @@ footer{
     </div>
 
 
+
     <!-- =====================================================
-         EXACT IMAGE
+         RIGHT SIDE GIRL
     ====================================================== -->
 
     <div class="hero-character">
@@ -1109,45 +1103,53 @@ footer{
         <div class="character-glow"></div>
 
 
-        <!--
-            IMPORTANT:
-
-            This is ONLY the image.
-
-            NO extra eyes.
-            NO CSS girl.
-            NO plant.
-            NO books.
-            NO laptop.
-            NO duplicated objects.
-
-            Everything comes directly from
-            portfolio-girl.png.
-        -->
-
-        <img
-            src="portfolio-girl.png"
-            alt="Isha coding"
-            class="girl-image"
-        >
+        <div class="girl-stage" id="girlStage">
 
 
-        <!-- TECHNOLOGY BADGES -->
+            <!-- GIRL IMAGE -->
+
+            <img
+                src="portfolio-girl.png"
+                alt="Isha coding illustration"
+                class="girl-image"
+                id="girlImage"
+            >
+
+
+            <!-- LEFT EYE -->
+
+            <div class="eye eye-left">
+
+                <div class="pupil"></div>
+
+            </div>
+
+
+            <!-- RIGHT EYE -->
+
+            <div class="eye eye-right">
+
+                <div class="pupil"></div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FLOATING TECHNOLOGY BADGES -->
 
         <div class="tech-badge python">
             🐍 Python
         </div>
 
-
         <div class="tech-badge javascript">
             JS
         </div>
 
-
         <div class="tech-badge mysql">
             MySQL
         </div>
-
 
         <div class="tech-badge code">
             &lt;/&gt;
@@ -1158,32 +1160,26 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      ABOUT
 ========================================================= -->
 
-<section
-    class="section"
-    id="about">
+<section class="section" id="about">
 
     <h2 class="section-title">
-
         About <span>Me</span>
-
     </h2>
-
 
     <div class="about-container">
 
         <p>
 
-            I am a Bachelor of Technology graduate in
-            Computer Science and Engineering with a CGPA
-            of 8.7/10.
-
-            I am interested in software development,
-            artificial intelligence, machine learning
-            and building practical technology solutions.
+            I am a Bachelor of Technology graduate in Computer
+            Science and Engineering with a CGPA of 8.7/10.
+            I am interested in software development, artificial
+            intelligence, machine learning and building practical
+            technology solutions.
 
         </p>
 
@@ -1192,18 +1188,15 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      SKILLS
 ========================================================= -->
 
-<section
-    class="section"
-    id="skills">
+<section class="section" id="skills">
 
     <h2 class="section-title">
-
         My <span>Skills</span>
-
     </h2>
 
 
@@ -1264,18 +1257,15 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      PROJECTS
 ========================================================= -->
 
-<section
-    class="section"
-    id="projects">
+<section class="section" id="projects">
 
     <h2 class="section-title">
-
         Featured <span>Projects</span>
-
     </h2>
 
 
@@ -1294,19 +1284,18 @@ footer{
 
             <p>
 
-                AI-based touchless shopping system that
-                uses hand gestures for product navigation,
+                AI-based touchless shopping system that uses
+                hand gestures for product navigation,
                 selection and cart interaction.
 
             </p>
 
             <div class="project-tech">
-
                 Python • Flask • MySQL • MediaPipe
-
             </div>
 
         </div>
+
 
 
         <div class="project-card">
@@ -1321,19 +1310,18 @@ footer{
 
             <p>
 
-                Machine learning based aptitude testing
-                system that adapts question difficulty
-                according to user performance.
+                Machine learning based aptitude testing system
+                that adapts question difficulty according to
+                user performance.
 
             </p>
 
             <div class="project-tech">
-
                 Python • Pandas • NumPy • Scikit-learn
-
             </div>
 
         </div>
+
 
 
         <div class="project-card">
@@ -1348,16 +1336,14 @@ footer{
 
             <p>
 
-                Deep learning based project using CNN
-                techniques to classify radiology images
-                into benign and malignant categories.
+                Deep learning based project using CNN techniques
+                to classify radiology images into benign and
+                malignant categories.
 
             </p>
 
             <div class="project-tech">
-
                 Python • CNN • Deep Learning
-
             </div>
 
         </div>
@@ -1367,18 +1353,15 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      EXPERIENCE
 ========================================================= -->
 
-<section
-    class="section"
-    id="experience">
+<section class="section" id="experience">
 
     <h2 class="section-title">
-
         My <span>Experience</span>
-
     </h2>
 
 
@@ -1397,9 +1380,9 @@ footer{
 
             <p>
 
-                Gained practical exposure to machine
-                learning, Python programming, data analysis
-                and development workflows.
+                Gained practical exposure to machine learning,
+                Python programming, data analysis and development
+                workflows.
 
             </p>
 
@@ -1418,9 +1401,8 @@ footer{
 
             <p>
 
-                Worked with Python, web technologies,
-                databases and full-stack development
-                concepts.
+                Worked with Python, web technologies, databases
+                and full-stack development concepts.
 
             </p>
 
@@ -1431,18 +1413,15 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      EDUCATION
 ========================================================= -->
 
-<section
-    class="section"
-    id="education">
+<section class="section" id="education">
 
     <h2 class="section-title">
-
         <span>Education</span>
-
     </h2>
 
 
@@ -1452,17 +1431,12 @@ footer{
         <div class="timeline-card">
 
             <h3>
-
                 Bachelor of Technology -
                 Computer Science & Engineering
-
             </h3>
 
             <div class="date">
-
-                C Byregowda Institute of Technology
-                • 2026
-
+                C Byregowda Institute of Technology • 2026
             </div>
 
             <p>
@@ -1479,9 +1453,7 @@ footer{
             </h3>
 
             <div class="date">
-
                 Sahyadri PU College • 2022
-
             </div>
 
             <p>
@@ -1498,9 +1470,7 @@ footer{
             </h3>
 
             <div class="date">
-
                 Shankara Vidyalaya School • 2020
-
             </div>
 
             <p>
@@ -1514,18 +1484,15 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      CERTIFICATIONS
 ========================================================= -->
 
-<section
-    class="section"
-    id="certifications">
+<section class="section" id="certifications">
 
     <h2 class="section-title">
-
         <span>Certifications</span>
-
     </h2>
 
 
@@ -1544,10 +1511,7 @@ footer{
         <div class="cert-card">
 
             <h3>
-
-                Data Analysis and
-                Machine Learning in Python
-
+                Data Analysis and Machine Learning in Python
             </h3>
 
         </div>
@@ -1556,9 +1520,7 @@ footer{
         <div class="cert-card">
 
             <h3>
-
                 Introduction to Generative AI
-
             </h3>
 
         </div>
@@ -1568,28 +1530,21 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      CONTACT
 ========================================================= -->
 
-<section
-    class="section contact"
-    id="contact">
+<section class="section contact" id="contact">
 
     <h2 class="section-title">
-
         Let's <span>Connect</span>
-
     </h2>
 
-
     <p>
-
-        I'm open to software development
-        and technology opportunities.
-
+        I'm open to software development and technology
+        opportunities.
     </p>
-
 
     <a
         href="mailto:srish348@gmail.com"
@@ -1600,6 +1555,7 @@ footer{
     </a>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -1613,6 +1569,143 @@ footer{
 </footer>
 
 
-</body>
 
+<!-- =========================================================
+     EYE TRACKING JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const girlStage =
+    document.getElementById("girlStage");
+
+const girlImage =
+    document.getElementById("girlImage");
+
+const pupils =
+    document.querySelectorAll(".pupil");
+
+
+document.addEventListener(
+    "mousemove",
+    function(event) {
+
+
+        /* =================================================
+           EYE TRACKING
+        ================================================= */
+
+        pupils.forEach(function(pupil) {
+
+            const eye =
+                pupil.parentElement;
+
+            const eyeRect =
+                eye.getBoundingClientRect();
+
+
+            const eyeX =
+                eyeRect.left +
+                eyeRect.width / 2;
+
+            const eyeY =
+                eyeRect.top +
+                eyeRect.height / 2;
+
+
+            const mouseX =
+                event.clientX;
+
+            const mouseY =
+                event.clientY;
+
+
+            const angle =
+                Math.atan2(
+                    mouseY - eyeY,
+                    mouseX - eyeX
+                );
+
+
+            const distance =
+                Math.min(
+                    8,
+                    Math.hypot(
+                        mouseX - eyeX,
+                        mouseY - eyeY
+                    ) / 45
+                );
+
+
+            const moveX =
+                Math.cos(angle) *
+                distance;
+
+            const moveY =
+                Math.sin(angle) *
+                distance;
+
+
+            pupil.style.transform =
+                `translate(
+                    calc(-50% + ${moveX}px),
+                    calc(-50% + ${moveY}px)
+                )`;
+
+        });
+
+
+
+        /* =================================================
+           VERY SMALL GIRL MOVEMENT
+        ================================================= */
+
+        const mouseX =
+            event.clientX /
+            window.innerWidth;
+
+        const mouseY =
+            event.clientY /
+            window.innerHeight;
+
+
+        const moveX =
+            (mouseX - 0.5) * 5;
+
+        const moveY =
+            (mouseY - 0.5) * 3;
+
+
+        girlImage.style.transform =
+            `translate(${moveX}px, ${moveY}px)`;
+
+    }
+);
+
+
+/* =========================================================
+   RESET WHEN MOUSE LEAVES
+========================================================= */
+
+document.addEventListener(
+    "mouseleave",
+    function() {
+
+        pupils.forEach(function(pupil) {
+
+            pupil.style.transform =
+                "translate(-50%, -50%)";
+
+        });
+
+        girlImage.style.transform =
+            "translate(0, 0)";
+
+    }
+);
+
+</script>
+
+
+</body>
 </html>
